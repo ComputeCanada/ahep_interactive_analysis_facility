@@ -1,0 +1,927 @@
+[0m[1mmodule.network.openstack_networking_router_v2.k8s[0]: Refreshing state... [id=11496ba6-89ba-4455-bc8d-297eb13f7c84][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.worker: Refreshing state... [id=a29298a3-5240-464b-9776-8bda1ff6200e][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.k8s: Refreshing state... [id=2cca2faf-97d4-4eb9-b305-41981f2584cc][0m
+[0m[1mmodule.compute.openstack_compute_keypair_v2.k8s: Refreshing state... [id=kubernetes-axion][0m
+[0m[1mmodule.network.openstack_networking_network_v2.k8s[0]: Refreshing state... [id=4cdd2fed-9b35-46ce-9d06-738136939b28][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.k8s_master: Refreshing state... [id=34b2e38c-8782-4199-bb94-b269dc0b40ee][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.bastion[0]: Refreshing state... [id=f869104e-1ec4-4b0d-a9f9-7ee3cf427045][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.bastion[0]: Refreshing state... [id=c5ef5131-2997-4cb4-bd25-6a26446c4d7b][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.egress[0]: Refreshing state... [id=b5b76ce1-802e-455d-b20d-fd48b760cf8d][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s: Refreshing state... [id=6c3ebda2-d554-4582-9ac0-71a07567b4b7][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.worker[0]: Refreshing state... [id=43f45637-6406-4b7a-b943-586d73f22cfe][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.worker[1]: Refreshing state... [id=3991ba61-616c-4c43-9294-fd4f7ddf30cc][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master[0]: Refreshing state... [id=a2ce0f38-2076-4040-bfbd-901aecb5d508][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[1]: Refreshing state... [id=46fd947c-69f6-4f6c-9c6e-36821a3c6ad6][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[2]: Refreshing state... [id=62f3131e-977e-4717-bd9c-9ba44a6b1147][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[3]: Refreshing state... [id=0dc61ee7-1b09-4c00-b20d-c3a274116bf0][0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[0]: Refreshing state... [id=975dcdda-2273-402f-bad3-3e6cb0666b54][0m
+[0m[1mmodule.network.openstack_networking_subnet_v2.k8s[0]: Refreshing state... [id=521c5a42-aabf-4cd0-aff9-04ded482050b][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[2]: Refreshing state... [id=62bdc868-4195-4e7b-b168-263053c4a911][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[4]: Refreshing state... [id=7eb50cb9-7b65-4c82-a338-a7466f3abcc5][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[3]: Refreshing state... [id=245a19b4-109e-4473-af9f-03b009e0eca4][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[1]: Refreshing state... [id=6de0f95e-5139-4530-9f2a-7a6953bd02e8][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[0]: Refreshing state... [id=3c04a471-dfe4-4712-ad6e-3b17ffa78d3d][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.etcd[0]: Refreshing state... [id=0b83a33f-c101-4dc8-86b8-03a9b4618c0c][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_master_no_floating_ip_no_etcd[0]: Refreshing state... [id=71fb4caa-26d8-49e1-881b-3c0b5ca30380][0m
+[0m[1mmodule.network.openstack_networking_router_interface_v2.k8s[0]: Refreshing state... [id=261f59ae-881d-4f57-ae7b-a7a7c267f99f][0m
+[0m[1mmodule.ips.null_resource.dummy_dependency: Refreshing state... [id=2718896371493481635][0m
+[0m[1mmodule.ips.openstack_networking_floatingip_v2.bastion[0]: Refreshing state... [id=3c842876-fd26-426b-9d4a-e6a9ea4aba46][0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.bastion[0]: Refreshing state... [id=7ebf6443-5609-480f-95cc-ce31fabd414f][0m
+[0m[1mmodule.compute.openstack_compute_floatingip_associate_v2.bastion[0]: Refreshing state... [id=206.12.94.156/7ebf6443-5609-480f-95cc-ce31fabd414f/][0m
+[0m
+[1m[36mNote:[0m[1m Objects have changed outside of Terraform[0m
+
+[0mTerraform detected the following changes made outside of Terraform since the
+last "terraform apply":
+
+[1m  # module.compute.openstack_networking_secgroup_v2.worker[0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_secgroup_v2" "worker" {
+        [1m[0mid[0m[0m                   = "a29298a3-5240-464b-9776-8bda1ff6200e"
+        [1m[0mname[0m[0m                 = "axion-k8s-worker"
+      [32m+[0m [0m[1m[0mtags[0m[0m                 = []
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.etcd[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "etcd" {
+        [1m[0mid[0m[0m                  = "0b83a33f-c101-4dc8-86b8-03a9b4618c0c"
+        [1m[0mname[0m[0m                = "axion-etcd-1"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (15 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_networking_secgroup_v2.k8s[0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_secgroup_v2" "k8s" {
+        [1m[0mid[0m[0m                   = "2cca2faf-97d4-4eb9-b305-41981f2584cc"
+        [1m[0mname[0m[0m                 = "axion-k8s"
+      [32m+[0m [0m[1m[0mtags[0m[0m                 = []
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_networking_secgroup_v2.k8s_master[0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_secgroup_v2" "k8s_master" {
+        [1m[0mid[0m[0m                   = "34b2e38c-8782-4199-bb94-b269dc0b40ee"
+        [1m[0mname[0m[0m                 = "axion-k8s-master"
+      [32m+[0m [0m[1m[0mtags[0m[0m                 = []
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_networking_secgroup_v2.bastion[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_secgroup_v2" "bastion" {
+        [1m[0mid[0m[0m                   = "f869104e-1ec4-4b0d-a9f9-7ee3cf427045"
+        [1m[0mname[0m[0m                 = "axion-bastion"
+      [32m+[0m [0m[1m[0mtags[0m[0m                 = []
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.bastion[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "bastion" {
+        [1m[0mid[0m[0m                  = "7ebf6443-5609-480f-95cc-ce31fabd414f"
+        [1m[0mname[0m[0m                = "axion-bastion-1"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (15 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.k8s_master_no_floating_ip_no_etcd[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "k8s_master_no_floating_ip_no_etcd" {
+        [1m[0mid[0m[0m                  = "71fb4caa-26d8-49e1-881b-3c0b5ca30380"
+        [1m[0mname[0m[0m                = "axion-k8s-master-ne-nf-1"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (14 unchanged attributes hidden)[0m[0m
+
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[1][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+        [1m[0mid[0m[0m                  = "6de0f95e-5139-4530-9f2a-7a6953bd02e8"
+        [1m[0mname[0m[0m                = "axion-k8s-node-nf-2"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (15 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[2][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+        [1m[0mid[0m[0m                  = "62bdc868-4195-4e7b-b168-263053c4a911"
+        [1m[0mname[0m[0m                = "axion-k8s-node-nf-3"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (15 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[3][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+        [1m[0mid[0m[0m                  = "245a19b4-109e-4473-af9f-03b009e0eca4"
+        [1m[0mname[0m[0m                = "axion-k8s-node-nf-4"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (15 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[4][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+        [1m[0mid[0m[0m                  = "7eb50cb9-7b65-4c82-a338-a7466f3abcc5"
+        [1m[0mname[0m[0m                = "axion-k8s-node-nf-5"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (15 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+        [1m[0mid[0m[0m                  = "3c04a471-dfe4-4712-ad6e-3b17ffa78d3d"
+        [1m[0mname[0m[0m                = "axion-k8s-node-nf-1"
+      [32m+[0m [0m[1m[0mtags[0m[0m                = []
+        [90m# (15 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.ips.openstack_networking_floatingip_v2.bastion[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_floatingip_v2" "bastion" {
+      [32m+[0m [0m[1m[0mfixed_ip[0m[0m  = "192.168.0.114"
+        [1m[0mid[0m[0m        = "3c842876-fd26-426b-9d4a-e6a9ea4aba46"
+      [32m+[0m [0m[1m[0mport_id[0m[0m   = "95811557-d561-46a9-bd58-8ffe2232db1a"
+      [32m+[0m [0m[1m[0mtags[0m[0m      = []
+        [90m# (5 unchanged attributes hidden)[0m[0m
+    }
+[1m  # module.network.openstack_networking_network_v2.k8s[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_network_v2" "k8s" {
+        [1m[0mid[0m[0m                      = "4cdd2fed-9b35-46ce-9d06-738136939b28"
+        [1m[0mname[0m[0m                    = "axion"
+      [32m+[0m [0m[1m[0mtags[0m[0m                    = []
+        [90m# (10 unchanged attributes hidden)[0m[0m
+    }
+[1m  # module.network.openstack_networking_router_v2.k8s[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_router_v2" "k8s" {
+        [1m[0mid[0m[0m                      = "11496ba6-89ba-4455-bc8d-297eb13f7c84"
+        [1m[0mname[0m[0m                    = "axion-router"
+      [32m+[0m [0m[1m[0mtags[0m[0m                    = []
+        [90m# (9 unchanged attributes hidden)[0m[0m
+
+        [90m# (1 unchanged block hidden)[0m[0m
+    }
+[1m  # module.network.openstack_networking_subnet_v2.k8s[0][0m has been changed[0m[0m
+[0m  [33m~[0m[0m resource "openstack_networking_subnet_v2" "k8s" {
+        [1m[0mid[0m[0m              = "521c5a42-aabf-4cd0-aff9-04ded482050b"
+        [1m[0mname[0m[0m            = "axion-internal-network"
+      [32m+[0m [0m[1m[0mtags[0m[0m            = []
+        [90m# (10 unchanged attributes hidden)[0m[0m
+
+
+        [90m# (2 unchanged blocks hidden)[0m[0m
+    }
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [31m-[0m destroy
+[0m
+Terraform will perform the following actions:
+
+[1m  # module.compute.openstack_compute_floatingip_associate_v2.bastion[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_floatingip_associate_v2" "bastion" {
+      [31m-[0m [0m[1m[0mfloating_ip[0m[0m           = "206.12.94.156" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                    = "206.12.94.156/7ebf6443-5609-480f-95cc-ce31fabd414f/" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0minstance_id[0m[0m           = "7ebf6443-5609-480f-95cc-ce31fabd414f" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m                = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mwait_until_associated[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.bastion[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "bastion" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.114" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "bastion"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "b81a5976-d70e-4963-8715-d8f858af148a" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c16-60gb-576" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "7ebf6443-5609-480f-95cc-ce31fabd414f" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_name[0m[0m          = "CentOS-7-x64-2020-11" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "bastion"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-bastion-1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-bastion",
+          [31m-[0m [0m"axion-k8s",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.114" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:00:42:5e" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.etcd[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "etcd" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.210" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "etcd,no_floating"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "22f7655d-45c1-4e01-83a0-2929e686f19b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c1-7.5gb-36" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "0b83a33f-c101-4dc8-86b8-03a9b4618c0c" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_name[0m[0m          = "CentOS-7-x64-2020-11" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "etcd,no_floating"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-etcd-1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-k8s",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.210" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:32:7e:24" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.k8s_master_no_floating_ip_no_etcd[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "k8s_master_no_floating_ip_no_etcd" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.134" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_control_plane,,k8s_cluster,no_floating"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "57a73012-a294-4caf-b7b8-8e98c8e9bee3" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c8-90gb-288" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "71fb4caa-26d8-49e1-881b-3c0b5ca30380" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "Attempt to boot from volume - no image supplied" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_control_plane,,k8s_cluster,no_floating"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-k8s-master-ne-nf-1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-k8s",
+          [31m-[0m [0m"axion-k8s-master",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mblock_device {
+          [31m-[0m [0m[1m[0mboot_index[0m[0m            = 0 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mdelete_on_termination[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mdestination_type[0m[0m      = "volume" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msource_type[0m[0m           = "image" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m                  = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mvolume_size[0m[0m           = 40 [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mvolume_type[0m[0m           = "Default" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.134" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:59:24:74" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.97" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "8c4dad4f-807d-4240-91e0-0fb958a1c671" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c2-15gb-72" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "3c04a471-dfe4-4712-ad6e-3b17ffa78d3d" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_name[0m[0m          = "CentOS-7-x64-2020-11" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-k8s-node-nf-1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-k8s",
+          [31m-[0m [0m"axion-k8s-worker",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.97" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:2d:ef:95" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[1][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.158" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "8c4dad4f-807d-4240-91e0-0fb958a1c671" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c2-15gb-72" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "6de0f95e-5139-4530-9f2a-7a6953bd02e8" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_name[0m[0m          = "CentOS-7-x64-2020-11" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-k8s-node-nf-2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-k8s",
+          [31m-[0m [0m"axion-k8s-worker",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.158" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:f8:ac:8b" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[2][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.162" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "8c4dad4f-807d-4240-91e0-0fb958a1c671" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c2-15gb-72" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "62bdc868-4195-4e7b-b168-263053c4a911" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_name[0m[0m          = "CentOS-7-x64-2020-11" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-k8s-node-nf-3" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-k8s",
+          [31m-[0m [0m"axion-k8s-worker",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.162" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:0a:db:90" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[3][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.89" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "8c4dad4f-807d-4240-91e0-0fb958a1c671" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c2-15gb-72" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "245a19b4-109e-4473-af9f-03b009e0eca4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_name[0m[0m          = "CentOS-7-x64-2020-11" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-k8s-node-nf-4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-k8s",
+          [31m-[0m [0m"axion-k8s-worker",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.89" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:27:04:f5" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[4][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_instance_v2" "k8s_node_no_floating_ip" {
+      [31m-[0m [0m[1m[0maccess_ip_v4[0m[0m        = "192.168.0.54" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_metadata[0m[0m        = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone[0m[0m   = "Compute" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_id[0m[0m           = "8c4dad4f-807d-4240-91e0-0fb958a1c671" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mflavor_name[0m[0m         = "c2-15gb-72" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mforce_delete[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "7eb50cb9-7b65-4c82-a338-a7466f3abcc5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_id[0m[0m            = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mimage_name[0m[0m          = "CentOS-7-x64-2020-11" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mkey_pair[0m[0m            = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmetadata[0m[0m            = {
+          [31m-[0m [0m"depends_on"       = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+          [31m-[0m [0m"kubespray_groups" = "kube_node,k8s_cluster,no_floating,"
+          [31m-[0m [0m"ssh_user"         = "centos"
+          [31m-[0m [0m"use_access_ip"    = "1"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "axion-k8s-node-nf-5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpower_state[0m[0m         = "active" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m              = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_groups[0m[0m     = [
+          [31m-[0m [0m"axion-k8s",
+          [31m-[0m [0m"axion-k8s-worker",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mstop_before_destroy[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mnetwork {
+          [31m-[0m [0m[1m[0maccess_network[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mfixed_ip_v4[0m[0m    = "192.168.0.54" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mmac[0m[0m            = "fa:16:3e:22:43:22" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mname[0m[0m           = "axion" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0muuid[0m[0m           = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.compute.openstack_compute_keypair_v2.k8s[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_compute_keypair_v2" "k8s" {
+      [31m-[0m [0m[1m[0mfingerprint[0m[0m = "98:e8:ea:48:31:f6:f8:0d:37:de:d7:af:70:e3:12:1b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m          = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m        = "kubernetes-axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpublic_key[0m[0m  = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCwySXho0xShZJ0AQx/Plr3qtgf2Cs032JW/EWtXFwwC0NGin3ujyVey87tEkUJLIB0NT3B9uduSoA5YTupg/8AvXDIaLn8bgZbkQ8UM/UM5T2njz6igsM6yMgRBL7yxFNLsvmeoTqgTPdyUQOk2qXjrttBh6EbVAUzTwbGBATAD3qZU9SPlQA1g1insIbXRyV2fNxAnh2G/1xfl4c3HgaBJ7shC3tUa9da8l03ByrEsOONxUjFHyfYZIXbd7iKo7euAzLtM+IIpiXyJJAi8LC1wh55jJCvKVvWsi1UE6FR4rsfG9yAeVWo4Hk0AuWXLKi5RjM7o+2369QZILLLAMhOgcC+Ucx0yD7wDLJLYqAfJdqsq/yKiTuYqsPIBAWIg4zsZgF5t3MZkguVjsuwVxhwexn1LM0hTdb8Upi0CmEQ3sy5qk//bMhQRRzDIvxSyyIVwyglkJIVc29X3dF3t9LqsCV/z8eSkzabcUr4DSBd/NAmoudvw9W891bm7D6Pp/xAXYWzZVFC9hhvRjynS3u8Zs9QTgd7nU+tWg2qJtun0TJaoiitMlPXqhr/VFGvFra1M0adgdMtYW81QB6PIPQSi+NdAG30F7ZRqs30nAhwqyOMyDDOjMlcDEASnUaTf8bKlud0g+5hIvTViMxwrbdfYkxfBRFNfTqgF+kKkqymXw== tejinc@tejin-Desktop" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m      = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.bastion[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "bastion" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "c5ef5131-2997-4cb4-bd25-6a26446c4d7b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 22 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 22 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "f869104e-1ec4-4b0d-a9f9-7ee3cf427045" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.egress[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "egress" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "egress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "b5b76ce1-802e-455d-b20d-fd48b760cf8d" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 0 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 0 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "2cca2faf-97d4-4eb9-b305-41981f2584cc" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.k8s[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "k8s" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "6c3ebda2-d554-4582-9ac0-71a07567b4b7" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 0 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 0 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_group_id[0m[0m   = "2cca2faf-97d4-4eb9-b305-41981f2584cc" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "2cca2faf-97d4-4eb9-b305-41981f2584cc" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.k8s_master[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "k8s_master" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "a2ce0f38-2076-4040-bfbd-901aecb5d508" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 6443 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 6443 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "34b2e38c-8782-4199-bb94-b269dc0b40ee" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "k8s_master_ports" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "975dcdda-2273-402f-bad3-3e6cb0666b54" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 22 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 22 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "34b2e38c-8782-4199-bb94-b269dc0b40ee" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[1][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "k8s_master_ports" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "46fd947c-69f6-4f6c-9c6e-36821a3c6ad6" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 9000 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 8000 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "34b2e38c-8782-4199-bb94-b269dc0b40ee" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[2][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "k8s_master_ports" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "62f3131e-977e-4717-bd9c-9ba44a6b1147" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 2380 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 2379 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "34b2e38c-8782-4199-bb94-b269dc0b40ee" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[3][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "k8s_master_ports" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "0dc61ee7-1b09-4c00-b20d-c3a274116bf0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 10255 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 10250 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "34b2e38c-8782-4199-bb94-b269dc0b40ee" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.worker[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "worker" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "43f45637-6406-4b7a-b943-586d73f22cfe" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 32767 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 30000 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "a29298a3-5240-464b-9776-8bda1ff6200e" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_rule_v2.worker[1][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_rule_v2" "worker" {
+      [31m-[0m [0m[1m[0mdirection[0m[0m         = "ingress" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0methertype[0m[0m         = "IPv4" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                = "3991ba61-616c-4c43-9294-fd4f7ddf30cc" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_max[0m[0m    = 22 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_range_min[0m[0m    = 22 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m          = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m            = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mremote_ip_prefix[0m[0m  = "0.0.0.0/0" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_group_id[0m[0m = "a29298a3-5240-464b-9776-8bda1ff6200e" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m         = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_v2.bastion[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_v2" "bastion" {
+      [31m-[0m [0m[1m[0mall_tags[0m[0m             = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdelete_default_rules[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdescription[0m[0m          = "axion - Bastion Server" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "f869104e-1ec4-4b0d-a9f9-7ee3cf427045" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                 = "axion-bastion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m               = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                 = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m            = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_v2.k8s[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_v2" "k8s" {
+      [31m-[0m [0m[1m[0mall_tags[0m[0m             = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdelete_default_rules[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdescription[0m[0m          = "axion - Kubernetes" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "2cca2faf-97d4-4eb9-b305-41981f2584cc" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                 = "axion-k8s" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m               = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                 = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m            = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_v2.k8s_master[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_v2" "k8s_master" {
+      [31m-[0m [0m[1m[0mall_tags[0m[0m             = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdelete_default_rules[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdescription[0m[0m          = "axion - Kubernetes Master" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "34b2e38c-8782-4199-bb94-b269dc0b40ee" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                 = "axion-k8s-master" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m               = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                 = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m            = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.compute.openstack_networking_secgroup_v2.worker[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_secgroup_v2" "worker" {
+      [31m-[0m [0m[1m[0mall_tags[0m[0m             = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdelete_default_rules[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdescription[0m[0m          = "axion - Kubernetes worker nodes" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "a29298a3-5240-464b-9776-8bda1ff6200e" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                 = "axion-k8s-worker" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m               = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                 = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m            = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.ips.null_resource.dummy_dependency[0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "null_resource" "dummy_dependency" {
+      [31m-[0m [0m[1m[0mid[0m[0m       = "2718896371493481635" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtriggers[0m[0m = {
+          [31m-[0m [0m"dependency_id" = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 "
+        } [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.ips.openstack_networking_floatingip_v2.bastion[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_floatingip_v2" "bastion" {
+      [31m-[0m [0m[1m[0maddress[0m[0m   = "206.12.94.156" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m  = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mfixed_ip[0m[0m  = "192.168.0.114" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m        = "3c842876-fd26-426b-9d4a-e6a9ea4aba46" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpool[0m[0m      = "Public-Network" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_id[0m[0m   = "95811557-d561-46a9-bd58-8ffe2232db1a" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m    = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m      = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.network.openstack_networking_network_v2.k8s[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_network_v2" "k8s" {
+      [31m-[0m [0m[1m[0madmin_state_up[0m[0m          = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_hints[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mexternal[0m[0m                = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mmtu[0m[0m                     = 1500 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "axion" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_security_enabled[0m[0m   = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m                  = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mshared[0m[0m                  = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m               = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtransparent_vlan[0m[0m        = false [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.network.openstack_networking_router_interface_v2.k8s[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_router_interface_v2" "k8s" {
+      [31m-[0m [0m[1m[0mid[0m[0m        = "261f59ae-881d-4f57-ae7b-a7a7c267f99f" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mport_id[0m[0m   = "261f59ae-881d-4f57-ae7b-a7a7c267f99f" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m    = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrouter_id[0m[0m = "11496ba6-89ba-4455-bc8d-297eb13f7c84" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m = "521c5a42-aabf-4cd0-aff9-04ded482050b" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+[1m  # module.network.openstack_networking_router_v2.k8s[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_router_v2" "k8s" {
+      [31m-[0m [0m[1m[0madmin_state_up[0m[0m          = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mall_tags[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mavailability_zone_hints[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdistributed[0m[0m             = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_snat[0m[0m             = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mexternal_gateway[0m[0m        = "6621bf61-6094-4b24-a9a0-f5794c3a881e" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mexternal_network_id[0m[0m     = "6621bf61-6094-4b24-a9a0-f5794c3a881e" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                      = "11496ba6-89ba-4455-bc8d-297eb13f7c84" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                    = "axion-router" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m                  = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                    = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m               = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mexternal_fixed_ip {
+          [31m-[0m [0m[1m[0mip_address[0m[0m = "206.12.95.48" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0msubnet_id[0m[0m  = "1f6a472c-c1bf-42a4-9473-7ec1a543f0a8" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[1m  # module.network.openstack_networking_subnet_v2.k8s[0][0m will be [1m[31mdestroyed[0m[0m
+[0m  [31m-[0m[0m resource "openstack_networking_subnet_v2" "k8s" {
+      [31m-[0m [0m[1m[0mall_tags[0m[0m        = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mcidr[0m[0m            = "192.168.0.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_nameservers[0m[0m = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menable_dhcp[0m[0m     = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mgateway_ip[0m[0m      = "192.168.0.1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m              = "521c5a42-aabf-4cd0-aff9-04ded482050b" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mip_version[0m[0m      = 4 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m            = "axion-internal-network" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_id[0m[0m      = "4cdd2fed-9b35-46ce-9d06-738136939b28" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mno_gateway[0m[0m      = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mregion[0m[0m          = "RegionOne" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m            = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m       = "827eb41d94fe4e7f890a905fbd8be6c5" [90m->[0m [0m[90mnull[0m[0m
+
+      [31m-[0m [0mallocation_pool {
+          [31m-[0m [0m[1m[0mend[0m[0m   = "192.168.0.254" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mstart[0m[0m = "192.168.0.2" [90m->[0m [0m[90mnull[0m[0m
+        }
+
+      [31m-[0m [0mallocation_pools {
+          [31m-[0m [0m[1m[0mend[0m[0m   = "192.168.0.254" [90m->[0m [0m[90mnull[0m[0m
+          [31m-[0m [0m[1m[0mstart[0m[0m = "192.168.0.2" [90m->[0m [0m[90mnull[0m[0m
+        }
+    }
+
+[0m[1mPlan:[0m 0 to add, 0 to change, 30 to destroy.
+[0m[0m
+[1mChanges to Outputs:[0m[0m
+  [31m-[0m [0m[1m[0mbastion_fips[0m[0m        = [
+      [31m-[0m [0m"206.12.94.156",
+    ] [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mfloating_network_id[0m[0m = "6621bf61-6094-4b24-a9a0-f5794c3a881e" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mk8s_master_fips[0m[0m     = [] [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mk8s_node_fips[0m[0m       = [] [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mprivate_subnet_id[0m[0m   = "521c5a42-aabf-4cd0-aff9-04ded482050b" [90m->[0m [0m[90mnull[0m[0m
+  [31m-[0m [0m[1m[0mrouter_id[0m[0m           = " 11496ba6-89ba-4455-bc8d-297eb13f7c84 " [90m->[0m [0m[90mnull[0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.egress[0]: Destroying... [id=b5b76ce1-802e-455d-b20d-fd48b760cf8d][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.worker[1]: Destroying... [id=3991ba61-616c-4c43-9294-fd4f7ddf30cc][0m[0m
+[0m[1mmodule.compute.openstack_compute_floatingip_associate_v2.bastion[0]: Destroying... [id=206.12.94.156/7ebf6443-5609-480f-95cc-ce31fabd414f/][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[0]: Destroying... [id=975dcdda-2273-402f-bad3-3e6cb0666b54][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s: Destroying... [id=6c3ebda2-d554-4582-9ac0-71a07567b4b7][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.worker[0]: Destroying... [id=43f45637-6406-4b7a-b943-586d73f22cfe][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.bastion[0]: Destroying... [id=c5ef5131-2997-4cb4-bd25-6a26446c4d7b][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[4]: Destroying... [id=7eb50cb9-7b65-4c82-a338-a7466f3abcc5][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[3]: Destroying... [id=0dc61ee7-1b09-4c00-b20d-c3a274116bf0][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[3]: Destroying... [id=245a19b4-109e-4473-af9f-03b009e0eca4][0m[0m
+[0m[1mmodule.compute.openstack_compute_floatingip_associate_v2.bastion[0]: Destruction complete after 5s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.etcd[0]: Destroying... [id=0b83a33f-c101-4dc8-86b8-03a9b4618c0c][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.bastion[0]: Destruction complete after 6s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master[0]: Destroying... [id=a2ce0f38-2076-4040-bfbd-901aecb5d508][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.worker[1]: Destruction complete after 7s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[0]: Destroying... [id=3c04a471-dfe4-4712-ad6e-3b17ffa78d3d][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[0]: Destruction complete after 7s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_master_no_floating_ip_no_etcd[0]: Destroying... [id=71fb4caa-26d8-49e1-881b-3c0b5ca30380][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s: Destruction complete after 7s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[2]: Destroying... [id=62f3131e-977e-4717-bd9c-9ba44a6b1147][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.egress[0]: Still destroying... [id=b5b76ce1-802e-455d-b20d-fd48b760cf8d, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.worker[0]: Still destroying... [id=43f45637-6406-4b7a-b943-586d73f22cfe, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[4]: Still destroying... [id=7eb50cb9-7b65-4c82-a338-a7466f3abcc5, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[3]: Still destroying... [id=0dc61ee7-1b09-4c00-b20d-c3a274116bf0, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[3]: Still destroying... [id=245a19b4-109e-4473-af9f-03b009e0eca4, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[3]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[4]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[1]: Destroying... [id=6de0f95e-5139-4530-9f2a-7a6953bd02e8][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[2]: Destroying... [id=62bdc868-4195-4e7b-b168-263053c4a911][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.worker[0]: Destruction complete after 13s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[3]: Destruction complete after 13s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.egress[0]: Destruction complete after 13s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[1]: Destroying... [id=46fd947c-69f6-4f6c-9c6e-36821a3c6ad6][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.bastion[0]: Destroying... [id=7ebf6443-5609-480f-95cc-ce31fabd414f][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.etcd[0]: Still destroying... [id=0b83a33f-c101-4dc8-86b8-03a9b4618c0c, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.etcd[0]: Destruction complete after 10s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master[0]: Still destroying... [id=a2ce0f38-2076-4040-bfbd-901aecb5d508, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[0]: Still destroying... [id=3c04a471-dfe4-4712-ad6e-3b17ffa78d3d, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_master_no_floating_ip_no_etcd[0]: Still destroying... [id=71fb4caa-26d8-49e1-881b-3c0b5ca30380, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[2]: Still destroying... [id=62f3131e-977e-4717-bd9c-9ba44a6b1147, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[0]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_master_no_floating_ip_no_etcd[0]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master[0]: Destruction complete after 14s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[2]: Still destroying... [id=62bdc868-4195-4e7b-b168-263053c4a911, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[1]: Still destroying... [id=6de0f95e-5139-4530-9f2a-7a6953bd02e8, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[1]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.k8s_node_no_floating_ip[2]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.worker: Destroying... [id=a29298a3-5240-464b-9776-8bda1ff6200e][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[1]: Still destroying... [id=46fd947c-69f6-4f6c-9c6e-36821a3c6ad6, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.bastion[0]: Still destroying... [id=7ebf6443-5609-480f-95cc-ce31fabd414f, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_compute_instance_v2.bastion[0]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_compute_keypair_v2.k8s: Destroying... [id=kubernetes-axion][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.k8s: Destroying... [id=2cca2faf-97d4-4eb9-b305-41981f2584cc][0m[0m
+[0m[1mmodule.ips.openstack_networking_floatingip_v2.bastion[0]: Destroying... [id=3c842876-fd26-426b-9d4a-e6a9ea4aba46][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.bastion[0]: Destroying... [id=f869104e-1ec4-4b0d-a9f9-7ee3cf427045][0m[0m
+[0m[1mmodule.compute.openstack_compute_keypair_v2.k8s: Destruction complete after 0s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[2]: Destruction complete after 19s[0m
+[0m[1mmodule.ips.openstack_networking_floatingip_v2.bastion[0]: Destruction complete after 7s[0m
+[0m[1mmodule.ips.null_resource.dummy_dependency: Destroying... [id=2718896371493481635][0m[0m
+[0m[1mmodule.ips.null_resource.dummy_dependency: Destruction complete after 0s[0m
+[0m[1mmodule.network.openstack_networking_router_interface_v2.k8s[0]: Destroying... [id=261f59ae-881d-4f57-ae7b-a7a7c267f99f][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.worker: Destruction complete after 10s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_rule_v2.k8s_master_ports[1]: Destruction complete after 19s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.k8s_master: Destroying... [id=34b2e38c-8782-4199-bb94-b269dc0b40ee][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.k8s: Still destroying... [id=2cca2faf-97d4-4eb9-b305-41981f2584cc, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.bastion[0]: Still destroying... [id=f869104e-1ec4-4b0d-a9f9-7ee3cf427045, 10s elapsed][0m[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.k8s: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.bastion[0]: Destruction complete after 11s[0m
+[0m[1mmodule.compute.openstack_networking_secgroup_v2.k8s_master: Destruction complete after 9s[0m
+[0m[1mmodule.network.openstack_networking_router_interface_v2.k8s[0]: Still destroying... [id=261f59ae-881d-4f57-ae7b-a7a7c267f99f, 10s elapsed][0m[0m
+[0m[1mmodule.network.openstack_networking_router_interface_v2.k8s[0]: Destruction complete after 12s[0m
+[0m[1mmodule.network.openstack_networking_router_v2.k8s[0]: Destroying... [id=11496ba6-89ba-4455-bc8d-297eb13f7c84][0m[0m
+[0m[1mmodule.network.openstack_networking_subnet_v2.k8s[0]: Destroying... [id=521c5a42-aabf-4cd0-aff9-04ded482050b][0m[0m
+[0m[1mmodule.network.openstack_networking_router_v2.k8s[0]: Destruction complete after 8s[0m
+[0m[1mmodule.network.openstack_networking_subnet_v2.k8s[0]: Still destroying... [id=521c5a42-aabf-4cd0-aff9-04ded482050b, 10s elapsed][0m[0m
+[0m[1mmodule.network.openstack_networking_subnet_v2.k8s[0]: Destruction complete after 15s[0m
+[0m[1mmodule.network.openstack_networking_network_v2.k8s[0]: Destroying... [id=4cdd2fed-9b35-46ce-9d06-738136939b28][0m[0m
+[0m[1mmodule.network.openstack_networking_network_v2.k8s[0]: Destruction complete after 8s[0m
+[0m[1m[32m
+Destroy complete! Resources: 30 destroyed.
+[0m

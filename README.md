@@ -12,7 +12,7 @@ To deploy a k8s cluster, from the ahep_interactive_analysis_facility root folder
 `cd kubespray/k8s-terraform/`
 Modify `cluster.tfvars` according to needs, source the OpenStack RC file, then 
 > `terraform init`
- `terraform apply -var-file=cluster.tfvars`
+> `terraform apply -var-file=cluster.tfvars`
 
 This will build the clusters according to specification.
 
@@ -26,5 +26,5 @@ This will try to ping all the nodes you just built. If the nodes are unreachable
 Kubernetes can be deployed once every node can be reached. Do the following:
 `ansible-playbook --become -i k8s-terraform/hosts cluster.yml`
 
-The `--become` flag is necessary because it allows ansible to run as the admin user. The deployment could fail if the flag is not specified. If the user built a cluster with `etcd` database on the `master` without a dedicated `etcd` node, the build could fail. The solution is to have a dedicated `etcd` node with the `k8s-master` having no `etcd` .
+The `--become` flag is necessary because it allows ansible to run as the admin user on the remote cluster. The deployment could fail if the flag is not specified. If the user built a cluster with `etcd` database on the `master` without a dedicated `etcd` node, the build could fail. The solution is to have a dedicated `etcd` node with the `k8s-master` having no `etcd` .
 

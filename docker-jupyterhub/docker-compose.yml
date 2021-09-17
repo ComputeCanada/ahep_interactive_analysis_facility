@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  jupyterhub:
+    image: tejinc/dune_iaf:jupyterhub-dev-2
+    container_name: test1
+    ports: 443:443
+    volumes:
+      - "/srv/jupyterhub/jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py:ro"
+      - "/etc/letsencrypt/:/etc/letsencrypt/:ro"
+      - "/cvmfs/:/cvmfs/:shared"
+

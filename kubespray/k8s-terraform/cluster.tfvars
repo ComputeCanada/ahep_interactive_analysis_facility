@@ -32,19 +32,19 @@ flavor_k8s_master = "57a73012-a294-4caf-b7b8-8e98c8e9bee3" #c8-90gb-288
 
 # nodes
 number_of_k8s_nodes = 0
-number_of_k8s_nodes_no_floating_ip = 5
-flavor_k8s_node = "8c4dad4f-807d-4240-91e0-0fb958a1c671" #c2-15gb-72
+number_of_k8s_nodes_no_floating_ip = 1
+flavor_k8s_node = "39b3870c-e0f6-42cb-a565-f90db442629a" #c16-120gb-576
 
 # GlusterFS
 # either 0 or more than one
-number_of_gfs_nodes_no_floating_ip = 0
-#gfs_volume_size_in_gb = 40
+number_of_gfs_nodes_no_floating_ip = 1
+gfs_volume_size_in_gb = 10
 # Container Linux does not support GlusterFS
 image_gfs = "CentOS-7-x64-2020-11"
 #image_gfs_uuid = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523"
 # May be different from other nodes
 ssh_user_gfs = "centos"
-flavor_gfs_node = "8c4dad4f-807d-4240-91e0-0fb958a1c671"
+flavor_gfs_node = "8c4dad4f-807d-4240-91e0-0fb958a1c671" #c2-15gb-72
 
 # networking
 network_name = "axion"
@@ -106,4 +106,5 @@ master_allowed_ports = [
 
 wait_for_floatingip=true
 
-master_root_volume_size_in_gb = 40
+master_root_volume_size_in_gb = 0
+node_root_volume_size_in_gb = 0

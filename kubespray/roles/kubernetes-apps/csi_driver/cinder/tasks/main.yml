@@ -17,7 +17,7 @@
 - name: Cinder CSI Driver | Write Cinder cloud-config
   template:
     src: "cinder-csi-cloud-config.j2"
-    dest: "{{ kube_config_dir }}/cinder_cloud_config"
+    dest: "{{ kube_config_dir }}/cindercloudconfig"
     group: "{{ kube_cert_group }}"
     mode: 0640
   when: inventory_hostname == groups['kube_control_plane'][0]
@@ -25,8 +25,8 @@
 
 - name: Cinder CSI Driver | Get base64 cloud-config
   slurp:
-    src: "{{ kube_config_dir }}/cinder_cloud_config"
-  register: cloud_config_secret
+    src: "{{ kube_config_dir }}/cindercloudconfig"
+  register: cloudconfigsecret
   when: inventory_hostname == groups['kube_control_plane'][0]
   tags: cinder-csi-driver
 

@@ -17,7 +17,8 @@ kube_token_dir: "{{ kube_config_dir }}/tokens"
 kube_api_anonymous_auth: true
 
 ## Change this to use another Kubernetes version, e.g. a current beta release
-kube_version: v1.20.7
+kube_version: v1.22.1
+#kube_version: v1.22.1
 
 # Where the binaries will be downloaded.
 # Note: ensure that you've enough disk space (about 1G)
@@ -64,7 +65,7 @@ credentials_dir: "{{ inventory_dir }}/credentials"
 
 # Choose network plugin (cilium, calico, weave or flannel. Use cni for generic cni plugin)
 # Can also be set to 'cloud', which lets the cloud provider setup appropriate routing
-kube_network_plugin: calico
+kube_network_plugin: weave
 
 # Setting multi_networking to true will install Multus: https://github.com/intel/multus-cni
 kube_network_plugin_multus: false
@@ -250,10 +251,10 @@ podsecuritypolicy_enabled: false
 ## Running on top of openstack vms with cinder enabled may lead to unschedulable pods due to NoVolumeZoneConflict restriction in kube-scheduler.
 ## See https://github.com/kubernetes-sigs/kubespray/issues/2141
 ## Set this variable to true to get rid of this issue
-volume_cross_zone_attachment: false
+volume_cross_zone_attachment: true
 ## Add Persistent Volumes Storage Class for corresponding cloud provider (supported: in-tree OpenStack, Cinder CSI,
 ## AWS EBS CSI, Azure Disk CSI, GCP Persistent Disk CSI)
-persistent_volumes_enabled: false
+persistent_volumes_enabled: true
 
 ## Container Engine Acceleration
 ## Enable container acceleration feature, for example use gpu acceleration in containers

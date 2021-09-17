@@ -5,12 +5,16 @@
 - name: Ensure compatibility with old groups
   import_playbook: legacy_groups.yml
 
+
 - hosts: bastion[0]
   gather_facts: False
   environment: "{{ proxy_disable_env }}"
   roles:
     - { role: kubespray-defaults }
     - { role: bastion-ssh-config, tags: ["localhost", "bastion"] }
+    - role: ansible-cvmfs-client
+
+
 
 - hosts: k8s_cluster:etcd
   strategy: linear
@@ -88,6 +92,7 @@
     - { role: kubernetes/kubeadm, tags: kubeadm}
     - { role: network_plugin, tags: network }
     - { role: kubernetes/node-label, tags: node-label }
+    - role: ansible-cvmfs-client
 
 - hosts: calico_rr
   gather_facts: False
@@ -132,3 +137,7 @@
   roles:
     - { role: kubespray-defaults }
     - { role: kubernetes/preinstall, when: "dns_mode != 'none' and resolvconf_mode == 'host_resolvconf'", tags: resolvconf, dns_late: true }
+
+
+
+

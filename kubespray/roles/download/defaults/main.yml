@@ -78,27 +78,29 @@ cni_version: "v0.9.1"
 weave_version: 2.8.1
 pod_infra_version: "3.3"
 cilium_version: "v1.8.9"
-kube_ovn_version: "v1.6.2"
-kube_router_version: "v1.2.2"
+kube_ovn_version: "v1.8.0"
+kube_router_version: "v1.3.1"
 multus_version: "v3.7"
 ovn4nfv_ovn_image_version: "v1.0.0"
 ovn4nfv_k8s_plugin_image_version: "v1.1.0"
-helm_version: "v3.5.4"
+helm_version: "v3.7.0"
 nerdctl_version: "0.8.1"
 krew_version: "v0.4.1"
 
 # Get kubernetes major version (i.e. 1.17.4 => 1.17)
 kube_major_version: "{{ kube_version | regex_replace('^v([0-9])+\\.([0-9]+)\\.[0-9]+', 'v\\1.\\2') }}"
 crictl_supported_versions:
+  v1.22: "v1.22.0"
   v1.21: "v1.21.0"
   v1.20: "v1.20.0"
   v1.19: "v1.19.0"
 crictl_version: "{{ crictl_supported_versions[kube_major_version] }}"
 
 # Download URLs
-kubelet_download_url: "https://storage.googleapis.com/kubernetes-release/release/{{ kube_version }}/bin/linux/{{ image_arch }}/kubelet"
-kubectl_download_url: "https://storage.googleapis.com/kubernetes-release/release/{{ kube_version }}/bin/linux/{{ image_arch }}/kubectl"
-kubeadm_download_url: "https://storage.googleapis.com/kubernetes-release/release/{{ kubeadm_version }}/bin/linux/{{ image_arch }}/kubeadm"
+#https://dl.k8s.io/{{ kube_version}}/bin/linux/amd64/kubeadm
+kubelet_download_url: "https://dl.k8s.io/{{ kube_version }}/bin/linux/{{ image_arch }}/kubelet"
+kubectl_download_url: "https://dl.k8s.io/{{ kube_version }}/bin/linux/{{ image_arch }}/kubectl"
+kubeadm_download_url: "https://dl.k8s.io/{{ kubeadm_version }}/bin/linux/{{ image_arch }}/kubeadm"
 etcd_download_url: "https://github.com/coreos/etcd/releases/download/{{ etcd_version }}/etcd-{{ etcd_version }}-linux-{{ image_arch }}.tar.gz"
 cni_download_url: "https://github.com/containernetworking/plugins/releases/download/{{ cni_version }}/cni-plugins-linux-{{ image_arch }}-{{ cni_version }}.tgz"
 calicoctl_download_url: "https://github.com/projectcalico/calicoctl/releases/download/{{ calico_ctl_version }}/calicoctl-linux-{{ image_arch }}"
@@ -112,14 +114,17 @@ krew_download_url: "https://github.com/kubernetes-sigs/krew/releases/download/{{
 
 crictl_checksums:
   arm:
+    v1.22.0: b74f7cc52ce79c6d7fd776beb6353f4628e9c36f17ba2b8e6c48155714057f07
     v1.21.0: 638af758860b282f8ec862b90ecbc200ec87388134e555684f92d39591c938f7
     v1.20.0: ed5ffdd386261ec1146731421d4ac9c5c7f91e08486fee409452a3364bef792a
     v1.19.0: b72fd3c4b35f60f5db2cfcd8e932f6000cf9c2978b54adfcf60ee5e2d452e92f
   arm64:
+    v1.22.0: a713c37fade0d96a989bc15ebe906e08ef5c8fe5e107c2161b0665e9963b770e
     v1.21.0: 454eecd29fe636282339af5b73c60234a7d10e4b11b9e18937e33056763d72cf
     v1.20.0: eda6879710eb046d335162d4afe8494c6f8161142ad3188022852f64b92806a8
     v1.19.0: ec040d14ca03e8e4e504a85dae5353e04b5d9d8aea3df68699258992c0eb8d88
   amd64:
+    v1.22.0: 45e0556c42616af60ebe93bf4691056338b3ea0001c0201a6a8ff8b1dbc0652a
     v1.21.0: 85c78a35584971625bf1c3bcd46e5404a90396f979d7586f18b11119cb623e24
     v1.20.0: 44d5f550ef3f41f9b53155906e0229ffdbee4b19452b4df540265e29572b899c
     v1.19.0: 87d8ef70b61f2fe3d8b4a48f6f712fd798c6e293ed3723c1e4bbb5052098f0ae
@@ -174,6 +179,7 @@ kubelet_checksums:
     v1.19.1: 143bed1f04cba4e6749a72abf9258d19f31e1a310f94bd041cd30ce62a1f73ff
     v1.19.0: d8fa5a9739ecc387dfcc55afa91ac6f4b0ccd01f1423c423dbd312d787bbb6bf
   amd64:
+    v1.22.1: 2079780ad2ff993affc9b8e1a378bf5ee759bf87fdc446e6a892a0bbd7353683
     v1.21.1: e77ff3ea404b2e69519ea4dce41cbdf11ae2bcba75a86d409a76eecda1c76244
     v1.21.0: 681c81b7934ae2bf38b9f12d891683972d1fbbf6d7d97e50940a47b139d41b35
     v1.20.7: f96eda810ec4c8f40f6455eaab9be46a8d0958d72f8432b48a8a0d7c52867c5f
@@ -244,6 +250,7 @@ kubectl_checksums:
     v1.19.1: 332bbdb4560f9b7fcbb96c8f2cebbc4996e409384ca07510e5c5990998158c20
     v1.19.0: d4adf1b6b97252025cb2f7febf55daa3f42dc305822e3da133f77fd33071ec2f
   amd64:
+    v1.22.1: 78178a8337fc6c76780f60541fca7199f0f1a2e9c41806bded280a4a5ef665c9
     v1.21.1: 58785190e2b4fc6891e01108e41f9ba5db26e04cebb7c1ac639919a931ce9233
     v1.21.0: 9f74f2fa7ee32ad07e17211725992248470310ca1988214518806b39b1dad9f0
     v1.20.7: 2ea3006a64d48657ac72223a01c6df0e5b827703263f2586da28044ea9e97daf
@@ -314,6 +321,7 @@ kubeadm_checksums:
     v1.19.1: dcdabd2fdec9b4dd8febd1625e1fbbe15362919041e5f4ce3aab629e4aea7540
     v1.19.0: db1c432646e6e6484989b6f7191f3610996ac593409f12574290bfc008ea11f5
   amd64:
+    v1.22.1: 50a5f0d186d7aefae309539e9cc7d530ef1a9b45ce690801655c2bee722d978c
     v1.21.1: 1553c07a6a777c4cf71d45d5892915f0ea6586b8a80f9fea39e7a659d6315d42
     v1.21.0: 7bdaf0d58f0d286538376bc40b50d7e3ab60a3fe7a0709194f53f1605129550f
     v1.20.7: 7bb0b40ea1e44cab716ab12b8bb793b3130373f1d67cf7b888667597fe226c05
@@ -372,6 +380,7 @@ helm_archive_checksums:
   arm:
     v3.5.4: 1a9cc09ef06db29a0232d265f73625056a0cb089e5a16b0a5ef8e810e0533157
   amd64:
+    v3.7.0: 096e30f54c3ccdabe30a8093f8e128dba76bb67af697b85db6ed0453a2701bf9
     v3.5.4: a8ddb4e30435b5fd45308ecce5eaad676d64a5de9c89660b56face3fe990b318
   arm64:
     v3.5.4: 9db01522150a83a5d65b420171147448d8396c142d2c91af95e5ee77c1694176
@@ -492,7 +501,7 @@ haproxy_image_tag: 2.3
 # bundle with kubeadm; if not 'basic' upgrade can sometimes fail
 coredns_image_is_namespaced: "{{ (kube_major_version | regex_replace('^v', '') | float) >= 1.21 }}"
 
-coredns_version: "v1.7.0"
+coredns_version: "v1.8.4"
 coredns_image_repo: "{{ kube_image_repo }}{{'/coredns/coredns' if (coredns_image_is_namespaced | bool) else '/coredns' }}"
 coredns_image_tag: "{{ coredns_version if (coredns_image_is_namespaced | bool) else (coredns_version | regex_replace('^v', '')) }}"
 

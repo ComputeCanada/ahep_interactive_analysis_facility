@@ -6,7 +6,7 @@
         path: "{{ item }}"
         state: absent
       with_items:
-        - /etc/kubernetes/cloud_config
+        - /etc/kubernetes/cloudconfig
 - hosts: kube_control_plane[0]
   tasks:
     - name: Include kubespray-default variables

@@ -1,10 +1,10 @@
 ---
 # Kubernetes dashboard
 # RBAC required. see docs/getting-started.md for access details.
-# dashboard_enabled: false
+dashboard_enabled: true
 
 # Helm deployment
-helm_enabled: false
+helm_enabled: true
 
 # Registry deployment
 registry_enabled: false

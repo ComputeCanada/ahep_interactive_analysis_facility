@@ -1,0 +1,112 @@
+# syntax=docker/dockerfile:1
+
+FROM fermilab/fnal-wn-sl7:latest AS builder
+
+RUN curl -fsSL https://rpm.nodesource.com/setup_16.x | bash - 
+RUN yum -y install git make cmake3 gcc-c++ gcc binutils \
+         libX10-devel libXpm-devel libXft-devel libXext-devel python openssl-devel \
+         epel-release \
+         redhat-lsb-core gcc-gfortran pcre-devel \
+         mesa-libGL-devel mesa-libGLU-devel glew-devel ftgl-devel mysql-devel \
+         fftw-devel cfitsio-devel graphviz-devel libuuid-devel \
+         avahi-compat-libdns_sd-devel openldap-devel python-devel numpy \
+         libxml2-devel gsl-devel readline-devel R-devel R-Rcpp-devel R-RInside-devel\ 
+         wget bzip2 ca-certificates libglib2.0-0 libxext6 libsm6 libxrender1 git mercurial subversion  \
+         nodejs \
+         && yum -y clean all
+RUN npm install -g configurable-http-proxy 
+
+ARG web_conda=https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh
+RUN  wget --quiet $web_conda -O ~/miniconda.sh && \
+     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
+     rm ~/miniconda.sh &&  \
+     find /opt/conda/ -follow -type f -name '*.a' -delete && \
+     find /opt/conda/ -follow -type f -name '*.js.map' -delete && \
+     /opt/conda/bin/conda clean -afy
+
+
+ENV PATH=/opt/conda/bin:/opt/conda/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin: \ 
+    CONDA_SHLVL=1 \ 
+    CONDA_PROMPT_MODIFIER=(base)  \ 
+    CONDA_EXE=/opt/conda/bin/conda \ 
+    CONDA_PREFIX=/opt/conda \ 
+    CONDA_PYTHON_EXE=/opt/conda/bin/python \ 
+    CONDA_DEFAULT_ENV=base   
+
+#RUN ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+#    echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
+#    echo "conda activate base" >> ~/.bashrc && \
+#    echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.profile && \
+#    echo "conda activate base" >> ~/.profile 
+
+#RUN source /opt/conda/etc/profile.d/conda.sh && conda activate base && printenv
+
+
+RUN python3 -m pip install jupyterhub jupyterlab notebook numpy scipy iminuit matplotlib
+
+RUN cd /opt/ && git clone https://github.com/tejinc/coffea.git \
+    && cd coffea && git checkout dune_dev && pip install --editable .[dev] 
+
+
+FROM builder AS builder1
+
+#Download ROOT
+ARG ROOTVAR=6-24-02
+RUN cd /opt/ && wget --quiet https://github.com/root-project/root/archive/refs/tags/v$ROOTVAR.tar.gz  \
+    && tar -xzvf v$ROOTVAR.tar.gz && rm v$ROOTVAR.tar.gz  \
+    && mkdir root root_build && cd root_build
+#
+##build and install ROOT
+RUN cd /opt/root_build && cmake3 -DCMAKE_INSTALL_PREFIX=../root ../root-$ROOTVAR \
+    && cmake3 --build . -- install -j8
+
+#MAT
+ENV MANPATH=/opt/root/man: \
+    ROOT_INCLUDE_PATH=/opt/MAT/opt/include/PlotUtils:/opt/MAT/opt/include: \
+    LD_LIBRARY_PATH=/opt/MAT/opt/lib:/opt/root/lib \
+    LIBPATH=/opt/root/lib \
+    PLOTUTILSVERSION=ROOT6 \
+    PATH=/opt/MAT/opt/bin:/opt/root/bin:/opt/conda/bin:/opt/conda/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin: \
+    PLOTUTILSTYPE=STANDALONE \
+    PLOTUTILSROOT=/opt/MAT/opt/lib \
+    CLING_STANDARD_PCH=none \
+    ROOTSYS=/opt/root \
+    DYLD_LIBRARY_PATH=/opt/root/lib \
+    PYTHONPATH=/opt/root/lib \
+    SHLIB_PATH=/opt/root/lib 
+
+RUN cd /opt/ && git clone https://github.com/MinervaExpt/MAT.git && cd MAT/ && echo $`pwd`  \
+    && mkdir -p ./opt/build && cd opt/build/ && cmake3 ../../ -DCMAKE_INSTALL_PREFIX=`pwd`/.. -DCMAKE_BUILD_TYPE=Release \
+    && make install -j4
+
+
+RUN source /opt/root/bin/thisroot.sh && source  /opt/MAT/opt/build/setup_MAT.sh && printenv
+
+FROM builder AS final
+
+COPY --from=builder1 /opt/root /opt/root
+COPY --from=builder1 /opt/MAT /opt/MAT
+ADD configs /srv/jupyterhub/configs
+RUN ln -s /srv/jupyterhub/configs/jhub_auth_dummy.py jupyterhub_config.py  && ls /srv/jupyterhub/ 
+
+
+ENV MANPATH=/opt/root/man: \
+    ROOT_INCLUDE_PATH=/opt/MAT/opt/include/PlotUtils:/opt/MAT/opt/include: \
+    LD_LIBRARY_PATH=/opt/MAT/opt/lib:/opt/root/lib \
+    LIBPATH=/opt/root/lib \
+    PLOTUTILSVERSION=ROOT6 \
+    PATH=/opt/MAT/opt/bin:/opt/root/bin:/opt/conda/bin:/opt/conda/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin: \
+    PLOTUTILSTYPE=STANDALONE \
+    PLOTUTILSROOT=/opt/MAT/opt/lib \
+    CLING_STANDARD_PCH=none \
+    ROOTSYS=/opt/root \
+    DYLD_LIBRARY_PATH=/opt/root/lib \
+    PYTHONPATH=/opt/root/lib \
+    SHLIB_PATH=/opt/root/lib 
+
+WORKDIR /srv/jupyterhub/
+RUN ln -s /srv/jupyterhub/configs/jhub_auth_dummy.py jupyterhub_config.py  && ls /srv/jupyterhub/ && \
+    yum -y install vim sshfs && yum -y clean all \
+
+CMD ["/bin/bash"]
+

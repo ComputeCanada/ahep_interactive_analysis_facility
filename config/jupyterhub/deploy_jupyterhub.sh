@@ -1,5 +1,5 @@
 helm upgrade --cleanup-on-fail \
-  --install jhub jupyterhub/jupyterhub \
+  --install jupyterhub jupyterhub/jupyterhub \
   --values config.yaml 
 #  --namespace dune \
 #  --create-namespace \

@@ -11,3 +11,20 @@
 
 singleuser:
   defaultUrl: "/lab"
+
+ingress:
+  enabled: true
+  hosts: 
+    - axion.axialvector-lab.com
+
+
+proxy:
+  service:
+    loadBalancerIP: 206.12.97.84
+  https:
+    enabled: true
+    hosts:
+      - axion.axialvector-lab.com
+    letsencrypt:
+      contactEmail: tejinc@yorku.ca
+

@@ -1,0 +1,31 @@
+---
+- name: Set multiple options on GlusterFS volume
+  hosts: gfs-cluster
+  tasks:
+    - name: Set options
+      gluster_volume:
+        state: present
+        name: "{{ item }}"
+        options:
+          { performance.cache-size: 128MB,
+            write-behind: 'off',
+            quick-read: 'on',
+            nfs.disable: 'off'
+          }
+      loop:
+        - gluster
+
+- name: Mount GlusterFS
+  hosts: k8s_cluster
+  tasks:
+    - name: Mount GlusterFS to K8s Cluster
+      mount:
+        name: "/mnt/{{ item }}"
+        src: "axion-gfs-node-nf-1:/{{ item }}"
+        fstype: glusterfs
+        state: mounted
+      loop:
+        - gluster
+
+
+

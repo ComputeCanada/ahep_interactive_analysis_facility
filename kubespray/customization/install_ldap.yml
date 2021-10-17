@@ -1,0 +1,15 @@
+- name: Install LDAP for Bastion
+  hosts: bastion[0]
+  tasks:
+    - name: Install all the packages
+      yum:
+        name: "{{ item }}"
+        state: present
+        update_cache: True
+      loop:
+        - openldap 
+        - compat-openldap 
+        - openldap-clients 
+        - openldap-servers 
+        - openldap-servers-sql 
+        - openldap-devel

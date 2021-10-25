@@ -1,0 +1,12 @@
+- name: Users Create
+  hosts: all
+  tasks:
+     - name: Create a login user
+       user:
+         name: axion
+         password: '$6$N/eXhxN4k$MB/V6JoKbPuqZ.GCVRZkmcfxTIWK3f5UHIe4fy/ZysGNNlumteW4bmfUold.v.ixqaHvRrIexGh1VIz.usrE41'
+         groups: docker, sudo
+         shell: /bin/bash
+         system: no
+         createhome: yes
+         home: /home/axion

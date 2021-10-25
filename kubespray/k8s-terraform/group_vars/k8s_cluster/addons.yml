@@ -84,7 +84,7 @@ rbd_provisioner_enabled: false
 # rbd_provisioner_reclaim_policy: Delete
 
 # Nginx ingress controller deployment
-ingress_nginx_enabled: false
+ingress_nginx_enabled: true
 # ingress_nginx_host_network: false
 ingress_publish_status_address: ""
 # ingress_nginx_nodeselector:
@@ -127,14 +127,15 @@ ingress_alb_enabled: false
 # alb_ingress_aws_debug: "false"
 
 # Cert manager deployment
-cert_manager_enabled: false
+# cert_manager_enabled: true
 # cert_manager_namespace: "cert-manager"
 
 # MetalLB deployment
-metallb_enabled: false
+metallb_enabled: true
 metallb_speaker_enabled: true
-# metallb_ip_range:
-#   - "10.5.0.50-10.5.0.99"
+metallb_ip_range:
+  - "192.168.0.10-192.168.0.20"
+    #  - "10.5.0.50-10.5.0.99"
 # metallb_speaker_nodeselector:
 #   kubernetes.io/os: "linux"
 # metallb_controller_nodeselector:
@@ -158,6 +159,7 @@ metallb_speaker_enabled: true
 #     value: ""
 #     effect: "NoSchedule"
 # metallb_version: v0.9.6
+metallb_version: v0.10.2
 # metallb_protocol: "layer2"
 # metallb_port: "7472"
 # metallb_limits_cpu: "100m"

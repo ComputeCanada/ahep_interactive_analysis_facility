@@ -17,28 +17,28 @@ ssh_user = "centos"
 # 0|1 bastion nodes
 number_of_bastions = 1
 
-flavor_bastion = "b81a5976-d70e-4963-8715-d8f858af148a" #c2-7.5gb-36
+flavor_bastion = "8c4dad4f-807d-4240-91e0-0fb958a1c671" #c2-15gb-72
 
 # standalone etcds
-number_of_etcd = 1
+number_of_etcd = 0
 flavor_etcd = "22f7655d-45c1-4e01-83a0-2929e686f19b" #c2-7.5gb-36
 
 # masters
 number_of_k8s_masters = 0
 number_of_k8s_masters_no_etcd = 0
-number_of_k8s_masters_no_floating_ip = 0
-number_of_k8s_masters_no_floating_ip_no_etcd = 1
+number_of_k8s_masters_no_floating_ip = 1
+number_of_k8s_masters_no_floating_ip_no_etcd = 0
 flavor_k8s_master = "57a73012-a294-4caf-b7b8-8e98c8e9bee3" #c8-90gb-288
 
 # nodes
 number_of_k8s_nodes = 0
-number_of_k8s_nodes_no_floating_ip = 1
+number_of_k8s_nodes_no_floating_ip = 2
 flavor_k8s_node = "39b3870c-e0f6-42cb-a565-f90db442629a" #c16-120gb-576
 
 # GlusterFS
 # either 0 or more than one
 number_of_gfs_nodes_no_floating_ip = 1
-gfs_volume_size_in_gb = 10
+gfs_volume_size_in_gb = 100
 # Container Linux does not support GlusterFS
 image_gfs = "CentOS-7-x64-2020-11"
 #image_gfs_uuid = "4cade8a8-d7df-40e8-8bd3-f58e2e17b523"

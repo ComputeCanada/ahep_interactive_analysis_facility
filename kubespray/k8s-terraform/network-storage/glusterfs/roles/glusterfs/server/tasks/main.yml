@@ -84,6 +84,20 @@
     src: test-file.txt
   when: groups['gfs-cluster'] is defined and inventory_hostname == groups['gfs-cluster'][0]
 
+- name: Enable GlusterFS NFS:
+  command: "touch /tmp/ansible_was_here"
+
+- name: Set multiple options on GlusterFS volume
+  gluster_volume:
+    state: present
+    name: "{{ gluster_brick_name }}"
+    options:
+      { performance.cache-size: 128MB,
+        write-behind: 'off',
+        quick-read: 'on'
+        nfs.disable: 'off'
+      }
+
 - name: Unmount glusterfs
   mount:
     name: "{{ gluster_mount_dir }}"

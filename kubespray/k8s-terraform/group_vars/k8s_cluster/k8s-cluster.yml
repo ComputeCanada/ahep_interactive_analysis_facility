@@ -65,10 +65,10 @@ credentials_dir: "{{ inventory_dir }}/credentials"
 
 # Choose network plugin (cilium, calico, weave or flannel. Use cni for generic cni plugin)
 # Can also be set to 'cloud', which lets the cloud provider setup appropriate routing
-kube_network_plugin: weave
+kube_network_plugin: calico
 
 # Setting multi_networking to true will install Multus: https://github.com/intel/multus-cni
-kube_network_plugin_multus: false
+kube_network_plugin_multus: true
 
 # Kubernetes internal network for services, unused block of space.
 kube_service_addresses: 10.233.0.0/18
@@ -127,7 +127,7 @@ kube_proxy_mode: ipvs
 
 # configure arp_ignore and arp_announce to avoid answering ARP queries from kube-ipvs0 interface
 # must be set to true for MetalLB to work
-kube_proxy_strict_arp: false
+kube_proxy_strict_arp: true
 
 # A string slice of values which specify the addresses to use for NodePorts.
 # Values may be valid IP blocks (e.g. 1.2.3.0/24, 1.2.3.4/32).

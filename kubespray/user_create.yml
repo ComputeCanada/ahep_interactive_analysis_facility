@@ -1,0 +1,38 @@
+- name: Check ansible version
+  import_playbook: ansible_version.yml
+
+- name: Ensure compatibility with old groups
+  import_playbook: legacy_groups.yml
+
+- name: Gather facts
+  tags: always
+  import_playbook: facts.yml
+
+
+- hosts: all
+  gather_facts: False
+  #environment: "{{ proxy_disable_env }}"
+  tasks:
+    - name: Make sure we have a 'wheel' group
+      group:
+        name: wheel
+        state: present
+
+    - name: Allow 'wheel' group to have passwordless sudo
+      lineinfile:
+        dest: /etc/sudoers
+        state: present
+        regexp: '^%wheel'
+        line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+        validate: visudo -cf %s
+
+    - name: Create a login user
+      user:
+        name: axion
+        password: $6$N/eXhxN4k$MB/V6JoKbPuqZ.GCVRZkmcfxTIWK3f5UHIe4fy/ZysGNNlumteW4bmfUold.v.ixqaHvRrIexGh1VIz.usrE41
+        groups: wheel
+        shell: /bin/bash
+        system: no
+        createhome: yes
+        home: /home/axion
+

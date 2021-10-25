@@ -1,0 +1,122 @@
+# This file can update the JupyterHub Helm chart's default configuration values.
+# #
+# # For reference see the configuration reference and default values, but make
+# # sure to refer to the Helm chart version of interest to you!
+# #
+# # Introduction to YAML:     https://www.youtube.com/watch?v=cdLNKUoMc6c
+# # Chart config reference:   https://zero-to-jupyterhub.readthedocs.io/en/stable/resources/reference.html
+# # Chart default values:     https://github.com/jupyterhub/zero-to-jupyterhub-k8s/blob/HEAD/jupyterhub/values.yaml
+# # Available chart versions: https://jupyterhub.github.io/helm-chart/
+# #
+
+
+#hub:
+#  config:
+#    GlobusOAuthenticator:
+#      client_id: 87ad2cfc-a665-464a-96b3-8b78443bf4f0
+#      client_secret: 9NFG2Ho0JfbiEHfi845OOZGuD8uK2jM8Ym0zs5cuIbM=
+#      oauth_callback_url: https://axion.axialvector-lab.com/hub/oauth_callback
+#      identity_provider: Compute Canada
+#    JupyterHub:
+#      authenticator_class: globus
+
+hub:
+  config:
+    GlobusOAuthenticator:
+      client_id: 6d08cebc-6535-4f64-b04a-5aef6596909e
+      client_secret: xoS1y8gI0q774TQE4CiiswqAHt06wY7PfN7c6NyOvdo=
+      oauth_callback_url: https://axion.axialvector-lab.com/hub/oauth_callback
+      #identity_provider: Compute Canada
+    JupyterHub:
+      authenticator_class: globus                                             
+#hub:
+#  config:
+#    Authenticator:
+#      admin_users: 'tejinc'
+
+
+singleuser:
+  defaultUrl: "/lab"
+  storage:
+    extraVolumes:
+      - name: cvmfs-fermilab
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-fermilab
+      - name: cvmfs-dune
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-dune
+      - name: cvmfs-larsoft
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-larsoft
+
+    extraVolumeMounts:
+      - name: cvmfs-fermilab
+        mountPath: /cvmfs/fermilab.opensciencegrid.org/
+      - name: cvmfs-larsoft
+        mountPath: /cvmfs/larsoft.opensciencegrid.org/
+      - name: cvmfs-dune
+        mountPath: /cvmfs/dune.opensciencegrid.org/
+#  extraEnv:
+#    JUPYERHUB_SINGLEUSER_APP: "jupyter_server.serverapp.ServerApp"
+
+#  image:
+#    name: jupyter/minimal-notebook
+#    tag: 2343e33dec46
+#  profileList:
+#    - display_name: "Minimal environment"
+#      description: "To avoid too much bells and whistles: Python."
+#      default: true
+#    - display_name: "Datascience environment"
+#      description: "If you want the additional bells and whistles: Python, R, and Julia."
+#      kubespawner_override:
+#        image: jupyter/datascience-notebook:2343e33dec46
+#    - display_name: "Spark environment"
+#      description: "The Jupyter Stacks spark image!"
+#      kubespawner_override:
+#        image: jupyter/all-spark-notebook:2343e33dec46
+#    - display_name: "Learning Data Science"
+#      description: "Datascience Environment with Sample Notebooks" #      kubespawner_override: #        image: jupyter/datascience-notebook:2343e33dec46
+#        lifecycle_hooks:
+#          postStart:
+#            exec:
+#              command:
+#                - "sh"
+#                - "-c"
+#                - >
+#                  gitpuller https://github.com/data-8/materials-fa17 master materials-fa;
+
+  #image:
+    # You should replace the "latest" tag with a fixed version from:
+    # https://hub.docker.com/r/jupyter/datascience-notebook/tags/
+    # Inspect the Dockerfile at:
+    # https://github.com/jupyter/docker-stacks/tree/HEAD/datascience-notebook/Dockerfile
+    #name: jupyter/datascience-notebook
+    #name: tejinc/dune_iaf
+    #tag: latest
+
+ingress:
+  enabled: true
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+
+#  ingressClassName: nginx
+#  pathType: Prefix
+  hosts: 
+    - axion.axialvector-lab.com
+#
+#
+proxy:
+  service:
+    type: ClusterIP
+#    nodePorts:
+#      http: 32001
+#      https: 32002
+# https:
+#   enabled: true
+#    hosts:
+#      - axion.axialvector-lab.com
+#    letsencrypt:
+#      contactEmail: tejinc@yorku.ca
+

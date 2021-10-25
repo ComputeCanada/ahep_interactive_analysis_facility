@@ -3,3 +3,7 @@
 *.conf
 *.creds
 *.swp
+*.swo
+*.out
+*-openrc.sh  
+*.bk

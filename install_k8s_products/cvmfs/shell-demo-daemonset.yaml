@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: shell-demo
+  namespace: jupyterhub
+spec:
+  selector:
+    matchLabels:
+      name: shell-demo
+  template:
+    metadata:
+      labels:
+        name: shell-demo
+    spec:
+      volumes:
+      - name: cvmfs-fermilab
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-fermilab
+      - name: cvmfs-dune
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-dune
+      - name: cvmfs-larsoft
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-larsoft
+    
+      containers:
+      - name: fnal-wn-sl7
+        image: fermilab/fnal-wn-sl7:latest
+        command: ["/bin/bash", "-c","sleep 10h"]
+        volumeMounts:
+        - name: cvmfs-fermilab
+          mountPath: /cvmfs/fermilab.opensciencegrid.org/
+        - name: cvmfs-larsoft
+          mountPath: /cvmfs/larsoft.opensciencegrid.org/
+        - name: cvmfs-dune
+          mountPath: /cvmfs/dune.opensciencegrid.org/

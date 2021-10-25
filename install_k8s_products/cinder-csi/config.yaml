@@ -1,0 +1,60 @@
+storageClass:
+  enabled: false
+  delete:
+    isDefault: true
+    allowVolumeExpansion: true
+  retain:
+    isDefault: false
+    allowVolumeExpansion: true
+  custom: |-
+    ---
+    apiVersion: storage.k8s.io/v1
+    kind: StorageClass
+    metadata:
+      name: csi-cinder-sc-delete
+      annotations:
+        storageclass.kubernetes.io/is-default-class: "true"
+    provisioner: cinder.csi.openstack.org
+    reclaimPolicy: Delete
+    allowVolumeExpansion: true
+    allowedTopologies:
+    - matchLabelExpressions:
+      - key: topology.cinder.csi.openstack.org/zone
+        values:
+        - nova
+        - Compute
+    parameters:
+      availability: nova
+    ---
+    apiVersion: storage.k8s.io/v1
+    kind: StorageClass
+    metadata:
+      name: csi-cinder-sc-retain
+    provisioner: cinder.csi.openstack.org
+    reclaimPolicy: Retain
+    allowVolumeExpansion: true
+    allowedTopologies:
+    - matchLabelExpressions:
+      - key: topology.cinder.csi.openstack.org/zone
+        values:
+        - nova
+        - Compute
+    parameters:
+      availability: nova
+
+
+priorityClassName: ""
+
+secret:
+  enabled: false
+  create: false
+  name: cinder-csi-cloud-config
+  data:
+#      [Global]
+#      auth-url=https://url:5000
+#      auth-type=v3applicationcredential
+#      application-credential-id=credential_id
+#      application-credential-secret=credential_password
+#
+#      [BlockStorage]
+#      ignore-volume-az=True

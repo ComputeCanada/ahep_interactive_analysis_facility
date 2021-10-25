@@ -1,0 +1,53 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: cvmfs-fermilab
+# Local storage does not need a provisioner
+provisioner: kubernetes.io/no-provisioner
+# Give it out as-is
+reclaimPolicy: Retain
+volumeBindingMode: Immediate
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: cvmfs-fermilab
+spec:
+  capacity:
+    storage: 2Gi
+  volumeMode: Filesystem
+  accessModes:
+  - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: cvmfs-fermilab
+  cephfs:
+    monitors:
+    - 10.30.201.3:6789
+    - 10.30.202.3:6789
+    - 10.30.203.3:6789
+    path: /volumes/_nogroup/5ae392d7-02a4-4f67-b0bb-4a2824563931/cvmfs-k8s/fermilab.opensciencegrid.org
+    user: cvmfs-cache-read
+    secretRef:
+      name: cvmfs-cache-read
+    readOnly: true
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: NotIn
+          values:
+          -  fake
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: cvmfs-fermilab
+  namespace: cvmfs
+spec:
+  accessModes:
+  - ReadOnlyMany
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: cvmfs-fermilab

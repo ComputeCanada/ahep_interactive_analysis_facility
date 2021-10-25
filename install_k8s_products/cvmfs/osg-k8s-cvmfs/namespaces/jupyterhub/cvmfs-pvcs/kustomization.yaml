@@ -1,0 +1,6 @@
+namespace: jupyterhub
+namePrefix: jupyterhub-
+bases:
+#- ../../../cvmfs-pvcs-cephfs/
+#- ../../../cvmfs-pvcs-gluster/
+- ../../../cvmfs-pvcs/

@@ -1,4 +1,4 @@
-ARG ROOT_CONTAINER=fermilab/fnal-wn-sl7:latest
+ARG ROOT_CONTAINER=centos:centos7
 
 FROM $ROOT_CONTAINER
 
@@ -12,10 +12,17 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 USER root
 
-FROM fermilab/fnal-wn-sl7:latest AS builder
-
-RUN yum -y install git make cmake3 gcc-c++ gcc binutils vim \
-         && yum -y clean all
+RUN yum -y install epel-release && \
+    yum repolist && \
+    yum -y install \
+    tini \
+    wget \
+    ca-certificates \
+    sudo \
+    which \
+    vim \
+    bash-completion &&\
+    yum -y clean all
 
 # Configure environment
 ENV CONDA_DIR=/opt/conda \
@@ -29,97 +36,110 @@ ENV CONDA_DIR=/opt/conda \
 ENV PATH="${CONDA_DIR}/bin:${PATH}" \
     HOME="/home/${NB_USER}"
 
-ARG web_conda=https://repo.anaconda.com/miniconda/Miniconda3-py38_4.10.3-Linux-x86_64.sh
-RUN  wget --quiet $web_conda -O ~/miniconda.sh && \
-     /bin/bash ~/miniconda.sh -b -p /opt/conda && \
-     rm ~/miniconda.sh &&  \
-     find /opt/conda/ -follow -type f -name '*.a' -delete && \
-     find /opt/conda/ -follow -type f -name '*.js.map' -delete && \
-     /opt/conda/bin/conda clean -afy
+# Copy a script that we will use to correct permissions after running certain commands
+COPY fix-permissions /usr/local/bin/fix-permissions
+RUN chmod a+rx /usr/local/bin/fix-permissions
+
+# Enable prompt color in the skeleton .bashrc before creating the default NB_USER
+# hadolint ignore=SC2016
+RUN echo  'force_color_prompt=yes' >> /etc/skel/.bashrc && \
+    echo  'alias vi=vim' >> /etc/skel/.bashrc && \
+   # Add call to conda init script see https://stackoverflow.com/a/58081608/4413446
+   echo 'eval "$(command conda shell.bash hook 2> /dev/null)"' >> /etc/skel/.bashrc
+
+# Create NB_USER with name jovyan user with UID=1000 and in the 'users' group
+# and make sure these dirs are writable by the `users` group.
+RUN echo "auth requisite pam_deny.so" >> /etc/pam.d/su && \
+    touch /etc/sudoers && \
+    sed -i.bak -e 's/^%admin/#%admin/' /etc/sudoers && \
+    sed -i.bak -e 's/^%sudo/#%sudo/' /etc/sudoers && \
+    useradd -l -m -s /bin/bash -N -u "${NB_UID}" "${NB_USER}" && \
+    mkdir -p "${CONDA_DIR}" && \
+    chown "${NB_USER}:${NB_GID}" "${CONDA_DIR}" && \
+    chmod g+w /etc/passwd && \
+    fix-permissions "${HOME}" && \
+    fix-permissions "${CONDA_DIR}"
 
 
-ENV PATH=/opt/conda/bin:/opt/conda/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin: \ 
-    CONDA_SHLVL=1 \ 
-    CONDA_PROMPT_MODIFIER=(base)  \ 
-    CONDA_EXE=/opt/conda/bin/conda \ 
-    CONDA_PREFIX=/opt/conda \ 
-    CONDA_PYTHON_EXE=/opt/conda/bin/python \ 
-    CONDA_DEFAULT_ENV=base   
 
-#RUN ln -s /opt/conda/etc/profile.d/conda.sh /etc/profile.d/conda.sh
-#    echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.bashrc && \
-#    echo "conda activate base" >> ~/.bashrc && \
-#    echo ". /opt/conda/etc/profile.d/conda.sh" >> ~/.profile && \
-#    echo "conda activate base" >> ~/.profile 
+USER ${NB_UID}
+ARG PYTHON_VERSION=default
 
-#RUN source /opt/conda/etc/profile.d/conda.sh && conda activate base && printenv
+# Setup work directory for backward-compatibility
+RUN mkdir "/home/${NB_USER}/work" && \
+    fix-permissions "/home/${NB_USER}"
 
+# Install conda as jovyan and check the sha256 sum provided on the download site
+WORKDIR /tmp
 
-RUN python3 -m pip install jupyterhub jupyterlab notebook numpy scipy iminuit matplotlib
+# ---- Miniforge installer ----
+# Check https://github.com/conda-forge/miniforge/releases
+# Package Manager and Python implementation to use (https://github.com/conda-forge/miniforge)
+# We're using Mambaforge installer, possible options:
+# - conda only: either Miniforge3 to use Python or Miniforge-pypy3 to use PyPy
+# - conda + mamba: either Mambaforge to use Python or Mambaforge-pypy3 to use PyPy
+# Installation: conda, mamba, pip
+RUN set -x && \
+    # Miniforge installer
+    miniforge_arch=$(uname -m) && \
+    miniforge_installer="Mambaforge-Linux-${miniforge_arch}.sh" && \
+    wget --quiet "https://github.com/conda-forge/miniforge/releases/latest/download/${miniforge_installer}" && \
+    /bin/bash "${miniforge_installer}" -f -b -p "${CONDA_DIR}" && \
+    rm "${miniforge_installer}" && \
+    # Conda configuration see https://conda.io/projects/conda/en/latest/configuration.html
+    conda config --system --set auto_update_conda false && \
+    conda config --system --set show_channel_urls true && \
+    if [[ "${PYTHON_VERSION}" != "default" ]]; then mamba install --quiet --yes python="${PYTHON_VERSION}"; fi && \
+    mamba list python | grep '^python ' | tr -s ' ' | cut -d ' ' -f 1,2 >> "${CONDA_DIR}/conda-meta/pinned" && \
+    # Using conda to update all packages: https://github.com/mamba-org/mamba/issues/1092
+    conda update --all --quiet --yes && \
+    conda clean --all -f -y && \
+    rm -rf "/home/${NB_USER}/.cache/yarn" && \
+    fix-permissions "${CONDA_DIR}" && \
+    fix-permissions "/home/${NB_USER}"
 
-RUN cd /opt/ && git clone https://github.com/tejinc/coffea.git \
-    && cd coffea && git checkout dune_dev && pip install --editable .[dev] 
+# Install Jupyter Notebook, Lab, and Hub
+# Generate a notebook server config
+# Cleanup temporary files
+# Correct permissions
+# Do all this in a single RUN command to avoid duplicating all of the
+# files across image layers when the permissions change
+RUN mamba install --quiet --yes \
+    'notebook' \
+    'jupyterhub' \
+    'jupyterlab' && \
+    mamba clean --all -f -y && \
+    npm cache clean --force && \
+    jupyter notebook --generate-config && \
+    jupyter lab clean && \
+    rm -rf "/home/${NB_USER}/.cache/yarn" && \
+    fix-permissions "${CONDA_DIR}" && \
+    fix-permissions "/home/${NB_USER}"
 
+EXPOSE 8888
 
-FROM builder AS builder1
+#USER root
+#CMD ["/bin/bash"]
 
-#Download ROOT
-ARG ROOTVAR=6-24-02
-RUN cd /opt/ && wget --quiet https://github.com/root-project/root/archive/refs/tags/v$ROOTVAR.tar.gz  \
-    && tar -xzvf v$ROOTVAR.tar.gz && rm v$ROOTVAR.tar.gz  \
-    && mkdir root root_build && cd root_build
-#
-##build and install ROOT
-RUN cd /opt/root_build && cmake3 -DCMAKE_INSTALL_PREFIX=../root ../root-$ROOTVAR \
-    && cmake3 --build . -- install -j8
+# Configure container startup
+ENTRYPOINT ["tini", "-g", "--"]
+CMD ["start-notebook.sh"]
 
-#MAT
-ENV MANPATH=/opt/root/man: \
-    ROOT_INCLUDE_PATH=/opt/MAT/opt/include/PlotUtils:/opt/MAT/opt/include: \
-    LD_LIBRARY_PATH=/opt/MAT/opt/lib:/opt/root/lib \
-    LIBPATH=/opt/root/lib \
-    PLOTUTILSVERSION=ROOT6 \
-    PATH=/opt/MAT/opt/bin:/opt/root/bin:/opt/conda/bin:/opt/conda/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin: \
-    PLOTUTILSTYPE=STANDALONE \
-    PLOTUTILSROOT=/opt/MAT/opt/lib \
-    CLING_STANDARD_PCH=none \
-    ROOTSYS=/opt/root \
-    DYLD_LIBRARY_PATH=/opt/root/lib \
-    PYTHONPATH=/opt/root/lib \
-    SHLIB_PATH=/opt/root/lib 
+# Copy local files as late as possible to avoid cache busting
+COPY start.sh start-notebook.sh start-singleuser.sh /usr/local/bin/
+# Currently need to have both jupyter_notebook_config and jupyter_server_config to support classic and lab
+COPY jupyter_notebook_config.py /etc/jupyter/
 
-RUN cd /opt/ && git clone https://github.com/MinervaExpt/MAT.git && cd MAT/ && echo $`pwd`  \
-    && mkdir -p ./opt/build && cd opt/build/ && cmake3 ../../ -DCMAKE_INSTALL_PREFIX=`pwd`/.. -DCMAKE_BUILD_TYPE=Release \
-    && make install -j4
+# Fix permissions on /etc/jupyter as root
+USER root
 
+# Prepare upgrade to JupyterLab V3.0 #1205
+RUN sed -re "s/c.NotebookApp/c.ServerApp/g" \
+    /etc/jupyter/jupyter_notebook_config.py > /etc/jupyter/jupyter_server_config.py && \
+    fix-permissions /etc/jupyter/
 
-RUN source /opt/root/bin/thisroot.sh && source  /opt/MAT/opt/build/setup_MAT.sh && printenv
+# Switch back to jovyan to avoid accidental container runs as root
+USER ${NB_UID}
 
-FROM builder AS final
-
-COPY --from=builder1 /opt/root /opt/root
-COPY --from=builder1 /opt/MAT /opt/MAT
-ADD configs /srv/jupyterhub/configs
-RUN ln -s /srv/jupyterhub/configs/jhub_auth_dummy.py jupyterhub_config.py  && ls /srv/jupyterhub/ 
-
-
-ENV MANPATH=/opt/root/man: \
-    ROOT_INCLUDE_PATH=/opt/MAT/opt/include/PlotUtils:/opt/MAT/opt/include: \
-    LD_LIBRARY_PATH=/opt/MAT/opt/lib:/opt/root/lib \
-    LIBPATH=/opt/root/lib \
-    PLOTUTILSVERSION=ROOT6 \
-    PATH=/opt/MAT/opt/bin:/opt/root/bin:/opt/conda/bin:/opt/conda/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin: \
-    PLOTUTILSTYPE=STANDALONE \
-    PLOTUTILSROOT=/opt/MAT/opt/lib \
-    CLING_STANDARD_PCH=none \
-    ROOTSYS=/opt/root \
-    DYLD_LIBRARY_PATH=/opt/root/lib \
-    PYTHONPATH=/opt/root/lib \
-    SHLIB_PATH=/opt/root/lib 
-
-WORKDIR /srv/jupyterhub/
-RUN ln -s /srv/jupyterhub/configs/jhub_auth_dummy.py jupyterhub_config.py  && ls /srv/jupyterhub/ && \
-    yum -y install vim sshfs && yum -y clean all \
-
-CMD ["/bin/bash"]
+WORKDIR "${HOME}"
 

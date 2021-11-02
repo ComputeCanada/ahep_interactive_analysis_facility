@@ -10,7 +10,7 @@ LOGGER = logging.getLogger(__name__)
 @pytest.mark.parametrize(
     "package_manager, version_arg",
     [
-        ("apt", "--version"),
+        ("yum", "--version"),
         ("conda", "--version"),
         ("mamba", "--version"),
         ("npm", "--version"),

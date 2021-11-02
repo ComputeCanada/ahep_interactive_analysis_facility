@@ -1,28 +1,49 @@
 ARG ROOT_CONTAINER=centos:centos7
 
 FROM $ROOT_CONTAINER
+LABEL maintainer="Tejin Cai"
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
-ARG NB_USER="jovyan"
-ARG NB_UID="1000"
-ARG NB_GID="100"
+ARG NB_GROUP="jupyter"
+ARG NB_USER="jupyter"
+ARG NB_UID="56344"
+ARG NB_GID="8609"
 
 # Fix DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 USER root
 
-RUN yum -y install epel-release && \
-    yum repolist && \
-    yum -y install \
-    tini \
+RUN yum -y update \
+    && yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.9-1.x86_64.rpm \
+    && yum -y install epel-release \
+    && yum -y install \
     wget \
+    gettext \
+    bzip2 \
     ca-certificates \
     sudo \
+    locales \
+    fonts-liberation \
+    run-one \
+    wget \
+    net-tools \
+    tcpdump \
+    nss_wrapper \
+    sssd-client \
+    openssl \
+    emacs \
+    git \
+    unzip \
+    krb5-workstation \
+    krb5-libs \
+    nano \
+    vim  \
     which \
-    vim \
-    bash-completion &&\
-    yum -y clean all
+    bash-completion \
+    redhat-lsb-core \
+    glibc-headers \
+    tini \
+    && yum -y clean all
 
 # Configure environment
 ENV CONDA_DIR=/opt/conda \
@@ -30,6 +51,7 @@ ENV CONDA_DIR=/opt/conda \
     NB_USER="${NB_USER}" \
     NB_UID=${NB_UID} \
     NB_GID=${NB_GID} \
+    NB_GROUP=${NB_GROUP} \
     LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
     LANGUAGE=en_US.UTF-8
@@ -43,6 +65,7 @@ RUN chmod a+rx /usr/local/bin/fix-permissions
 # Enable prompt color in the skeleton .bashrc before creating the default NB_USER
 # hadolint ignore=SC2016
 RUN echo  'force_color_prompt=yes' >> /etc/skel/.bashrc && \
+    echo  'export PS1="\e[1;32m[\u@\h \W]\$ \e[m "' >> /etc/skel/.bashrc && \
     echo  'alias vi=vim' >> /etc/skel/.bashrc && \
    # Add call to conda init script see https://stackoverflow.com/a/58081608/4413446
    echo 'eval "$(command conda shell.bash hook 2> /dev/null)"' >> /etc/skel/.bashrc
@@ -53,7 +76,8 @@ RUN echo "auth requisite pam_deny.so" >> /etc/pam.d/su && \
     touch /etc/sudoers && \
     sed -i.bak -e 's/^%admin/#%admin/' /etc/sudoers && \
     sed -i.bak -e 's/^%sudo/#%sudo/' /etc/sudoers && \
-    useradd -l -m -s /bin/bash -N -u "${NB_UID}" "${NB_USER}" && \
+    groupadd -r "${NB_GROUP}" --gid "${NB_GID}" && \
+    useradd -l -m -s /bin/bash -N -g "${NB_GROUP}" -u "${NB_UID}" "${NB_USER}" && \
     mkdir -p "${CONDA_DIR}" && \
     chown "${NB_USER}:${NB_GID}" "${CONDA_DIR}" && \
     chmod g+w /etc/passwd && \
@@ -63,7 +87,7 @@ RUN echo "auth requisite pam_deny.so" >> /etc/pam.d/su && \
 
 
 USER ${NB_UID}
-ARG PYTHON_VERSION=default
+ARG PYTHON_VERSION="3.8.6"
 
 # Setup work directory for backward-compatibility
 RUN mkdir "/home/${NB_USER}/work" && \
@@ -118,8 +142,6 @@ RUN mamba install --quiet --yes \
 
 EXPOSE 8888
 
-#USER root
-#CMD ["/bin/bash"]
 
 # Configure container startup
 ENTRYPOINT ["tini", "-g", "--"]
@@ -136,10 +158,13 @@ USER root
 # Prepare upgrade to JupyterLab V3.0 #1205
 RUN sed -re "s/c.NotebookApp/c.ServerApp/g" \
     /etc/jupyter/jupyter_notebook_config.py > /etc/jupyter/jupyter_server_config.py && \
-    fix-permissions /etc/jupyter/
+    fix-permissions /etc/jupyter/ && \
+    cp /etc/skel/.bashrc ${HOME}
+
+RUN wget https://authentication.fnal.gov/krb5conf/SL7/krb5.conf --output-document=/etc/krb5.conf && \
+    echo "$(awk '{print} /libdefaults/ && !n {print "udp_preference_limit = 1"; n++}' /etc/krb5.conf)" > /etc/krb5.conf
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER ${NB_UID}
-
+#USER root
 WORKDIR "${HOME}"
-

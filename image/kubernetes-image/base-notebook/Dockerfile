@@ -42,7 +42,6 @@ RUN yum -y update \
     bash-completion \
     redhat-lsb-core \
     glibc-headers \
-    tini \
     && yum -y clean all
 
 # Configure environment
@@ -129,6 +128,7 @@ RUN set -x && \
 # Do all this in a single RUN command to avoid duplicating all of the
 # files across image layers when the permissions change
 RUN mamba install --quiet --yes \
+    'tini' \
     'notebook' \
     'jupyterhub' \
     'jupyterlab' && \
@@ -144,6 +144,8 @@ EXPOSE 8888
 
 
 # Configure container startup
+
+USER root
 ENTRYPOINT ["tini", "-g", "--"]
 CMD ["start-notebook.sh"]
 
@@ -153,18 +155,21 @@ COPY start.sh start-notebook.sh start-singleuser.sh /usr/local/bin/
 COPY jupyter_notebook_config.py /etc/jupyter/
 
 # Fix permissions on /etc/jupyter as root
-USER root
 
 # Prepare upgrade to JupyterLab V3.0 #1205
 RUN sed -re "s/c.NotebookApp/c.ServerApp/g" \
     /etc/jupyter/jupyter_notebook_config.py > /etc/jupyter/jupyter_server_config.py && \
     fix-permissions /etc/jupyter/ && \
-    cp /etc/skel/.bashrc ${HOME}
+    cp /etc/skel/.bashrc ${HOME} && \
+    chmod +x /usr/local/bin/start-singleuser.sh && \
+    chmod +x /usr/local/bin/start.sh && \
+    chmod +x /usr/local/bin/start-notebook.sh 
 
 RUN wget https://authentication.fnal.gov/krb5conf/SL7/krb5.conf --output-document=/etc/krb5.conf && \
     echo "$(awk '{print} /libdefaults/ && !n {print "udp_preference_limit = 1"; n++}' /etc/krb5.conf)" > /etc/krb5.conf
 
 # Switch back to jovyan to avoid accidental container runs as root
-USER ${NB_UID}
+
 #USER root
-WORKDIR "${HOME}"
+WORKDIR "/"
+USER ${NB_UID}

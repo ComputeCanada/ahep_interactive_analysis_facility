@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+auto_update_conda: false
+show_channel_urls: true
+
+envs_dirs:
+  - /home/${NB_USER}/my-conda-envs/
+env_prompt: '({name}) '

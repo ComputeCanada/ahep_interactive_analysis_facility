@@ -1,4 +1,4 @@
-ARG ROOT_CONTAINER=centos:centos7
+ARG ROOT_CONTAINER=fermilab/fnal-wn-sl7
 
 FROM $ROOT_CONTAINER
 LABEL maintainer="Tejin Cai"
@@ -14,8 +14,9 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 USER root
 
 RUN yum -y update \
-    && yum -y install https://packages.endpoint.com/rhel/7/os/x86_64/endpoint-repo-1.9-1.x86_64.rpm \
+    && yum -y install https://packages.endpointdev.com/rhel/7/os/x86_64/endpoint-repo.x86_64.rpm \
     && yum -y install epel-release \
+    && yum -y update \
     && yum -y install \
     wget \
     gettext \
@@ -42,6 +43,8 @@ RUN yum -y update \
     bash-completion \
     redhat-lsb-core \
     glibc-headers \
+    glibc-devel \
+    voms-clients-java subversion asciidoc bzip2-devel fontconfig-devel freetype-devel ftgl-devel gdbm-devel giflib-devel gl2ps-devel glew-devel ncurses-devel openldap-devel pcre2-devel readline-devel autoconf automake libtool lz4-devel swig texinfo tcl-devel tk-devel xmlto xxhash xxhash-devel zstd libAfterImage-devel libjpeg-turbo-devel libpng-devel libuuid-devel libXft-devel libXi-devel libXrender-devel perl-DBD-SQLite perl-ExtUtils-MakeMaker libgcc.i686 glibc-devel.i686 libstdc++.i686 \
     && yum -y clean all
 
 # Configure environment

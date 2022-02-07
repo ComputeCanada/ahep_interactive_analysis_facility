@@ -3,10 +3,10 @@ ARG ROOT_CONTAINER=centos:centos7
 FROM $ROOT_CONTAINER
 LABEL maintainer="Tejin Cai"
 
-ARG NB_GROUP="dune"
+ARG NB_GROUP="jupyter"
 ARG NB_USER="jupyter"
-ARG NB_UID="10000"
-ARG NB_GID="90100"
+ARG NB_UID="44783"
+ARG NB_GID="9010"
 
 # Fix DL4006
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
@@ -86,7 +86,7 @@ RUN echo "auth requisite pam_deny.so" >> /etc/pam.d/su && \
 
 
 USER ${NB_UID}
-ARG PYTHON_VERSION="3.9.2"
+ARG PYTHON_VERSION="3.8.6"
 
 # Setup work directory for backward-compatibility
 RUN mkdir "/home/${NB_USER}/work" && \

@@ -30,12 +30,15 @@ spec:
               command: ["/usr/local/sbin/unmount-and-terminate.sh"]
         env:
         - name: MOUNT_REPOS
-          value: "config-osg.opensciencegrid.org,icecube.opensciencegrid.org,oasis.opensciencegrid.org,connect.opensciencegrid.org,singularity.opensciencegrid.org,xenon.opensciencegrid.org,fermilab.opensciencegrid.org,nova.opensciencegrid.org,cms.cern.ch,cms-ib.cern.ch,dune.opensciencegrid.org,larsoft.opensciencegrid.org"
+          #value: "config-osg.opensciencegrid.org,icecube.opensciencegrid.org,oasis.opensciencegrid.org,connect.opensciencegrid.org,singularity.opensciencegrid.org,xenon.opensciencegrid.org,fermilab.opensciencegrid.org,nova.opensciencegrid.org,cms.cern.ch,cms-ib.cern.ch,dune.opensciencegrid.org,larsoft.opensciencegrid.org"
+          value: "config-osg.opensciencegrid.org,fermilab.opensciencegrid.org,dune.opensciencegrid.org,larsoft.opensciencegrid.org,dune.osgstorage.org"
         - name: SQUID_URI
           #value: "http://frontier-squid:3128"
           value: "http://cvmfs-cache.arbutus.cloud.computecanada.ca:3128;DIRECT"
         - name: CVMFS_HTTP_PROXY
           value: "http://cvmfs-cache.arbutus.cloud.computecanada.ca:3128;DIRECT" 
+        - name: CVMFS_CACHE_BASE
+          value: "/mnt/cvmfs-cache"
         resources:
            limits:
              memory: 4Gi
@@ -51,4 +54,4 @@ spec:
       - name: cvmfs-base
         hostPath:
           type: DirectoryOrCreate
-          path: /var/lib/cvmfs-k8s
+          path: /mnt/cvmfs-k8s

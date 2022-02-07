@@ -1,0 +1,183 @@
+# This file can update the JupyterHub Helm chart's default configuration values.
+# #
+# # For reference see the configuration reference and default values, but make
+# # sure to refer to the Helm chart version of interest to you!
+# #
+# # Introduction to YAML:     https://www.youtube.com/watch?v=cdLNKUoMc6c
+# # Chart config reference:   https://zero-to-jupyterhub.readthedocs.io/en/stable/resources/reference.html
+# # Chart default values:     https://github.com/jupyterhub/zero-to-jupyterhub-k8s/blob/HEAD/jupyterhub/values.yaml
+# # Available chart versions: https://jupyterhub.github.io/helm-chart/
+# #
+
+debug:
+  enabled: true
+
+hub:
+  extraConfig:
+    001_Config.py: |
+      import os
+      def my_auth_state_hook(spawner, auth_state):
+        print("=================================")
+        print("username: ", spawner.user.name)
+
+    002_Config.py: |
+      import os
+      def my_hook(spawner):
+        username = spawner.user.name
+        spawner.environment['TEST']=username
+        spawner.environment['NB_USER']=username
+        spawner.environment['NB_GROUP']="dune"
+        spawner.environment['NB_GID']="90100"
+        spawner.environment['LD_PRELOAD']='libnss_wrapper.so'
+        spawner.environment['NSS_WRAPPER_PASSWD']='/tmp/config_data/passwd'
+        spawner.environment['NSS_WRAPPER_GROUP']='/tmp/config_data/group'
+        home_path=f"/home/{username}"
+        data_path=f"/dune/data/{username}"
+        app_path=f"/dune/app/{username}"
+        spawner.environment['HOME']=home_path
+        spawner.environment['DATA']=data_path
+        spawner.environment['APP']=app_path
+        spawner.working_dir = f'/home/'
+        spawner.notebook_dir = f'/home/{username}'
+
+
+    003_Config.py: |
+      
+      c.Spawner.auth_state_hook=my_auth_state_hook
+      c.Spawner.pre_spawn_hook = my_hook
+    004_Config.py: |
+      c.KubeSpawner.lifecycle_hooks = {
+          "postStart": {
+              "exec": {
+                  "command": ["/bin/sh", "-c", "echo Hello from the postStart handler > /usr/share/message"]
+              }
+          },
+          "preStop": {
+              "exec": {
+                  "command": ["/usr/sbin/nginx", "-s", "quit"]
+              }
+          }
+      }
+    005_Config.py: |
+      c.KubeSpawner.args = ['--allow-root']
+
+      #c.NotebookApp.allow_root = True
+        # want to -- create directory for dune/app/test, dune/data/test
+        #
+
+  extraVolumes:
+  - name: app
+    cephfs:
+      monitors:
+      - 10.30.201.3:6789
+      - 10.30.202.3:6789
+      - 10.30.203.3:6789
+      path: /volumes/_nogroup/a36f259c-582f-480d-9408-9db9a3495b9e
+      user: app-read-write
+      secretRef:
+        name: app-secret-rw
+  - name: data
+    cephfs:
+      monitors:
+      - 10.30.201.3:6789
+      - 10.30.202.3:6789
+      - 10.30.203.3:6789
+      path: /volumes/_nogroup/c38bae82-d703-41c2-88a2-c0507a0b94ba
+      user: data-read-write
+      secretRef:
+        name: data-secret-rw
+  - name: store
+    cephfs:
+      monitors:
+      - 10.30.201.3:6789
+      - 10.30.202.3:6789
+      - 10.30.203.3:6789
+      path: /volumes/_nogroup/a651ed72-3bee-4319-8cb9-7b45b41ad891/
+      user: shared-data-read-write
+      secretRef:
+        name: store-secret-rw
+  extraVolumeMounts:
+  - name: data
+    mountPath: /dune/data/
+  - name: app
+    mountPath: /dune/app/
+  - name: store
+    mountPath: /data_store/
+  config:
+    Authenticator:
+      enable_auth_state: true
+    #Spawner:
+    #  lifecycle_hooks:
+    #    postStart:
+    #      exec:
+    #        command: 
+    #          - "/bin/sh"
+    #          - "-c"
+    #          - "echo Hello from the postStart handler > /usr/share/message"
+singleuser:
+  #uid: 1000
+  #uid: 44783
+  #uid: 56344
+  uid: 0
+  cmd: "start-notebook.sh"
+  image:
+    name: axionhub/dune-notebook-sl7
+    tag: latest
+    pullPolicy: Always
+  defaultUrl: "/lab"
+  extraEnv:
+    JUPYTERHUB_SINGLEUSER_APP: "jupyter_server.serverapp.ServerApp"
+  storage:
+    extraVolumes:
+      - name: app
+        cephfs:
+          monitors:
+          - 10.30.201.3:6789
+          - 10.30.202.3:6789
+          - 10.30.203.3:6789
+          path: /volumes/_nogroup/a36f259c-582f-480d-9408-9db9a3495b9e
+          user: app-read-write
+          secretRef:
+            name: app-secret-rw
+      - name: data
+        cephfs:
+          monitors:
+          - 10.30.201.3:6789
+          - 10.30.202.3:6789
+          - 10.30.203.3:6789
+          path: /volumes/_nogroup/c38bae82-d703-41c2-88a2-c0507a0b94ba
+          user: data-read-write
+          secretRef:
+            name: data-secret-rw
+      - name: store
+        cephfs:
+          monitors:
+          - 10.30.201.3:6789
+          - 10.30.202.3:6789
+          - 10.30.203.3:6789
+          path: /volumes/_nogroup/a651ed72-3bee-4319-8cb9-7b45b41ad891/jupyter_data/
+          user: shared-data-read-write
+          secretRef:
+            name: store-secret-rw
+
+    extraVolumeMounts:
+      - name: app
+        mountPath: /dune/app/
+      - name: data
+        mountPath: /dune/data/
+      - name: store
+        mountPath: /tmp/config_data
+
+
+ingress:
+  enabled: true
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts: 
+    - axion.axialvector-lab.com
+proxy:
+  service:
+    type: ClusterIP
+

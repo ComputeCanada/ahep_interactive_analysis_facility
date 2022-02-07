@@ -14,14 +14,14 @@ metadata:
   name: cvmfs-fermilab
 spec:
   capacity:
-    storage: 2Gi
+    storage: 20Gi
   volumeMode: Filesystem
   accessModes:
   - ReadOnlyMany
   persistentVolumeReclaimPolicy: Retain
   storageClassName: cvmfs-fermilab
   local:
-    path: /var/lib/cvmfs-k8s/fermilab.opensciencegrid.org
+    path: /mnt/cvmfs-k8s/fermilab.opensciencegrid.org
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -41,5 +41,5 @@ spec:
   - ReadOnlyMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 20Gi
   storageClassName: cvmfs-fermilab

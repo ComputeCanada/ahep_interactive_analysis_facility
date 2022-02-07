@@ -14,14 +14,14 @@ metadata:
   name: cvmfs-config-osg
 spec:
   capacity:
-    storage: 2Gi
+    storage: 5Gi
   volumeMode: Filesystem
   accessModes:
   - ReadOnlyMany
   persistentVolumeReclaimPolicy: Retain
   storageClassName: cvmfs-config-osg
   local:
-    path: /var/lib/cvmfs-k8s/config-osg.opensciencegrid.org
+    path: /mnt/cvmfs-k8s/config-osg.opensciencegrid.org
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -41,5 +41,5 @@ spec:
   - ReadOnlyMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 5Gi
   storageClassName: cvmfs-config-osg

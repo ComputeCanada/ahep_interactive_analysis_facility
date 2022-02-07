@@ -14,14 +14,14 @@ metadata:
   name: cvmfs-larsoft
 spec:
   capacity:
-    storage: 2Gi
+    storage: 30Gi
   volumeMode: Filesystem
   accessModes:
   - ReadOnlyMany
   persistentVolumeReclaimPolicy: Retain
   storageClassName: cvmfs-larsoft
   local:
-    path: /var/lib/cvmfs-k8s/larsoft.opensciencegrid.org
+    path: /mnt/cvmfs-k8s/larsoft.opensciencegrid.org
   nodeAffinity:
     required:
       nodeSelectorTerms:
@@ -41,5 +41,5 @@ spec:
   - ReadOnlyMany
   resources:
     requests:
-      storage: 2Gi
+      storage: 30Gi
   storageClassName: cvmfs-larsoft

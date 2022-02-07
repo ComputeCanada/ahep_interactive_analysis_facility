@@ -1,0 +1,225 @@
+
+# This file can update the JupyterHub Helm chart's default configuration values.
+# #
+# # For reference see the configuration reference and default values, but make
+# # sure to refer to the Helm chart version of interest to you!
+# #
+# # Introduction to YAML:     https://www.youtube.com/watch?v=cdLNKUoMc6c
+# # Chart config reference:   https://zero-to-jupyterhub.readthedocs.io/en/stable/resources/reference.html
+# # Chart default values:     https://github.com/jupyterhub/zero-to-jupyterhub-k8s/blob/HEAD/jupyterhub/values.yaml
+# # Available chart versions: https://jupyterhub.github.io/helm-chart/
+# #
+
+debug:
+  enabled: true
+
+hub:
+  extraConfig:
+    001_Config.py: |
+      import os
+      def my_auth_state_hook(spawner, auth_state):
+        print("=================================")
+        print("username: ", spawner.user.name)
+    002_Config.py: |
+      import os
+      def my_hook(spawner):
+        username = spawner.user.name
+        spawner.environment['TEST']=username
+        spawner.environment['NB_USER']=username
+        spawner.environment['NB_GROUP']="dune"
+        spawner.environment['NB_GID']="90100"
+        spawner.environment['LD_PRELOAD']='libnss_wrapper.so'
+        spawner.environment['NSS_WRAPPER_PASSWD']='/tmp/config_data/passwd'
+        spawner.environment['NSS_WRAPPER_GROUP']='/tmp/config_data/group'
+        home_path=f"/home/{username}"
+        data_path=f"/dune/data/{username}"
+        app_path=f"/dune/app/{username}"
+        spawner.environment['HOME']=home_path
+        spawner.environment['DATA']=data_path
+        spawner.environment['APP']=app_path
+        spawner.working_dir = f'/home/{username}'
+        spawner.notebook_dir = f'/home/{username}'
+
+    003_Config.py: |
+      c.Spawner.auth_state_hook=my_auth_state_hook
+      c.Spawner.pre_spawn_hook = my_hook
+      c.KubeSpawner.args = ['--allow-root']
+
+
+  config:
+    #GlobusOAuthenticator:
+    #  client_id: 87ad2cfc-a665-464a-96b3-8b78443bf4f0
+    #  client_secret: 2WnL0LIqZij0HwxYdKA4+AP5Ty7y84yX9A29wfPV+RI=
+    #  oauth_callback_url: https://axion.axialvector-lab.com/hub/oauth_callback
+    #  allowed_globus_groups:
+    #    - '09affb83-4103-11ec-b079-f561b5a488be'
+    #  #identity_provider: fnal.gov
+    #JupyterHub:
+    #  authenticator_class: globus                                             
+    Authenticator:
+      enable_auth_state: true
+    CILogonOAuthenticator:
+      client_id: 'cilogon:/client_id/405cb7b4e6bb4a1cc7930c8e5c30d8ee'
+      client_secret: GLjuMvUWe3kbNcy1jLjz8PIShNEdmRKn2NU6Y5ATzqV5UPwz4fo4nmpoqzBOT5etE2w3tj0Q2ThvKwoiWGSTBg
+      client_id_issued_at: 1638204284
+      registration_client_uri: 'https://cilogon.org/oauth2/oidc-cm?client_id=cilogon:/client_id/405cb7b4e6bb4a1cc7930c8e5c30d8ee'
+      oauth_callback_url: https://axion.axialvector-lab.com/hub/oauth_callback
+      username_claim: 'uid'
+      scope:
+        - openid
+        - email
+        - org.cilogon.userinfo
+        - wlcg.groups:/dune
+        - wlcg.capabilityset:/duneana
+    JupyterHub:
+      authenticator_class: cilogon
+      admin_access: true
+      admin_users:
+        - jupyter
+
+  extraVolumes:
+  - name: app
+    cephfs:
+      monitors:
+      - 10.30.201.3:6789
+      - 10.30.202.3:6789
+      - 10.30.203.3:6789
+      path: /volumes/_nogroup/a36f259c-582f-480d-9408-9db9a3495b9e
+      user: app-read-write
+      secretRef:
+        name: app-secret-rw
+  - name: data
+    cephfs:
+      monitors:
+      - 10.30.201.3:6789
+      - 10.30.202.3:6789
+      - 10.30.203.3:6789
+      path: /volumes/_nogroup/c38bae82-d703-41c2-88a2-c0507a0b94ba
+      user: data-read-write
+      secretRef:
+        name: data-secret-rw
+  - name: store
+    cephfs:
+      monitors:
+      - 10.30.201.3:6789
+      - 10.30.202.3:6789
+      - 10.30.203.3:6789
+      path: /volumes/_nogroup/a651ed72-3bee-4319-8cb9-7b45b41ad891
+      user: shared-data-read-write
+      secretRef:
+        name: store-secret-rw
+  extraVolumeMounts:
+  - name: data
+    mountPath: /dune/data/
+  - name: app
+    mountPath: /dune/app/
+  - name: store
+    mountPath: /data_store/
+
+singleuser:
+  uid: 0
+  fsGid: 90100
+  cmd: "start-notebook.sh"
+  extraEnv:
+    #GRANT_SUDO: "yes"
+    JUPYTERHUB_SINGLEUSER_APP: "jupyter_server.serverapp.ServerApp"
+
+  image:
+    name: axionhub/dune-notebook
+    tag: latest
+    #name: mapsacosta/eafjupyter
+    #tag: base-notebook
+    pullPolicy: Always
+  profileList:
+    - display_name: "DUNE Basic"
+      description: "Basic bash and python environment"
+      default: true 
+    - display_name: "DUNE Coffea"
+      description: "Basic + Coffea Packages"
+      kubespawner_override:
+        image: jupyter/datascience-notebook:2343e33dec46
+  defaultUrl: "/lab"
+  lifecycleHooks:
+    postStart:
+      exec:
+        command:
+          - "sh"
+          - "-c"
+          - >
+            mkdir -p  /home/${NB_USER}/my-conda-envs/;
+            chown $NB_USER:dune /home/${NB_USER};
+            chown $NB_USER:dune /home/${NB_USER}/my-conda-envs/;
+            chown $NB_USER:dune /home/${NB_USER}/.;
+            echo "envs_dirs:" > /home/jupyter/.condarc;
+            echo "  - /home/${NB_USER}/my-conda-envs/" >> /home/jupyter/.condarc;
+            echo "env_prompt: '({name}) '" >> /home/jupyter/.condarc;
+            chown jupyter:dune /home/jupyter/.condarc;
+    #preStop:
+  storage:
+    homeMountPath: '/home/{username}'
+    extraVolumes:
+      - name: cvmfs-fermilab
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-fermilab
+      - name: cvmfs-dune
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-dune
+      - name: cvmfs-larsoft
+        persistentVolumeClaim:
+          claimName: jupyterhub-cvmfs-larsoft
+      - name: app
+        cephfs:
+          monitors:
+          - 10.30.201.3:6789
+          - 10.30.202.3:6789
+          - 10.30.203.3:6789
+          path: /volumes/_nogroup/a36f259c-582f-480d-9408-9db9a3495b9e
+          user: app-read-write
+          secretRef:
+            name: app-secret-rw
+      - name: data
+        cephfs:
+          monitors:
+          - 10.30.201.3:6789
+          - 10.30.202.3:6789
+          - 10.30.203.3:6789
+          path: /volumes/_nogroup/c38bae82-d703-41c2-88a2-c0507a0b94ba
+          user: data-read-write
+          secretRef:
+            name: data-secret-rw
+      - name: store
+        cephfs:
+          monitors:
+          - 10.30.201.3:6789
+          - 10.30.202.3:6789
+          - 10.30.203.3:6789
+          path: /volumes/_nogroup/a651ed72-3bee-4319-8cb9-7b45b41ad891/jupyter_data/
+          user: shared-data-read-write
+          secretRef:
+            name: store-secret-rw
+
+    extraVolumeMounts:
+      - name: cvmfs-fermilab
+        mountPath: /cvmfs/fermilab.opensciencegrid.org/
+      - name: cvmfs-larsoft
+        mountPath: /cvmfs/larsoft.opensciencegrid.org/
+      - name: cvmfs-dune
+        mountPath: /cvmfs/dune.opensciencegrid.org/
+      - name: app
+        mountPath: /dune/app/
+      - name: data
+        mountPath: /dune/data/
+      - name: store
+        mountPath: /tmp/config_data
+
+ingress:
+  enabled: true
+  annotations:
+    # use the shared ingress-nginx
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  hosts: 
+    - axion.axialvector-lab.com
+proxy:
+  service:
+    type: ClusterIP

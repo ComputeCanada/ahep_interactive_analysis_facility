@@ -26,6 +26,7 @@ spec:
       containers:
       - name: fnal-wn-sl7
         image: fermilab/fnal-wn-sl7:latest
+        #image: centos/centos7
         command: ["/bin/bash", "-c","sleep 10h"]
         volumeMounts:
         - name: cvmfs-fermilab

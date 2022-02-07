@@ -12,7 +12,7 @@
   roles:
     - { role: kubespray-defaults }
     - { role: bastion-ssh-config, tags: ["localhost", "bastion"] }
-    - role: ansible-cvmfs-client
+      - role: ansible-cvmfs-client
 
 
 
@@ -92,7 +92,7 @@
     - { role: kubernetes/kubeadm, tags: kubeadm}
     - { role: network_plugin, tags: network }
     - { role: kubernetes/node-label, tags: node-label }
-    - role: ansible-cvmfs-client
+      - role: ansible-cvmfs-client
 
 - hosts: calico_rr
   gather_facts: False

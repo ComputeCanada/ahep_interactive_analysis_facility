@@ -8,4 +8,7 @@
 *-openrc.sh  
 *.bk
 *.key
-*.work
+
+authentication/**
+image/jupyter-remote-desktop-proxy**/
+**/__pycache__

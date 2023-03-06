@@ -1,7 +1,8 @@
 ---
 # Please see roles/container-engine/containerd/defaults/main.yml for more configuration options
 
-# containerd_storage_dir: "/var/lib/containerd"
+#containerd_storage_dir: "/var/lib/containerd"
+ containerd_storage_dir: "/mnt/lib/containerd"
 # containerd_state_dir: "/run/containerd"
 # containerd_oom_score: 0
 

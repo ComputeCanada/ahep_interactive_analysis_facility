@@ -1,0 +1,825 @@
+all:
+  children:
+    bastion:
+      hosts:
+        axion-bastion-1:
+          access_ip: 206.12.95.48
+          access_ip_v4: 206.12.95.48
+          access_ip_v6: ''
+          ansible_ssh_host: 206.12.95.48
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          bin_dir: /usr/bin
+          cloud_provider: openstack
+          consul_is_server: false
+          containerd_storage_dir: /mnt/lib/containerd
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          flavor:
+            id: 8c4dad4f-807d-4240-91e0-0fb958a1c671
+            name: c2-15gb-72
+          host_domain: novalocal
+          id: 5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ip: 192.168.0.215
+          key_pair: kubernetes-axion
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: bastion
+            ssh_user: centos
+            use_access_ip: '1'
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.215
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:91:24:c6
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          private_ipv4: 192.168.0.215
+          provider: openstack
+          public_ipv4: 206.12.95.48
+          publicly_routable: true
+          region: RegionOne
+          role: none
+          security_groups:
+          - axion-bastion
+          - axion-k8s
+          use_host_domain: true
+    etcd:
+      hosts:
+        axion-etcd-1:
+          access_ip: 192.168.0.135
+          access_ip_v4: 192.168.0.135
+          access_ip_v6: ''
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.135
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          bin_dir: /usr/bin
+          cloud_provider: openstack
+          consul_is_server: false
+          containerd_storage_dir: /mnt/lib/containerd
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          flavor:
+            id: 22f7655d-45c1-4e01-83a0-2929e686f19b
+            name: c1-7.5gb-36
+          host_domain: novalocal
+          id: a2aed495-dbe9-41a1-a538-6d9220cd2f2d
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ip: 192.168.0.135
+          key_pair: kubernetes-axion
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: etcd,no_floating
+            ssh_user: centos
+            use_access_ip: '1'
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.135
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:f9:ed:66
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          private_ipv4: 192.168.0.135
+          provider: openstack
+          public_ipv4: 192.168.0.135
+          publicly_routable: true
+          region: RegionOne
+          role: none
+          security_groups:
+          - axion-k8s
+          use_host_domain: true
+    k8s_cluster:
+      hosts:
+        axion-k8s-master-nf-ne-1:
+          access_ip: 192.168.0.92
+          access_ip_v4: 192.168.0.92
+          access_ip_v6: ''
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.92
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          auto_renew_certificates: false
+          bin_dir: /usr/bin
+          cephfs_provisioner_enabled: false
+          cloud_provider: openstack
+          cluster_name: cluster.local
+          consul_is_server: false
+          container_manager: containerd
+          containerd_storage_dir: /mnt/lib/containerd
+          coredns_k8s_external_zone: k8s_external.local
+          credentials_dir: '{{ inventory_dir }}/credentials'
+          dashboard_enabled: true
+          default_kubelet_config_dir: '{{ kube_config_dir }}/dynamic_kubelet_dir'
+          deploy_netchecker: false
+          dns_domain: '{{ cluster_name }}'
+          dns_mode: coredns
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          dynamic_kubelet_configuration: false
+          dynamic_kubelet_configuration_dir: '{{ kubelet_config_dir | default(default_kubelet_config_dir)
+            }}'
+          enable_coredns_k8s_endpoint_pod_names: false
+          enable_coredns_k8s_external: false
+          enable_dual_stack_networks: false
+          enable_nat_default_gateway: true
+          enable_nodelocaldns: true
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          event_ttl_duration: 1h0m0s
+          flavor:
+            id: 57a73012-a294-4caf-b7b8-8e98c8e9bee3
+            name: c8-90gb-288
+          helm_enabled: true
+          host_domain: novalocal
+          id: 7ce0cd56-98a4-4a49-b063-11c65765370c
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ingress_alb_enabled: false
+          ingress_ambassador_enabled: false
+          ingress_nginx_enabled: true
+          ingress_publish_status_address: ''
+          ip: 192.168.0.92
+          k8s_image_pull_policy: IfNotPresent
+          kata_containers_enabled: false
+          key_pair: kubernetes-axion
+          krew_enabled: false
+          krew_root_dir: /usr/local/krew
+          kube_api_anonymous_auth: true
+          kube_apiserver_insecure_port: 0
+          kube_apiserver_ip: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(1)|ipaddr(''address'')
+            }}'
+          kube_apiserver_port: 6443
+          kube_cert_dir: '{{ kube_config_dir }}/ssl'
+          kube_cert_group: kube-cert
+          kube_config_dir: /etc/kubernetes
+          kube_encrypt_secret_data: false
+          kube_log_level: 2
+          kube_manifest_dir: '{{ kube_config_dir }}/manifests'
+          kube_network_node_prefix: 24
+          kube_network_node_prefix_ipv6: 120
+          kube_network_plugin: calico
+          kube_network_plugin_multus: true
+          kube_pods_subnet: 10.233.64.0/18
+          kube_pods_subnet_ipv6: fd85:ee78:d8a6:8607::1:0000/112
+          kube_proxy_mode: ipvs
+          kube_proxy_nodeport_addresses: '{%- if kube_proxy_nodeport_addresses_cidr
+            is defined -%} [{{ kube_proxy_nodeport_addresses_cidr }}] {%- else -%}
+            [] {%- endif -%}'
+          kube_proxy_strict_arp: true
+          kube_script_dir: '{{ bin_dir }}/kubernetes-scripts'
+          kube_service_addresses: 10.233.0.0/18
+          kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+          kube_token_dir: '{{ kube_config_dir }}/tokens'
+          kube_version: v1.22.1
+          kubeadm_certificate_key: '{{ lookup(''password'', credentials_dir + ''/kubeadm_certificate_key.creds
+            length=64 chars=hexdigits'') | lower }}'
+          kubernetes_audit: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          local_path_provisioner_enabled: false
+          local_release_dir: /tmp/releases
+          local_volume_provisioner_enabled: false
+          macvlan_interface: eth1
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_control_plane,,k8s_cluster,no_floating
+            ssh_user: centos
+            use_access_ip: '1'
+          metallb_enabled: true
+          metallb_ip_range: &id001
+          - 192.168.0.10-192.168.0.20
+          metallb_speaker_enabled: true
+          metallb_version: v0.10.2
+          metrics_server_enabled: false
+          ndots: 2
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.92
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:e9:94:e5
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          nodelocaldns_health_port: 9254
+          nodelocaldns_ip: 169.254.25.10
+          persistent_volumes_enabled: true
+          podsecuritypolicy_enabled: false
+          private_ipv4: 192.168.0.92
+          provider: openstack
+          public_ipv4: 192.168.0.92
+          publicly_routable: true
+          rbd_provisioner_enabled: false
+          region: RegionOne
+          registry_enabled: false
+          resolvconf_mode: docker_dns
+          retry_stagger: 5
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-master
+          skydns_server: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(3)|ipaddr(''address'')
+            }}'
+          skydns_server_secondary: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(4)|ipaddr(''address'')
+            }}'
+          use_host_domain: true
+          volume_cross_zone_attachment: true
+          weave_no_masq_local: true
+        axion-k8s-node-1:
+          access_ip: 192.168.0.233
+          access_ip_v4: 192.168.0.233
+          access_ip_v6: ''
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.233
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          auto_renew_certificates: false
+          bin_dir: /usr/bin
+          cephfs_provisioner_enabled: false
+          cloud_provider: openstack
+          cluster_name: cluster.local
+          consul_is_server: false
+          container_manager: containerd
+          containerd_storage_dir: /mnt/lib/containerd
+          coredns_k8s_external_zone: k8s_external.local
+          credentials_dir: '{{ inventory_dir }}/credentials'
+          dashboard_enabled: true
+          default_kubelet_config_dir: '{{ kube_config_dir }}/dynamic_kubelet_dir'
+          deploy_netchecker: false
+          dns_domain: '{{ cluster_name }}'
+          dns_mode: coredns
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          dynamic_kubelet_configuration: false
+          dynamic_kubelet_configuration_dir: '{{ kubelet_config_dir | default(default_kubelet_config_dir)
+            }}'
+          enable_coredns_k8s_endpoint_pod_names: false
+          enable_coredns_k8s_external: false
+          enable_dual_stack_networks: false
+          enable_nat_default_gateway: true
+          enable_nodelocaldns: true
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          event_ttl_duration: 1h0m0s
+          flavor:
+            id: 39b3870c-e0f6-42cb-a565-f90db442629a
+            name: c16-180gb-576
+          helm_enabled: true
+          host_domain: novalocal
+          id: aea46e3d-5788-486b-abe8-10fa73aac9d2
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ingress_alb_enabled: false
+          ingress_ambassador_enabled: false
+          ingress_nginx_enabled: true
+          ingress_publish_status_address: ''
+          ip: 192.168.0.233
+          k8s_image_pull_policy: IfNotPresent
+          kata_containers_enabled: false
+          key_pair: kubernetes-axion
+          krew_enabled: false
+          krew_root_dir: /usr/local/krew
+          kube_api_anonymous_auth: true
+          kube_apiserver_insecure_port: 0
+          kube_apiserver_ip: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(1)|ipaddr(''address'')
+            }}'
+          kube_apiserver_port: 6443
+          kube_cert_dir: '{{ kube_config_dir }}/ssl'
+          kube_cert_group: kube-cert
+          kube_config_dir: /etc/kubernetes
+          kube_encrypt_secret_data: false
+          kube_log_level: 2
+          kube_manifest_dir: '{{ kube_config_dir }}/manifests'
+          kube_network_node_prefix: 24
+          kube_network_node_prefix_ipv6: 120
+          kube_network_plugin: calico
+          kube_network_plugin_multus: true
+          kube_pods_subnet: 10.233.64.0/18
+          kube_pods_subnet_ipv6: fd85:ee78:d8a6:8607::1:0000/112
+          kube_proxy_mode: ipvs
+          kube_proxy_nodeport_addresses: '{%- if kube_proxy_nodeport_addresses_cidr
+            is defined -%} [{{ kube_proxy_nodeport_addresses_cidr }}] {%- else -%}
+            [] {%- endif -%}'
+          kube_proxy_strict_arp: true
+          kube_script_dir: '{{ bin_dir }}/kubernetes-scripts'
+          kube_service_addresses: 10.233.0.0/18
+          kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+          kube_token_dir: '{{ kube_config_dir }}/tokens'
+          kube_version: v1.22.1
+          kubeadm_certificate_key: '{{ lookup(''password'', credentials_dir + ''/kubeadm_certificate_key.creds
+            length=64 chars=hexdigits'') | lower }}'
+          kubernetes_audit: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          local_path_provisioner_enabled: false
+          local_release_dir: /tmp/releases
+          local_volume_provisioner_enabled: false
+          macvlan_interface: eth1
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_node,k8s_cluster,no_floating,
+            ssh_user: centos
+            use_access_ip: '1'
+          metallb_enabled: true
+          metallb_ip_range: *id001
+          metallb_speaker_enabled: true
+          metallb_version: v0.10.2
+          metrics_server_enabled: false
+          ndots: 2
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.233
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:3a:69:3b
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          nodelocaldns_health_port: 9254
+          nodelocaldns_ip: 169.254.25.10
+          persistent_volumes_enabled: true
+          podsecuritypolicy_enabled: false
+          private_ipv4: 192.168.0.233
+          provider: openstack
+          public_ipv4: 192.168.0.233
+          publicly_routable: true
+          rbd_provisioner_enabled: false
+          region: RegionOne
+          registry_enabled: false
+          resolvconf_mode: docker_dns
+          retry_stagger: 5
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-worker
+          skydns_server: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(3)|ipaddr(''address'')
+            }}'
+          skydns_server_secondary: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(4)|ipaddr(''address'')
+            }}'
+          use_host_domain: true
+          volume_cross_zone_attachment: true
+          weave_no_masq_local: true
+        axion-k8s-node-2:
+          access_ip: 192.168.0.153
+          access_ip_v4: 192.168.0.153
+          access_ip_v6: ''
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.153
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          auto_renew_certificates: false
+          bin_dir: /usr/bin
+          cephfs_provisioner_enabled: false
+          cloud_provider: openstack
+          cluster_name: cluster.local
+          consul_is_server: false
+          container_manager: containerd
+          containerd_storage_dir: /mnt/lib/containerd
+          coredns_k8s_external_zone: k8s_external.local
+          credentials_dir: '{{ inventory_dir }}/credentials'
+          dashboard_enabled: true
+          default_kubelet_config_dir: '{{ kube_config_dir }}/dynamic_kubelet_dir'
+          deploy_netchecker: false
+          dns_domain: '{{ cluster_name }}'
+          dns_mode: coredns
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          dynamic_kubelet_configuration: false
+          dynamic_kubelet_configuration_dir: '{{ kubelet_config_dir | default(default_kubelet_config_dir)
+            }}'
+          enable_coredns_k8s_endpoint_pod_names: false
+          enable_coredns_k8s_external: false
+          enable_dual_stack_networks: false
+          enable_nat_default_gateway: true
+          enable_nodelocaldns: true
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          event_ttl_duration: 1h0m0s
+          flavor:
+            id: 39b3870c-e0f6-42cb-a565-f90db442629a
+            name: c16-180gb-576
+          helm_enabled: true
+          host_domain: novalocal
+          id: 598d50f1-c01b-4f32-914f-75f2e1a46702
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ingress_alb_enabled: false
+          ingress_ambassador_enabled: false
+          ingress_nginx_enabled: true
+          ingress_publish_status_address: ''
+          ip: 192.168.0.153
+          k8s_image_pull_policy: IfNotPresent
+          kata_containers_enabled: false
+          key_pair: kubernetes-axion
+          krew_enabled: false
+          krew_root_dir: /usr/local/krew
+          kube_api_anonymous_auth: true
+          kube_apiserver_insecure_port: 0
+          kube_apiserver_ip: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(1)|ipaddr(''address'')
+            }}'
+          kube_apiserver_port: 6443
+          kube_cert_dir: '{{ kube_config_dir }}/ssl'
+          kube_cert_group: kube-cert
+          kube_config_dir: /etc/kubernetes
+          kube_encrypt_secret_data: false
+          kube_log_level: 2
+          kube_manifest_dir: '{{ kube_config_dir }}/manifests'
+          kube_network_node_prefix: 24
+          kube_network_node_prefix_ipv6: 120
+          kube_network_plugin: calico
+          kube_network_plugin_multus: true
+          kube_pods_subnet: 10.233.64.0/18
+          kube_pods_subnet_ipv6: fd85:ee78:d8a6:8607::1:0000/112
+          kube_proxy_mode: ipvs
+          kube_proxy_nodeport_addresses: '{%- if kube_proxy_nodeport_addresses_cidr
+            is defined -%} [{{ kube_proxy_nodeport_addresses_cidr }}] {%- else -%}
+            [] {%- endif -%}'
+          kube_proxy_strict_arp: true
+          kube_script_dir: '{{ bin_dir }}/kubernetes-scripts'
+          kube_service_addresses: 10.233.0.0/18
+          kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+          kube_token_dir: '{{ kube_config_dir }}/tokens'
+          kube_version: v1.22.1
+          kubeadm_certificate_key: '{{ lookup(''password'', credentials_dir + ''/kubeadm_certificate_key.creds
+            length=64 chars=hexdigits'') | lower }}'
+          kubernetes_audit: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          local_path_provisioner_enabled: false
+          local_release_dir: /tmp/releases
+          local_volume_provisioner_enabled: false
+          macvlan_interface: eth1
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_node,k8s_cluster,no_floating,
+            ssh_user: centos
+            use_access_ip: '1'
+          metallb_enabled: true
+          metallb_ip_range: *id001
+          metallb_speaker_enabled: true
+          metallb_version: v0.10.2
+          metrics_server_enabled: false
+          ndots: 2
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.153
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:ea:48:c9
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          nodelocaldns_health_port: 9254
+          nodelocaldns_ip: 169.254.25.10
+          persistent_volumes_enabled: true
+          podsecuritypolicy_enabled: false
+          private_ipv4: 192.168.0.153
+          provider: openstack
+          public_ipv4: 192.168.0.153
+          publicly_routable: true
+          rbd_provisioner_enabled: false
+          region: RegionOne
+          registry_enabled: false
+          resolvconf_mode: docker_dns
+          retry_stagger: 5
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-worker
+          skydns_server: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(3)|ipaddr(''address'')
+            }}'
+          skydns_server_secondary: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(4)|ipaddr(''address'')
+            }}'
+          use_host_domain: true
+          volume_cross_zone_attachment: true
+          weave_no_masq_local: true
+        axion-k8s-node-gpu-1:
+          access_ip: 192.168.0.236
+          access_ip_v4: 192.168.0.236
+          access_ip_v6: ''
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.236
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          auto_renew_certificates: false
+          bin_dir: /usr/bin
+          cephfs_provisioner_enabled: false
+          cloud_provider: openstack
+          cluster_name: cluster.local
+          consul_is_server: false
+          container_manager: containerd
+          containerd_storage_dir: /mnt/lib/containerd
+          coredns_k8s_external_zone: k8s_external.local
+          credentials_dir: '{{ inventory_dir }}/credentials'
+          dashboard_enabled: true
+          default_kubelet_config_dir: '{{ kube_config_dir }}/dynamic_kubelet_dir'
+          deploy_netchecker: false
+          dns_domain: '{{ cluster_name }}'
+          dns_mode: coredns
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          dynamic_kubelet_configuration: false
+          dynamic_kubelet_configuration_dir: '{{ kubelet_config_dir | default(default_kubelet_config_dir)
+            }}'
+          enable_coredns_k8s_endpoint_pod_names: false
+          enable_coredns_k8s_external: false
+          enable_dual_stack_networks: false
+          enable_nat_default_gateway: true
+          enable_nodelocaldns: true
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          event_ttl_duration: 1h0m0s
+          flavor:
+            id: 39d3041a-ace2-4166-9133-d78fe00190a9
+            name: g1-8gb-c4-22gb
+          helm_enabled: true
+          host_domain: novalocal
+          id: 301688ef-2718-4df6-804d-8094b15d5f1e
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ingress_alb_enabled: false
+          ingress_ambassador_enabled: false
+          ingress_nginx_enabled: true
+          ingress_publish_status_address: ''
+          ip: 192.168.0.236
+          k8s_image_pull_policy: IfNotPresent
+          kata_containers_enabled: false
+          key_pair: kubernetes-axion
+          krew_enabled: false
+          krew_root_dir: /usr/local/krew
+          kube_api_anonymous_auth: true
+          kube_apiserver_insecure_port: 0
+          kube_apiserver_ip: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(1)|ipaddr(''address'')
+            }}'
+          kube_apiserver_port: 6443
+          kube_cert_dir: '{{ kube_config_dir }}/ssl'
+          kube_cert_group: kube-cert
+          kube_config_dir: /etc/kubernetes
+          kube_encrypt_secret_data: false
+          kube_log_level: 2
+          kube_manifest_dir: '{{ kube_config_dir }}/manifests'
+          kube_network_node_prefix: 24
+          kube_network_node_prefix_ipv6: 120
+          kube_network_plugin: calico
+          kube_network_plugin_multus: true
+          kube_pods_subnet: 10.233.64.0/18
+          kube_pods_subnet_ipv6: fd85:ee78:d8a6:8607::1:0000/112
+          kube_proxy_mode: ipvs
+          kube_proxy_nodeport_addresses: '{%- if kube_proxy_nodeport_addresses_cidr
+            is defined -%} [{{ kube_proxy_nodeport_addresses_cidr }}] {%- else -%}
+            [] {%- endif -%}'
+          kube_proxy_strict_arp: true
+          kube_script_dir: '{{ bin_dir }}/kubernetes-scripts'
+          kube_service_addresses: 10.233.0.0/18
+          kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+          kube_token_dir: '{{ kube_config_dir }}/tokens'
+          kube_version: v1.22.1
+          kubeadm_certificate_key: '{{ lookup(''password'', credentials_dir + ''/kubeadm_certificate_key.creds
+            length=64 chars=hexdigits'') | lower }}'
+          kubernetes_audit: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          local_path_provisioner_enabled: false
+          local_release_dir: /tmp/releases
+          local_volume_provisioner_enabled: false
+          macvlan_interface: eth1
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_node,k8s_cluster,no_floating,
+            ssh_user: centos
+            use_access_ip: '1'
+          metallb_enabled: true
+          metallb_ip_range: *id001
+          metallb_speaker_enabled: true
+          metallb_version: v0.10.2
+          metrics_server_enabled: false
+          ndots: 2
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.236
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:6f:68:4f
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          nodelocaldns_health_port: 9254
+          nodelocaldns_ip: 169.254.25.10
+          persistent_volumes_enabled: true
+          podsecuritypolicy_enabled: false
+          private_ipv4: 192.168.0.236
+          provider: openstack
+          public_ipv4: 192.168.0.236
+          publicly_routable: true
+          rbd_provisioner_enabled: false
+          region: RegionOne
+          registry_enabled: false
+          resolvconf_mode: docker_dns
+          retry_stagger: 5
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-worker
+          skydns_server: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(3)|ipaddr(''address'')
+            }}'
+          skydns_server_secondary: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(4)|ipaddr(''address'')
+            }}'
+          use_host_domain: true
+          volume_cross_zone_attachment: true
+          weave_no_masq_local: true
+    kube_control_plane:
+      hosts:
+        axion-k8s-master-nf-ne-1: {}
+    kube_node:
+      hosts:
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        axion-k8s-node-gpu-1: {}
+    no_floating:
+      hosts:
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        axion-k8s-node-gpu-1: {}
+    os_flavor=c1-7.5gb-36:
+      hosts:
+        axion-etcd-1: {}
+    os_flavor=c16-180gb-576:
+      hosts:
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_flavor=c2-15gb-72:
+      hosts:
+        axion-bastion-1: {}
+    os_flavor=c8-90gb-288:
+      hosts:
+        axion-k8s-master-nf-ne-1: {}
+    os_flavor=g1-8gb-c4-22gb:
+      hosts:
+        g1-8gb-c4-22gb:
+          bin_dir: /usr/bin
+          cloud_provider: openstack
+          containerd_storage_dir: /mnt/lib/containerd
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          no_proxy_exclude_workers: false
+    os_image=b5d803f7-bcb1-4af4-83ce-6e994eb0d04f:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    os_metadata_%=4:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    'os_metadata_depends_on= 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ':
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    os_metadata_kubespray_groups=bastion:
+      hosts:
+        axion-bastion-1: {}
+    os_metadata_kubespray_groups=etcd,no_floating:
+      hosts:
+        axion-etcd-1: {}
+    os_metadata_kubespray_groups=kube_control_plane,,k8s_cluster,no_floating:
+      hosts:
+        axion-k8s-master-nf-ne-1: {}
+    os_metadata_kubespray_groups=kube_node,k8s_cluster,no_floating,:
+      hosts:
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    os_metadata_ssh_user=centos:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    os_metadata_use_access_ip=1:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    os_region=RegionOne:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    publicly_routable:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        g1-8gb-c4-22gb: {}
+    ungrouped: {}

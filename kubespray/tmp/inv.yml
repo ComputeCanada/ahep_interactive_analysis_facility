@@ -1,0 +1,3654 @@
+all:
+  children:
+    bastion:
+      hosts:
+        axion-bastion-1:
+          access_ip: 206.12.95.48
+          access_ip_v4: 206.12.95.48
+          access_ip_v6: ''
+          ansible_ssh_host: 206.12.95.48
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          bin_dir: /usr/bin
+          cloud_provider: openstack
+          consul_is_server: false
+          containerd_storage_dir: /mnt/lib/containerd
+          discovered_interpreter_python: /usr/bin/python
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          flavor:
+            id: 8c4dad4f-807d-4240-91e0-0fb958a1c671
+            name: c2-15gb-72
+          host_domain: novalocal
+          id: 5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ip: 192.168.0.215
+          key_pair: kubernetes-axion
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: bastion
+            ssh_user: centos
+            use_access_ip: '1'
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.215
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:91:24:c6
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          packages:
+            PyYAML:
+            - arch: x86_64
+              epoch: null
+              name: PyYAML
+              release: 11.el7
+              source: rpm
+              version: '3.10'
+            acl:
+            - arch: x86_64
+              epoch: null
+              name: acl
+              release: 15.el7
+              source: rpm
+              version: 2.2.51
+            attr:
+            - arch: x86_64
+              epoch: null
+              name: attr
+              release: 13.el7
+              source: rpm
+              version: 2.4.46
+            audit:
+            - arch: x86_64
+              epoch: null
+              name: audit
+              release: 4.el7
+              source: rpm
+              version: 2.8.5
+            audit-libs:
+            - arch: x86_64
+              epoch: null
+              name: audit-libs
+              release: 4.el7
+              source: rpm
+              version: 2.8.5
+            audit-libs-python:
+            - arch: x86_64
+              epoch: null
+              name: audit-libs-python
+              release: 4.el7
+              source: rpm
+              version: 2.8.5
+            authconfig:
+            - arch: x86_64
+              epoch: null
+              name: authconfig
+              release: 30.el7
+              source: rpm
+              version: 6.2.8
+            autofs:
+            - arch: x86_64
+              epoch: 1
+              name: autofs
+              release: 116.el7_9
+              source: rpm
+              version: 5.0.7
+            basesystem:
+            - arch: noarch
+              epoch: null
+              name: basesystem
+              release: 7.el7.centos
+              source: rpm
+              version: '10.0'
+            bash:
+            - arch: x86_64
+              epoch: null
+              name: bash
+              release: 34.el7
+              source: rpm
+              version: 4.2.46
+            bc:
+            - arch: x86_64
+              epoch: null
+              name: bc
+              release: 13.el7
+              source: rpm
+              version: 1.06.95
+            bind-export-libs:
+            - arch: x86_64
+              epoch: 32
+              name: bind-export-libs
+              release: 26.P2.el7_9.7
+              source: rpm
+              version: 9.11.4
+            binutils:
+            - arch: x86_64
+              epoch: null
+              name: binutils
+              release: 44.base.el7_9.1
+              source: rpm
+              version: '2.27'
+            btrfs-progs:
+            - arch: x86_64
+              epoch: null
+              name: btrfs-progs
+              release: 1.el7
+              source: rpm
+              version: 4.9.1
+            bzip2-libs:
+            - arch: x86_64
+              epoch: null
+              name: bzip2-libs
+              release: 13.el7
+              source: rpm
+              version: 1.0.6
+            ca-certificates:
+            - arch: noarch
+              epoch: null
+              name: ca-certificates
+              release: 72.el7_9
+              source: rpm
+              version: 2021.2.50
+            centos-release:
+            - arch: x86_64
+              epoch: null
+              name: centos-release
+              release: 9.2009.1.el7.centos
+              source: rpm
+              version: '7'
+            checkpolicy:
+            - arch: x86_64
+              epoch: null
+              name: checkpolicy
+              release: 8.el7
+              source: rpm
+              version: '2.5'
+            chkconfig:
+            - arch: x86_64
+              epoch: null
+              name: chkconfig
+              release: 1.el7
+              source: rpm
+              version: 1.7.6
+            chrony:
+            - arch: x86_64
+              epoch: null
+              name: chrony
+              release: 1.el7
+              source: rpm
+              version: '3.4'
+            cloud-init:
+            - arch: x86_64
+              epoch: null
+              name: cloud-init
+              release: 7.el7.centos.5
+              source: rpm
+              version: '19.4'
+            cloud-utils-growpart:
+            - arch: noarch
+              epoch: null
+              name: cloud-utils-growpart
+              release: 5.el7
+              source: rpm
+              version: '0.29'
+            computecanada-release:
+            - arch: noarch
+              epoch: null
+              name: computecanada-release
+              release: '1'
+              source: rpm
+              version: '1.0'
+            coreutils:
+            - arch: x86_64
+              epoch: null
+              name: coreutils
+              release: 24.el7_9.2
+              source: rpm
+              version: '8.22'
+            cpio:
+            - arch: x86_64
+              epoch: null
+              name: cpio
+              release: 28.el7
+              source: rpm
+              version: '2.11'
+            cracklib:
+            - arch: x86_64
+              epoch: null
+              name: cracklib
+              release: 11.el7
+              source: rpm
+              version: 2.9.0
+            cracklib-dicts:
+            - arch: x86_64
+              epoch: null
+              name: cracklib-dicts
+              release: 11.el7
+              source: rpm
+              version: 2.9.0
+            cronie:
+            - arch: x86_64
+              epoch: null
+              name: cronie
+              release: 23.el7
+              source: rpm
+              version: 1.4.11
+            cronie-anacron:
+            - arch: x86_64
+              epoch: null
+              name: cronie-anacron
+              release: 23.el7
+              source: rpm
+              version: 1.4.11
+            crontabs:
+            - arch: noarch
+              epoch: null
+              name: crontabs
+              release: 6.20121102git.el7
+              source: rpm
+              version: '1.11'
+            cryptsetup-libs:
+            - arch: x86_64
+              epoch: null
+              name: cryptsetup-libs
+              release: 6.el7
+              source: rpm
+              version: 2.0.3
+            curl:
+            - arch: x86_64
+              epoch: null
+              name: curl
+              release: 59.el7_9.1
+              source: rpm
+              version: 7.29.0
+            cvmfs:
+            - arch: x86_64
+              epoch: null
+              name: cvmfs
+              release: 1.el7
+              source: rpm
+              version: 2.9.0
+            cvmfs-auto-setup:
+            - arch: noarch
+              epoch: null
+              name: cvmfs-auto-setup
+              release: '2'
+              source: rpm
+              version: '1.5'
+            cvmfs-config-computecanada:
+            - arch: noarch
+              epoch: null
+              name: cvmfs-config-computecanada
+              release: '1'
+              source: rpm
+              version: 1.4.0
+            cvmfs-config-default:
+            - arch: noarch
+              epoch: null
+              name: cvmfs-config-default
+              release: '1'
+              source: rpm
+              version: '2.0'
+            cvmfs-release:
+            - arch: noarch
+              epoch: null
+              name: cvmfs-release
+              release: '6'
+              source: rpm
+              version: '2'
+            cyrus-sasl-lib:
+            - arch: x86_64
+              epoch: null
+              name: cyrus-sasl-lib
+              release: 23.el7
+              source: rpm
+              version: 2.1.26
+            dbus:
+            - arch: x86_64
+              epoch: 1
+              name: dbus
+              release: 15.el7
+              source: rpm
+              version: 1.10.24
+            dbus-glib:
+            - arch: x86_64
+              epoch: null
+              name: dbus-glib
+              release: 7.el7
+              source: rpm
+              version: '0.100'
+            dbus-libs:
+            - arch: x86_64
+              epoch: 1
+              name: dbus-libs
+              release: 15.el7
+              source: rpm
+              version: 1.10.24
+            dbus-python:
+            - arch: x86_64
+              epoch: null
+              name: dbus-python
+              release: 9.el7
+              source: rpm
+              version: 1.1.1
+            device-mapper:
+            - arch: x86_64
+              epoch: 7
+              name: device-mapper
+              release: 6.el7_9.5
+              source: rpm
+              version: 1.02.170
+            device-mapper-event:
+            - arch: x86_64
+              epoch: 7
+              name: device-mapper-event
+              release: 6.el7_9.5
+              source: rpm
+              version: 1.02.170
+            device-mapper-event-libs:
+            - arch: x86_64
+              epoch: 7
+              name: device-mapper-event-libs
+              release: 6.el7_9.5
+              source: rpm
+              version: 1.02.170
+            device-mapper-libs:
+            - arch: x86_64
+              epoch: 7
+              name: device-mapper-libs
+              release: 6.el7_9.5
+              source: rpm
+              version: 1.02.170
+            device-mapper-persistent-data:
+            - arch: x86_64
+              epoch: null
+              name: device-mapper-persistent-data
+              release: 3.el7_9.2
+              source: rpm
+              version: 0.8.5
+            dhclient:
+            - arch: x86_64
+              epoch: 12
+              name: dhclient
+              release: 83.el7.centos.1
+              source: rpm
+              version: 4.2.5
+            dhcp-common:
+            - arch: x86_64
+              epoch: 12
+              name: dhcp-common
+              release: 83.el7.centos.1
+              source: rpm
+              version: 4.2.5
+            dhcp-libs:
+            - arch: x86_64
+              epoch: 12
+              name: dhcp-libs
+              release: 83.el7.centos.1
+              source: rpm
+              version: 4.2.5
+            diffutils:
+            - arch: x86_64
+              epoch: null
+              name: diffutils
+              release: 5.el7
+              source: rpm
+              version: '3.3'
+            dmidecode:
+            - arch: x86_64
+              epoch: 1
+              name: dmidecode
+              release: 5.el7_9.1
+              source: rpm
+              version: '3.2'
+            dracut:
+            - arch: x86_64
+              epoch: null
+              name: dracut
+              release: 572.el7
+              source: rpm
+              version: '033'
+            dracut-config-generic:
+            - arch: x86_64
+              epoch: null
+              name: dracut-config-generic
+              release: 572.el7
+              source: rpm
+              version: '033'
+            dracut-config-rescue:
+            - arch: x86_64
+              epoch: null
+              name: dracut-config-rescue
+              release: 572.el7
+              source: rpm
+              version: '033'
+            dracut-network:
+            - arch: x86_64
+              epoch: null
+              name: dracut-network
+              release: 572.el7
+              source: rpm
+              version: '033'
+            e2fsprogs:
+            - arch: x86_64
+              epoch: null
+              name: e2fsprogs
+              release: 19.el7
+              source: rpm
+              version: 1.42.9
+            e2fsprogs-libs:
+            - arch: x86_64
+              epoch: null
+              name: e2fsprogs-libs
+              release: 19.el7
+              source: rpm
+              version: 1.42.9
+            elfutils-default-yama-scope:
+            - arch: noarch
+              epoch: null
+              name: elfutils-default-yama-scope
+              release: 5.el7
+              source: rpm
+              version: '0.176'
+            elfutils-libelf:
+            - arch: x86_64
+              epoch: null
+              name: elfutils-libelf
+              release: 5.el7
+              source: rpm
+              version: '0.176'
+            elfutils-libs:
+            - arch: x86_64
+              epoch: null
+              name: elfutils-libs
+              release: 5.el7
+              source: rpm
+              version: '0.176'
+            ethtool:
+            - arch: x86_64
+              epoch: 2
+              name: ethtool
+              release: 10.el7
+              source: rpm
+              version: '4.8'
+            expat:
+            - arch: x86_64
+              epoch: null
+              name: expat
+              release: 12.el7
+              source: rpm
+              version: 2.1.0
+            file:
+            - arch: x86_64
+              epoch: null
+              name: file
+              release: 37.el7
+              source: rpm
+              version: '5.11'
+            file-libs:
+            - arch: x86_64
+              epoch: null
+              name: file-libs
+              release: 37.el7
+              source: rpm
+              version: '5.11'
+            filesystem:
+            - arch: x86_64
+              epoch: null
+              name: filesystem
+              release: 25.el7
+              source: rpm
+              version: '3.2'
+            findutils:
+            - arch: x86_64
+              epoch: 1
+              name: findutils
+              release: 6.el7
+              source: rpm
+              version: 4.5.11
+            fipscheck:
+            - arch: x86_64
+              epoch: null
+              name: fipscheck
+              release: 6.el7
+              source: rpm
+              version: 1.4.1
+            fipscheck-lib:
+            - arch: x86_64
+              epoch: null
+              name: fipscheck-lib
+              release: 6.el7
+              source: rpm
+              version: 1.4.1
+            freetype:
+            - arch: x86_64
+              epoch: null
+              name: freetype
+              release: 14.el7_9.1
+              source: rpm
+              version: '2.8'
+            fuse:
+            - arch: x86_64
+              epoch: null
+              name: fuse
+              release: 11.el7
+              source: rpm
+              version: 2.9.2
+            fuse-libs:
+            - arch: x86_64
+              epoch: null
+              name: fuse-libs
+              release: 11.el7
+              source: rpm
+              version: 2.9.2
+            gawk:
+            - arch: x86_64
+              epoch: null
+              name: gawk
+              release: 4.el7_3.1
+              source: rpm
+              version: 4.0.2
+            gdb:
+            - arch: x86_64
+              epoch: null
+              name: gdb
+              release: 120.el7
+              source: rpm
+              version: 7.6.1
+            gdbm:
+            - arch: x86_64
+              epoch: null
+              name: gdbm
+              release: 8.el7
+              source: rpm
+              version: '1.10'
+            gdisk:
+            - arch: x86_64
+              epoch: null
+              name: gdisk
+              release: 3.el7
+              source: rpm
+              version: 0.8.10
+            gettext:
+            - arch: x86_64
+              epoch: null
+              name: gettext
+              release: 3.el7
+              source: rpm
+              version: 0.19.8.1
+            gettext-libs:
+            - arch: x86_64
+              epoch: null
+              name: gettext-libs
+              release: 3.el7
+              source: rpm
+              version: 0.19.8.1
+            glib2:
+            - arch: x86_64
+              epoch: null
+              name: glib2
+              release: 9.el7_9
+              source: rpm
+              version: 2.56.1
+            glibc:
+            - arch: x86_64
+              epoch: null
+              name: glibc
+              release: 325.el7_9
+              source: rpm
+              version: '2.17'
+            glibc-common:
+            - arch: x86_64
+              epoch: null
+              name: glibc-common
+              release: 325.el7_9
+              source: rpm
+              version: '2.17'
+            gmp:
+            - arch: x86_64
+              epoch: 1
+              name: gmp
+              release: 15.el7
+              source: rpm
+              version: 6.0.0
+            gnupg2:
+            - arch: x86_64
+              epoch: null
+              name: gnupg2
+              release: 5.el7_5
+              source: rpm
+              version: 2.0.22
+            gobject-introspection:
+            - arch: x86_64
+              epoch: null
+              name: gobject-introspection
+              release: 1.el7
+              source: rpm
+              version: 1.56.1
+            gpg-pubkey:
+            - arch: null
+              epoch: null
+              name: gpg-pubkey
+              release: '57039892'
+              source: rpm
+              version: 8ae45ce7
+            - arch: null
+              epoch: null
+              name: gpg-pubkey
+              release: 53a7ff4b
+              source: rpm
+              version: f4a80eb5
+            - arch: null
+              epoch: null
+              name: gpg-pubkey
+              release: 5956e618
+              source: rpm
+              version: cf214cfc
+            gpgme:
+            - arch: x86_64
+              epoch: null
+              name: gpgme
+              release: 5.el7
+              source: rpm
+              version: 1.3.2
+            grep:
+            - arch: x86_64
+              epoch: null
+              name: grep
+              release: 3.el7
+              source: rpm
+              version: '2.20'
+            groff-base:
+            - arch: x86_64
+              epoch: null
+              name: groff-base
+              release: 8.el7
+              source: rpm
+              version: 1.22.2
+            grub2:
+            - arch: x86_64
+              epoch: 1
+              name: grub2
+              release: 0.87.el7.centos.7
+              source: rpm
+              version: '2.02'
+            grub2-common:
+            - arch: noarch
+              epoch: 1
+              name: grub2-common
+              release: 0.87.el7.centos.7
+              source: rpm
+              version: '2.02'
+            grub2-pc:
+            - arch: x86_64
+              epoch: 1
+              name: grub2-pc
+              release: 0.87.el7.centos.7
+              source: rpm
+              version: '2.02'
+            grub2-pc-modules:
+            - arch: noarch
+              epoch: 1
+              name: grub2-pc-modules
+              release: 0.87.el7.centos.7
+              source: rpm
+              version: '2.02'
+            grub2-tools:
+            - arch: x86_64
+              epoch: 1
+              name: grub2-tools
+              release: 0.87.el7.centos.7
+              source: rpm
+              version: '2.02'
+            grub2-tools-extra:
+            - arch: x86_64
+              epoch: 1
+              name: grub2-tools-extra
+              release: 0.87.el7.centos.7
+              source: rpm
+              version: '2.02'
+            grub2-tools-minimal:
+            - arch: x86_64
+              epoch: 1
+              name: grub2-tools-minimal
+              release: 0.87.el7.centos.7
+              source: rpm
+              version: '2.02'
+            grubby:
+            - arch: x86_64
+              epoch: null
+              name: grubby
+              release: 26.el7
+              source: rpm
+              version: '8.28'
+            gssproxy:
+            - arch: x86_64
+              epoch: null
+              name: gssproxy
+              release: 30.el7_9
+              source: rpm
+              version: 0.7.0
+            gzip:
+            - arch: x86_64
+              epoch: null
+              name: gzip
+              release: 10.el7
+              source: rpm
+              version: '1.5'
+            hardlink:
+            - arch: x86_64
+              epoch: 1
+              name: hardlink
+              release: 19.el7
+              source: rpm
+              version: '1.0'
+            hesiod:
+            - arch: x86_64
+              epoch: null
+              name: hesiod
+              release: 3.el7
+              source: rpm
+              version: 3.2.1
+            hostname:
+            - arch: x86_64
+              epoch: null
+              name: hostname
+              release: 3.el7_7.1
+              source: rpm
+              version: '3.13'
+            hwdata:
+            - arch: x86_64
+              epoch: null
+              name: hwdata
+              release: 9.7.el7
+              source: rpm
+              version: '0.252'
+            info:
+            - arch: x86_64
+              epoch: null
+              name: info
+              release: 5.el7
+              source: rpm
+              version: '5.1'
+            initscripts:
+            - arch: x86_64
+              epoch: null
+              name: initscripts
+              release: 1.el7_9.1
+              source: rpm
+              version: 9.49.53
+            iproute:
+            - arch: x86_64
+              epoch: null
+              name: iproute
+              release: 30.el7
+              source: rpm
+              version: 4.11.0
+            iptables:
+            - arch: x86_64
+              epoch: null
+              name: iptables
+              release: 35.el7
+              source: rpm
+              version: 1.4.21
+            iputils:
+            - arch: x86_64
+              epoch: null
+              name: iputils
+              release: 10.el7
+              source: rpm
+              version: '20160308'
+            irqbalance:
+            - arch: x86_64
+              epoch: 3
+              name: irqbalance
+              release: 12.el7
+              source: rpm
+              version: 1.0.7
+            jansson:
+            - arch: x86_64
+              epoch: null
+              name: jansson
+              release: 1.el7
+              source: rpm
+              version: '2.10'
+            json-c:
+            - arch: x86_64
+              epoch: null
+              name: json-c
+              release: 4.el7_0
+              source: rpm
+              version: '0.11'
+            kbd:
+            - arch: x86_64
+              epoch: null
+              name: kbd
+              release: 15.el7
+              source: rpm
+              version: 1.15.5
+            kbd-legacy:
+            - arch: noarch
+              epoch: null
+              name: kbd-legacy
+              release: 15.el7
+              source: rpm
+              version: 1.15.5
+            kbd-misc:
+            - arch: noarch
+              epoch: null
+              name: kbd-misc
+              release: 15.el7
+              source: rpm
+              version: 1.15.5
+            kernel:
+            - arch: x86_64
+              epoch: null
+              name: kernel
+              release: 1160.45.1.el7
+              source: rpm
+              version: 3.10.0
+            kernel-tools:
+            - arch: x86_64
+              epoch: null
+              name: kernel-tools
+              release: 1160.45.1.el7
+              source: rpm
+              version: 3.10.0
+            kernel-tools-libs:
+            - arch: x86_64
+              epoch: null
+              name: kernel-tools-libs
+              release: 1160.45.1.el7
+              source: rpm
+              version: 3.10.0
+            kexec-tools:
+            - arch: x86_64
+              epoch: null
+              name: kexec-tools
+              release: 51.el7_9.3
+              source: rpm
+              version: 2.0.15
+            keyutils:
+            - arch: x86_64
+              epoch: null
+              name: keyutils
+              release: 3.el7
+              source: rpm
+              version: 1.5.8
+            keyutils-libs:
+            - arch: x86_64
+              epoch: null
+              name: keyutils-libs
+              release: 3.el7
+              source: rpm
+              version: 1.5.8
+            kmod:
+            - arch: x86_64
+              epoch: null
+              name: kmod
+              release: 28.el7
+              source: rpm
+              version: '20'
+            kmod-libs:
+            - arch: x86_64
+              epoch: null
+              name: kmod-libs
+              release: 28.el7
+              source: rpm
+              version: '20'
+            kpartx:
+            - arch: x86_64
+              epoch: null
+              name: kpartx
+              release: 135.el7_9
+              source: rpm
+              version: 0.4.9
+            krb5-libs:
+            - arch: x86_64
+              epoch: null
+              name: krb5-libs
+              release: 50.el7
+              source: rpm
+              version: 1.15.1
+            less:
+            - arch: x86_64
+              epoch: null
+              name: less
+              release: 9.el7
+              source: rpm
+              version: '458'
+            libacl:
+            - arch: x86_64
+              epoch: null
+              name: libacl
+              release: 15.el7
+              source: rpm
+              version: 2.2.51
+            libaio:
+            - arch: x86_64
+              epoch: null
+              name: libaio
+              release: 13.el7
+              source: rpm
+              version: 0.3.109
+            libassuan:
+            - arch: x86_64
+              epoch: null
+              name: libassuan
+              release: 3.el7
+              source: rpm
+              version: 2.1.0
+            libattr:
+            - arch: x86_64
+              epoch: null
+              name: libattr
+              release: 13.el7
+              source: rpm
+              version: 2.4.46
+            libbasicobjects:
+            - arch: x86_64
+              epoch: null
+              name: libbasicobjects
+              release: 32.el7
+              source: rpm
+              version: 0.1.1
+            libblkid:
+            - arch: x86_64
+              epoch: null
+              name: libblkid
+              release: 65.el7_9.1
+              source: rpm
+              version: 2.23.2
+            libcap:
+            - arch: x86_64
+              epoch: null
+              name: libcap
+              release: 11.el7
+              source: rpm
+              version: '2.22'
+            libcap-ng:
+            - arch: x86_64
+              epoch: null
+              name: libcap-ng
+              release: 4.el7
+              source: rpm
+              version: 0.7.5
+            libcgroup:
+            - arch: x86_64
+              epoch: null
+              name: libcgroup
+              release: 21.el7
+              source: rpm
+              version: '0.41'
+            libcollection:
+            - arch: x86_64
+              epoch: null
+              name: libcollection
+              release: 32.el7
+              source: rpm
+              version: 0.7.0
+            libcom_err:
+            - arch: x86_64
+              epoch: null
+              name: libcom_err
+              release: 19.el7
+              source: rpm
+              version: 1.42.9
+            libcroco:
+            - arch: x86_64
+              epoch: null
+              name: libcroco
+              release: 6.el7_9
+              source: rpm
+              version: 0.6.12
+            libcurl:
+            - arch: x86_64
+              epoch: null
+              name: libcurl
+              release: 59.el7_9.1
+              source: rpm
+              version: 7.29.0
+            libdaemon:
+            - arch: x86_64
+              epoch: null
+              name: libdaemon
+              release: 7.el7
+              source: rpm
+              version: '0.14'
+            libdb:
+            - arch: x86_64
+              epoch: null
+              name: libdb
+              release: 25.el7
+              source: rpm
+              version: 5.3.21
+            libdb-utils:
+            - arch: x86_64
+              epoch: null
+              name: libdb-utils
+              release: 25.el7
+              source: rpm
+              version: 5.3.21
+            libedit:
+            - arch: x86_64
+              epoch: null
+              name: libedit
+              release: 12.20121213cvs.el7
+              source: rpm
+              version: '3.0'
+            libestr:
+            - arch: x86_64
+              epoch: null
+              name: libestr
+              release: 2.el7
+              source: rpm
+              version: 0.1.9
+            libevent:
+            - arch: x86_64
+              epoch: null
+              name: libevent
+              release: 4.el7
+              source: rpm
+              version: 2.0.21
+            libfastjson:
+            - arch: x86_64
+              epoch: null
+              name: libfastjson
+              release: 3.el7
+              source: rpm
+              version: 0.99.4
+            libffi:
+            - arch: x86_64
+              epoch: null
+              name: libffi
+              release: 19.el7
+              source: rpm
+              version: 3.0.13
+            libgcc:
+            - arch: x86_64
+              epoch: null
+              name: libgcc
+              release: 44.el7
+              source: rpm
+              version: 4.8.5
+            libgcrypt:
+            - arch: x86_64
+              epoch: null
+              name: libgcrypt
+              release: 14.el7
+              source: rpm
+              version: 1.5.3
+            libgomp:
+            - arch: x86_64
+              epoch: null
+              name: libgomp
+              release: 44.el7
+              source: rpm
+              version: 4.8.5
+            libgpg-error:
+            - arch: x86_64
+              epoch: null
+              name: libgpg-error
+              release: 3.el7
+              source: rpm
+              version: '1.12'
+            libidn:
+            - arch: x86_64
+              epoch: null
+              name: libidn
+              release: 4.el7
+              source: rpm
+              version: '1.28'
+            libini_config:
+            - arch: x86_64
+              epoch: null
+              name: libini_config
+              release: 32.el7
+              source: rpm
+              version: 1.3.1
+            libmnl:
+            - arch: x86_64
+              epoch: null
+              name: libmnl
+              release: 7.el7
+              source: rpm
+              version: 1.0.3
+            libmount:
+            - arch: x86_64
+              epoch: null
+              name: libmount
+              release: 65.el7_9.1
+              source: rpm
+              version: 2.23.2
+            libndp:
+            - arch: x86_64
+              epoch: null
+              name: libndp
+              release: 9.el7
+              source: rpm
+              version: '1.2'
+            libnetfilter_conntrack:
+            - arch: x86_64
+              epoch: null
+              name: libnetfilter_conntrack
+              release: 1.el7_3
+              source: rpm
+              version: 1.0.6
+            libnfnetlink:
+            - arch: x86_64
+              epoch: null
+              name: libnfnetlink
+              release: 4.el7
+              source: rpm
+              version: 1.0.1
+            libnfsidmap:
+            - arch: x86_64
+              epoch: null
+              name: libnfsidmap
+              release: 19.el7
+              source: rpm
+              version: '0.25'
+            libnl3:
+            - arch: x86_64
+              epoch: null
+              name: libnl3
+              release: 4.el7
+              source: rpm
+              version: 3.2.28
+            libnl3-cli:
+            - arch: x86_64
+              epoch: null
+              name: libnl3-cli
+              release: 4.el7
+              source: rpm
+              version: 3.2.28
+            libpath_utils:
+            - arch: x86_64
+              epoch: null
+              name: libpath_utils
+              release: 32.el7
+              source: rpm
+              version: 0.2.1
+            libpipeline:
+            - arch: x86_64
+              epoch: null
+              name: libpipeline
+              release: 3.el7
+              source: rpm
+              version: 1.2.3
+            libpng:
+            - arch: x86_64
+              epoch: 2
+              name: libpng
+              release: 8.el7
+              source: rpm
+              version: 1.5.13
+            libpwquality:
+            - arch: x86_64
+              epoch: null
+              name: libpwquality
+              release: 5.el7
+              source: rpm
+              version: 1.2.3
+            libref_array:
+            - arch: x86_64
+              epoch: null
+              name: libref_array
+              release: 32.el7
+              source: rpm
+              version: 0.1.5
+            libseccomp:
+            - arch: x86_64
+              epoch: null
+              name: libseccomp
+              release: 4.el7
+              source: rpm
+              version: 2.3.1
+            libselinux:
+            - arch: x86_64
+              epoch: null
+              name: libselinux
+              release: 15.el7
+              source: rpm
+              version: '2.5'
+            libselinux-python:
+            - arch: x86_64
+              epoch: null
+              name: libselinux-python
+              release: 15.el7
+              source: rpm
+              version: '2.5'
+            libselinux-utils:
+            - arch: x86_64
+              epoch: null
+              name: libselinux-utils
+              release: 15.el7
+              source: rpm
+              version: '2.5'
+            libsemanage:
+            - arch: x86_64
+              epoch: null
+              name: libsemanage
+              release: 14.el7
+              source: rpm
+              version: '2.5'
+            libsemanage-python:
+            - arch: x86_64
+              epoch: null
+              name: libsemanage-python
+              release: 14.el7
+              source: rpm
+              version: '2.5'
+            libsepol:
+            - arch: x86_64
+              epoch: null
+              name: libsepol
+              release: 10.el7
+              source: rpm
+              version: '2.5'
+            libsmartcols:
+            - arch: x86_64
+              epoch: null
+              name: libsmartcols
+              release: 65.el7_9.1
+              source: rpm
+              version: 2.23.2
+            libss:
+            - arch: x86_64
+              epoch: null
+              name: libss
+              release: 19.el7
+              source: rpm
+              version: 1.42.9
+            libssh2:
+            - arch: x86_64
+              epoch: null
+              name: libssh2
+              release: 4.el7
+              source: rpm
+              version: 1.8.0
+            libstdc++:
+            - arch: x86_64
+              epoch: null
+              name: libstdc++
+              release: 44.el7
+              source: rpm
+              version: 4.8.5
+            libsysfs:
+            - arch: x86_64
+              epoch: null
+              name: libsysfs
+              release: 16.el7
+              source: rpm
+              version: 2.1.0
+            libtasn1:
+            - arch: x86_64
+              epoch: null
+              name: libtasn1
+              release: 1.el7
+              source: rpm
+              version: '4.10'
+            libteam:
+            - arch: x86_64
+              epoch: null
+              name: libteam
+              release: 3.el7
+              source: rpm
+              version: '1.29'
+            libtirpc:
+            - arch: x86_64
+              epoch: null
+              name: libtirpc
+              release: 0.16.el7
+              source: rpm
+              version: 0.2.4
+            libunistring:
+            - arch: x86_64
+              epoch: null
+              name: libunistring
+              release: 9.el7
+              source: rpm
+              version: 0.9.3
+            libuser:
+            - arch: x86_64
+              epoch: null
+              name: libuser
+              release: 9.el7
+              source: rpm
+              version: '0.60'
+            libutempter:
+            - arch: x86_64
+              epoch: null
+              name: libutempter
+              release: 4.el7
+              source: rpm
+              version: 1.1.6
+            libuuid:
+            - arch: x86_64
+              epoch: null
+              name: libuuid
+              release: 65.el7_9.1
+              source: rpm
+              version: 2.23.2
+            libverto:
+            - arch: x86_64
+              epoch: null
+              name: libverto
+              release: 4.el7
+              source: rpm
+              version: 0.2.5
+            libverto-libevent:
+            - arch: x86_64
+              epoch: null
+              name: libverto-libevent
+              release: 4.el7
+              source: rpm
+              version: 0.2.5
+            libxml2:
+            - arch: x86_64
+              epoch: null
+              name: libxml2
+              release: 6.el7_9.6
+              source: rpm
+              version: 2.9.1
+            libxml2-python:
+            - arch: x86_64
+              epoch: null
+              name: libxml2-python
+              release: 6.el7_9.6
+              source: rpm
+              version: 2.9.1
+            libyaml:
+            - arch: x86_64
+              epoch: null
+              name: libyaml
+              release: 11.el7_0
+              source: rpm
+              version: 0.1.4
+            logrotate:
+            - arch: x86_64
+              epoch: null
+              name: logrotate
+              release: 19.el7
+              source: rpm
+              version: 3.8.6
+            lshw:
+            - arch: x86_64
+              epoch: null
+              name: lshw
+              release: 17.el7
+              source: rpm
+              version: B.02.18
+            lsof:
+            - arch: x86_64
+              epoch: null
+              name: lsof
+              release: 6.el7
+              source: rpm
+              version: '4.87'
+            lua:
+            - arch: x86_64
+              epoch: null
+              name: lua
+              release: 15.el7
+              source: rpm
+              version: 5.1.4
+            lvm2:
+            - arch: x86_64
+              epoch: 7
+              name: lvm2
+              release: 6.el7_9.5
+              source: rpm
+              version: 2.02.187
+            lvm2-libs:
+            - arch: x86_64
+              epoch: 7
+              name: lvm2-libs
+              release: 6.el7_9.5
+              source: rpm
+              version: 2.02.187
+            lz4:
+            - arch: x86_64
+              epoch: null
+              name: lz4
+              release: 1.el7
+              source: rpm
+              version: 1.8.3
+            lzo:
+            - arch: x86_64
+              epoch: null
+              name: lzo
+              release: 8.el7
+              source: rpm
+              version: '2.06'
+            make:
+            - arch: x86_64
+              epoch: 1
+              name: make
+              release: 24.el7
+              source: rpm
+              version: '3.82'
+            man-db:
+            - arch: x86_64
+              epoch: null
+              name: man-db
+              release: 11.el7
+              source: rpm
+              version: 2.6.3
+            mariadb-libs:
+            - arch: x86_64
+              epoch: 1
+              name: mariadb-libs
+              release: 1.el7
+              source: rpm
+              version: 5.5.68
+            microcode_ctl:
+            - arch: x86_64
+              epoch: 2
+              name: microcode_ctl
+              release: 73.11.el7_9
+              source: rpm
+              version: '2.1'
+            mozjs17:
+            - arch: x86_64
+              epoch: null
+              name: mozjs17
+              release: 20.el7
+              source: rpm
+              version: 17.0.0
+            ncurses:
+            - arch: x86_64
+              epoch: null
+              name: ncurses
+              release: 14.20130511.el7_4
+              source: rpm
+              version: '5.9'
+            ncurses-base:
+            - arch: noarch
+              epoch: null
+              name: ncurses-base
+              release: 14.20130511.el7_4
+              source: rpm
+              version: '5.9'
+            ncurses-libs:
+            - arch: x86_64
+              epoch: null
+              name: ncurses-libs
+              release: 14.20130511.el7_4
+              source: rpm
+              version: '5.9'
+            net-tools:
+            - arch: x86_64
+              epoch: null
+              name: net-tools
+              release: 0.25.20131004git.el7
+              source: rpm
+              version: '2.0'
+            newt:
+            - arch: x86_64
+              epoch: null
+              name: newt
+              release: 4.el7
+              source: rpm
+              version: 0.52.15
+            newt-python:
+            - arch: x86_64
+              epoch: null
+              name: newt-python
+              release: 4.el7
+              source: rpm
+              version: 0.52.15
+            nfs-utils:
+            - arch: x86_64
+              epoch: 1
+              name: nfs-utils
+              release: 0.68.el7.2
+              source: rpm
+              version: 1.3.0
+            nspr:
+            - arch: x86_64
+              epoch: null
+              name: nspr
+              release: 1.el7_9
+              source: rpm
+              version: 4.32.0
+            nss:
+            - arch: x86_64
+              epoch: null
+              name: nss
+              release: 3.el7_9
+              source: rpm
+              version: 3.67.0
+            nss-pem:
+            - arch: x86_64
+              epoch: null
+              name: nss-pem
+              release: 7.el7
+              source: rpm
+              version: 1.0.3
+            nss-softokn:
+            - arch: x86_64
+              epoch: null
+              name: nss-softokn
+              release: 3.el7_9
+              source: rpm
+              version: 3.67.0
+            nss-softokn-freebl:
+            - arch: x86_64
+              epoch: null
+              name: nss-softokn-freebl
+              release: 3.el7_9
+              source: rpm
+              version: 3.67.0
+            nss-sysinit:
+            - arch: x86_64
+              epoch: null
+              name: nss-sysinit
+              release: 3.el7_9
+              source: rpm
+              version: 3.67.0
+            nss-tools:
+            - arch: x86_64
+              epoch: null
+              name: nss-tools
+              release: 3.el7_9
+              source: rpm
+              version: 3.67.0
+            nss-util:
+            - arch: x86_64
+              epoch: null
+              name: nss-util
+              release: 1.el7_9
+              source: rpm
+              version: 3.67.0
+            numactl-libs:
+            - arch: x86_64
+              epoch: null
+              name: numactl-libs
+              release: 5.el7
+              source: rpm
+              version: 2.0.12
+            openldap:
+            - arch: x86_64
+              epoch: null
+              name: openldap
+              release: 24.el7_9
+              source: rpm
+              version: 2.4.44
+            openssh:
+            - arch: x86_64
+              epoch: null
+              name: openssh
+              release: 21.el7
+              source: rpm
+              version: 7.4p1
+            openssh-clients:
+            - arch: x86_64
+              epoch: null
+              name: openssh-clients
+              release: 21.el7
+              source: rpm
+              version: 7.4p1
+            openssh-server:
+            - arch: x86_64
+              epoch: null
+              name: openssh-server
+              release: 21.el7
+              source: rpm
+              version: 7.4p1
+            openssl:
+            - arch: x86_64
+              epoch: 1
+              name: openssl
+              release: 22.el7_9
+              source: rpm
+              version: 1.0.2k
+            openssl-libs:
+            - arch: x86_64
+              epoch: 1
+              name: openssl-libs
+              release: 22.el7_9
+              source: rpm
+              version: 1.0.2k
+            os-prober:
+            - arch: x86_64
+              epoch: null
+              name: os-prober
+              release: 9.el7
+              source: rpm
+              version: '1.58'
+            p11-kit:
+            - arch: x86_64
+              epoch: null
+              name: p11-kit
+              release: 3.el7
+              source: rpm
+              version: 0.23.5
+            p11-kit-trust:
+            - arch: x86_64
+              epoch: null
+              name: p11-kit-trust
+              release: 3.el7
+              source: rpm
+              version: 0.23.5
+            pam:
+            - arch: x86_64
+              epoch: null
+              name: pam
+              release: 23.el7
+              source: rpm
+              version: 1.1.8
+            parted:
+            - arch: x86_64
+              epoch: null
+              name: parted
+              release: 32.el7
+              source: rpm
+              version: '3.1'
+            passwd:
+            - arch: x86_64
+              epoch: null
+              name: passwd
+              release: 6.el7
+              source: rpm
+              version: '0.79'
+            pciutils-libs:
+            - arch: x86_64
+              epoch: null
+              name: pciutils-libs
+              release: 3.el7
+              source: rpm
+              version: 3.5.1
+            pcre:
+            - arch: x86_64
+              epoch: null
+              name: pcre
+              release: 17.el7
+              source: rpm
+              version: '8.32'
+            pinentry:
+            - arch: x86_64
+              epoch: null
+              name: pinentry
+              release: 17.el7
+              source: rpm
+              version: 0.8.1
+            pkgconfig:
+            - arch: x86_64
+              epoch: 1
+              name: pkgconfig
+              release: 4.el7
+              source: rpm
+              version: 0.27.1
+            policycoreutils:
+            - arch: x86_64
+              epoch: null
+              name: policycoreutils
+              release: 34.el7
+              source: rpm
+              version: '2.5'
+            policycoreutils-python:
+            - arch: x86_64
+              epoch: null
+              name: policycoreutils-python
+              release: 34.el7
+              source: rpm
+              version: '2.5'
+            polkit:
+            - arch: x86_64
+              epoch: null
+              name: polkit
+              release: 26.el7
+              source: rpm
+              version: '0.112'
+            polkit-pkla-compat:
+            - arch: x86_64
+              epoch: null
+              name: polkit-pkla-compat
+              release: 4.el7
+              source: rpm
+              version: '0.1'
+            popt:
+            - arch: x86_64
+              epoch: null
+              name: popt
+              release: 16.el7
+              source: rpm
+              version: '1.13'
+            postfix:
+            - arch: x86_64
+              epoch: 2
+              name: postfix
+              release: 9.el7
+              source: rpm
+              version: 2.10.1
+            procps-ng:
+            - arch: x86_64
+              epoch: null
+              name: procps-ng
+              release: 28.el7
+              source: rpm
+              version: 3.3.10
+            psmisc:
+            - arch: x86_64
+              epoch: null
+              name: psmisc
+              release: 17.el7
+              source: rpm
+              version: '22.20'
+            pth:
+            - arch: x86_64
+              epoch: null
+              name: pth
+              release: 23.el7
+              source: rpm
+              version: 2.0.7
+            pygpgme:
+            - arch: x86_64
+              epoch: null
+              name: pygpgme
+              release: 9.el7
+              source: rpm
+              version: '0.3'
+            pyliblzma:
+            - arch: x86_64
+              epoch: null
+              name: pyliblzma
+              release: 11.el7
+              source: rpm
+              version: 0.5.3
+            pyserial:
+            - arch: noarch
+              epoch: null
+              name: pyserial
+              release: 6.el7
+              source: rpm
+              version: '2.6'
+            python:
+            - arch: x86_64
+              epoch: null
+              name: python
+              release: 90.el7
+              source: rpm
+              version: 2.7.5
+            python-IPy:
+            - arch: noarch
+              epoch: null
+              name: python-IPy
+              release: 6.el7
+              source: rpm
+              version: '0.75'
+            python-babel:
+            - arch: noarch
+              epoch: null
+              name: python-babel
+              release: 8.el7
+              source: rpm
+              version: 0.9.6
+            python-backports:
+            - arch: x86_64
+              epoch: null
+              name: python-backports
+              release: 8.el7
+              source: rpm
+              version: '1.0'
+            python-backports-ssl_match_hostname:
+            - arch: noarch
+              epoch: null
+              name: python-backports-ssl_match_hostname
+              release: 1.el7
+              source: rpm
+              version: 3.5.0.1
+            python-chardet:
+            - arch: noarch
+              epoch: null
+              name: python-chardet
+              release: 3.el7
+              source: rpm
+              version: 2.2.1
+            python-configobj:
+            - arch: noarch
+              epoch: null
+              name: python-configobj
+              release: 7.el7
+              source: rpm
+              version: 4.7.2
+            python-decorator:
+            - arch: noarch
+              epoch: null
+              name: python-decorator
+              release: 3.el7
+              source: rpm
+              version: 3.4.0
+            python-gobject-base:
+            - arch: x86_64
+              epoch: null
+              name: python-gobject-base
+              release: 1.el7_4.1
+              source: rpm
+              version: 3.22.0
+            python-iniparse:
+            - arch: noarch
+              epoch: null
+              name: python-iniparse
+              release: 9.el7
+              source: rpm
+              version: '0.4'
+            python-ipaddress:
+            - arch: noarch
+              epoch: null
+              name: python-ipaddress
+              release: 2.el7
+              source: rpm
+              version: 1.0.16
+            python-jinja2:
+            - arch: noarch
+              epoch: null
+              name: python-jinja2
+              release: 4.el7
+              source: rpm
+              version: 2.7.2
+            python-jsonpatch:
+            - arch: noarch
+              epoch: null
+              name: python-jsonpatch
+              release: 4.el7
+              source: rpm
+              version: '1.2'
+            python-jsonpointer:
+            - arch: noarch
+              epoch: null
+              name: python-jsonpointer
+              release: 2.el7
+              source: rpm
+              version: '1.9'
+            python-kitchen:
+            - arch: noarch
+              epoch: null
+              name: python-kitchen
+              release: 5.el7
+              source: rpm
+              version: 1.1.1
+            python-libs:
+            - arch: x86_64
+              epoch: null
+              name: python-libs
+              release: 90.el7
+              source: rpm
+              version: 2.7.5
+            python-linux-procfs:
+            - arch: noarch
+              epoch: null
+              name: python-linux-procfs
+              release: 4.el7
+              source: rpm
+              version: 0.4.11
+            python-markupsafe:
+            - arch: x86_64
+              epoch: null
+              name: python-markupsafe
+              release: 10.el7
+              source: rpm
+              version: '0.11'
+            python-perf:
+            - arch: x86_64
+              epoch: null
+              name: python-perf
+              release: 1160.45.1.el7
+              source: rpm
+              version: 3.10.0
+            python-prettytable:
+            - arch: noarch
+              epoch: null
+              name: python-prettytable
+              release: 3.el7
+              source: rpm
+              version: 0.7.2
+            python-pycurl:
+            - arch: x86_64
+              epoch: null
+              name: python-pycurl
+              release: 19.el7
+              source: rpm
+              version: 7.19.0
+            python-pyudev:
+            - arch: noarch
+              epoch: null
+              name: python-pyudev
+              release: 9.el7
+              source: rpm
+              version: '0.15'
+            python-requests:
+            - arch: noarch
+              epoch: null
+              name: python-requests
+              release: 10.el7
+              source: rpm
+              version: 2.6.0
+            python-schedutils:
+            - arch: x86_64
+              epoch: null
+              name: python-schedutils
+              release: 6.el7
+              source: rpm
+              version: '0.4'
+            python-setuptools:
+            - arch: noarch
+              epoch: null
+              name: python-setuptools
+              release: 7.el7
+              source: rpm
+              version: 0.9.8
+            python-six:
+            - arch: noarch
+              epoch: null
+              name: python-six
+              release: 2.el7
+              source: rpm
+              version: 1.9.0
+            python-urlgrabber:
+            - arch: noarch
+              epoch: null
+              name: python-urlgrabber
+              release: 10.el7
+              source: rpm
+              version: '3.10'
+            python-urllib3:
+            - arch: noarch
+              epoch: null
+              name: python-urllib3
+              release: 7.el7
+              source: rpm
+              version: 1.10.2
+            pyxattr:
+            - arch: x86_64
+              epoch: null
+              name: pyxattr
+              release: 5.el7
+              source: rpm
+              version: 0.5.1
+            qemu-guest-agent:
+            - arch: x86_64
+              epoch: 10
+              name: qemu-guest-agent
+              release: 3.el7
+              source: rpm
+              version: 2.12.0
+            qrencode-libs:
+            - arch: x86_64
+              epoch: null
+              name: qrencode-libs
+              release: 3.el7
+              source: rpm
+              version: 3.4.1
+            quota:
+            - arch: x86_64
+              epoch: 1
+              name: quota
+              release: 19.el7
+              source: rpm
+              version: '4.01'
+            quota-nls:
+            - arch: noarch
+              epoch: 1
+              name: quota-nls
+              release: 19.el7
+              source: rpm
+              version: '4.01'
+            readline:
+            - arch: x86_64
+              epoch: null
+              name: readline
+              release: 11.el7
+              source: rpm
+              version: '6.2'
+            rootfiles:
+            - arch: noarch
+              epoch: null
+              name: rootfiles
+              release: 11.el7
+              source: rpm
+              version: '8.1'
+            rpcbind:
+            - arch: x86_64
+              epoch: null
+              name: rpcbind
+              release: 49.el7
+              source: rpm
+              version: 0.2.0
+            rpm:
+            - arch: x86_64
+              epoch: null
+              name: rpm
+              release: 46.el7_9
+              source: rpm
+              version: 4.11.3
+            rpm-build-libs:
+            - arch: x86_64
+              epoch: null
+              name: rpm-build-libs
+              release: 46.el7_9
+              source: rpm
+              version: 4.11.3
+            rpm-libs:
+            - arch: x86_64
+              epoch: null
+              name: rpm-libs
+              release: 46.el7_9
+              source: rpm
+              version: 4.11.3
+            rpm-python:
+            - arch: x86_64
+              epoch: null
+              name: rpm-python
+              release: 46.el7_9
+              source: rpm
+              version: 4.11.3
+            rsync:
+            - arch: x86_64
+              epoch: null
+              name: rsync
+              release: 10.el7
+              source: rpm
+              version: 3.1.2
+            rsyslog:
+            - arch: x86_64
+              epoch: null
+              name: rsyslog
+              release: 57.el7_9.1
+              source: rpm
+              version: 8.24.0
+            sed:
+            - arch: x86_64
+              epoch: null
+              name: sed
+              release: 7.el7
+              source: rpm
+              version: 4.2.2
+            selinux-policy:
+            - arch: noarch
+              epoch: null
+              name: selinux-policy
+              release: 268.el7_9.2
+              source: rpm
+              version: 3.13.1
+            selinux-policy-targeted:
+            - arch: noarch
+              epoch: null
+              name: selinux-policy-targeted
+              release: 268.el7_9.2
+              source: rpm
+              version: 3.13.1
+            setools-libs:
+            - arch: x86_64
+              epoch: null
+              name: setools-libs
+              release: 4.el7
+              source: rpm
+              version: 3.3.8
+            setup:
+            - arch: noarch
+              epoch: null
+              name: setup
+              release: 11.el7
+              source: rpm
+              version: 2.8.71
+            sg3_utils:
+            - arch: x86_64
+              epoch: 1
+              name: sg3_utils
+              release: 19.el7
+              source: rpm
+              version: '1.37'
+            sg3_utils-libs:
+            - arch: x86_64
+              epoch: 1
+              name: sg3_utils-libs
+              release: 19.el7
+              source: rpm
+              version: '1.37'
+            shadow-utils:
+            - arch: x86_64
+              epoch: 2
+              name: shadow-utils
+              release: 5.el7
+              source: rpm
+              version: '4.6'
+            shared-mime-info:
+            - arch: x86_64
+              epoch: null
+              name: shared-mime-info
+              release: 5.el7
+              source: rpm
+              version: '1.8'
+            slang:
+            - arch: x86_64
+              epoch: null
+              name: slang
+              release: 11.el7
+              source: rpm
+              version: 2.2.4
+            snappy:
+            - arch: x86_64
+              epoch: null
+              name: snappy
+              release: 3.el7
+              source: rpm
+              version: 1.1.0
+            sqlite:
+            - arch: x86_64
+              epoch: null
+              name: sqlite
+              release: 8.el7_7.1
+              source: rpm
+              version: 3.7.17
+            sudo:
+            - arch: x86_64
+              epoch: null
+              name: sudo
+              release: 10.el7_9.2
+              source: rpm
+              version: 1.8.23
+            systemd:
+            - arch: x86_64
+              epoch: null
+              name: systemd
+              release: 78.el7_9.3
+              source: rpm
+              version: '219'
+            systemd-libs:
+            - arch: x86_64
+              epoch: null
+              name: systemd-libs
+              release: 78.el7_9.3
+              source: rpm
+              version: '219'
+            systemd-sysv:
+            - arch: x86_64
+              epoch: null
+              name: systemd-sysv
+              release: 78.el7_9.3
+              source: rpm
+              version: '219'
+            sysvinit-tools:
+            - arch: x86_64
+              epoch: null
+              name: sysvinit-tools
+              release: 14.dsf.el7
+              source: rpm
+              version: '2.88'
+            tar:
+            - arch: x86_64
+              epoch: 2
+              name: tar
+              release: 35.el7
+              source: rpm
+              version: '1.26'
+            tcp_wrappers:
+            - arch: x86_64
+              epoch: null
+              name: tcp_wrappers
+              release: 77.el7
+              source: rpm
+              version: '7.6'
+            tcp_wrappers-libs:
+            - arch: x86_64
+              epoch: null
+              name: tcp_wrappers-libs
+              release: 77.el7
+              source: rpm
+              version: '7.6'
+            teamd:
+            - arch: x86_64
+              epoch: null
+              name: teamd
+              release: 3.el7
+              source: rpm
+              version: '1.29'
+            tuned:
+            - arch: noarch
+              epoch: null
+              name: tuned
+              release: 11.el7_9
+              source: rpm
+              version: 2.11.0
+            tzdata:
+            - arch: noarch
+              epoch: null
+              name: tzdata
+              release: 1.el7
+              source: rpm
+              version: 2021e
+            ustr:
+            - arch: x86_64
+              epoch: null
+              name: ustr
+              release: 16.el7
+              source: rpm
+              version: 1.0.4
+            util-linux:
+            - arch: x86_64
+              epoch: null
+              name: util-linux
+              release: 65.el7_9.1
+              source: rpm
+              version: 2.23.2
+            vim-minimal:
+            - arch: x86_64
+              epoch: 2
+              name: vim-minimal
+              release: 8.el7_9
+              source: rpm
+              version: 7.4.629
+            virt-what:
+            - arch: x86_64
+              epoch: null
+              name: virt-what
+              release: 4.el7_9.1
+              source: rpm
+              version: '1.18'
+            which:
+            - arch: x86_64
+              epoch: null
+              name: which
+              release: 7.el7
+              source: rpm
+              version: '2.20'
+            wpa_supplicant:
+            - arch: x86_64
+              epoch: 1
+              name: wpa_supplicant
+              release: 12.el7_9.2
+              source: rpm
+              version: '2.6'
+            xfsprogs:
+            - arch: x86_64
+              epoch: null
+              name: xfsprogs
+              release: 22.el7
+              source: rpm
+              version: 4.5.0
+            xz:
+            - arch: x86_64
+              epoch: null
+              name: xz
+              release: 1.el7
+              source: rpm
+              version: 5.2.2
+            xz-libs:
+            - arch: x86_64
+              epoch: null
+              name: xz-libs
+              release: 1.el7
+              source: rpm
+              version: 5.2.2
+            yum:
+            - arch: noarch
+              epoch: null
+              name: yum
+              release: 168.el7.centos
+              source: rpm
+              version: 3.4.3
+            yum-metadata-parser:
+            - arch: x86_64
+              epoch: null
+              name: yum-metadata-parser
+              release: 10.el7
+              source: rpm
+              version: 1.1.4
+            yum-plugin-fastestmirror:
+            - arch: noarch
+              epoch: null
+              name: yum-plugin-fastestmirror
+              release: 54.el7_8
+              source: rpm
+              version: 1.1.31
+            yum-utils:
+            - arch: noarch
+              epoch: null
+              name: yum-utils
+              release: 54.el7_8
+              source: rpm
+              version: 1.1.31
+            zlib:
+            - arch: x86_64
+              epoch: null
+              name: zlib
+              release: 19.el7_9
+              source: rpm
+              version: 1.2.7
+          pkg_mgr: yum
+          private_ipv4: 192.168.0.215
+          provider: openstack
+          public_ipv4: 206.12.95.48
+          publicly_routable: true
+          region: RegionOne
+          role: none
+          security_groups:
+          - axion-bastion
+          - axion-k8s
+          use_host_domain: true
+    etcd:
+      hosts:
+        axion-etcd-1:
+          access_ip: 192.168.0.135
+          access_ip_v4: 192.168.0.135
+          access_ip_v6: ''
+          ansible_all_ipv4_addresses:
+          - 192.168.0.135
+          - 172.17.0.1
+          ansible_all_ipv6_addresses:
+          - fe80::f816:3eff:fef9:ed66
+          ansible_apparmor:
+            status: disabled
+          ansible_architecture: x86_64
+          ansible_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console: ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_date_time:
+            date: '2022-05-23'
+            day: '23'
+            epoch: '1653333782'
+            hour: '19'
+            iso8601: '2022-05-23T19:23:02Z'
+            iso8601_basic: 20220523T192302046520
+            iso8601_basic_short: 20220523T192302
+            iso8601_micro: '2022-05-23T19:23:02.046520Z'
+            minute: '23'
+            month: '05'
+            second: '02'
+            time: '19:23:02'
+            tz: UTC
+            tz_offset: '+0000'
+            weekday: Monday
+            weekday_number: '1'
+            weeknumber: '21'
+            year: '2022'
+          ansible_default_ipv4:
+            address: 192.168.0.135
+            alias: eth0
+            broadcast: 192.168.0.255
+            gateway: 192.168.0.1
+            interface: eth0
+            macaddress: fa:16:3e:f9:ed:66
+            mtu: 1500
+            netmask: 255.255.255.0
+            network: 192.168.0.0
+            type: ether
+          ansible_default_ipv6: {}
+          ansible_distribution: CentOS
+          ansible_distribution_file_parsed: true
+          ansible_distribution_file_path: /etc/redhat-release
+          ansible_distribution_file_variety: RedHat
+          ansible_distribution_major_version: '7'
+          ansible_distribution_release: Core
+          ansible_distribution_version: '7.9'
+          ansible_dns:
+            nameservers:
+            - 192.168.0.3
+            - 192.168.0.5
+            - 192.168.0.2
+            - 192.168.0.4
+            search:
+            - arbutus
+            - novalocal
+          ansible_domain: cluster.local
+          ansible_effective_group_id: 1000
+          ansible_effective_user_id: 1000
+          ansible_env:
+            HOME: /home/centos
+            LANG: en_US.UTF-8
+            LC_ADDRESS: en_US.UTF-8
+            LC_IDENTIFICATION: en_US.UTF-8
+            LC_MEASUREMENT: en_US.UTF-8
+            LC_MONETARY: en_US.UTF-8
+            LC_NAME: en_US.UTF-8
+            LC_NUMERIC: en_US.UTF-8
+            LC_PAPER: en_US.UTF-8
+            LC_TELEPHONE: en_US.UTF-8
+            LC_TIME: en_US.UTF-8
+            LESSOPEN: '||/usr/bin/lesspipe.sh %s'
+            LOGNAME: centos
+            MAIL: /var/mail/centos
+            PATH: /usr/local/bin:/usr/bin
+            PWD: /home/centos
+            SELINUX_LEVEL_REQUESTED: ''
+            SELINUX_ROLE_REQUESTED: ''
+            SELINUX_USE_CURRENT_RANGE: ''
+            SHELL: /bin/bash
+            SHLVL: '2'
+            SSH_CLIENT: 192.168.0.215 35268 22
+            SSH_CONNECTION: 192.168.0.215 35268 192.168.0.135 22
+            USER: centos
+            XDG_RUNTIME_DIR: /run/user/1000
+            XDG_SESSION_ID: '2335'
+            _: /usr/bin/python
+          ansible_fips: false
+          ansible_fqdn: axion-etcd-1.cluster.local
+          ansible_hostname: axion-etcd-1
+          ansible_kernel: 3.10.0-1160.45.1.el7.x86_64
+          ansible_kernel_version: '#1 SMP Wed Oct 13 17:20:51 UTC 2021'
+          ansible_local: {}
+          ansible_lsb: {}
+          ansible_machine: x86_64
+          ansible_machine_id: 754f8a1ad2654504b10cacfb2e9d5eb0
+          ansible_memtotal_mb: 7317
+          ansible_nodename: axion-etcd-1
+          ansible_os_family: RedHat
+          ansible_pkg_mgr: yum
+          ansible_proc_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console:
+            - tty0
+            - ttyS0,115200n8
+            - ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_python:
+            executable: /usr/bin/python
+            has_sslcontext: true
+            type: CPython
+            version:
+              major: 2
+              micro: 5
+              minor: 7
+              releaselevel: final
+              serial: 0
+            version_info:
+            - 2
+            - 7
+            - 5
+            - final
+            - 0
+          ansible_python_version: 2.7.5
+          ansible_real_group_id: 1000
+          ansible_real_user_id: 1000
+          ansible_selinux:
+            config_mode: permissive
+            mode: permissive
+            policyvers: 31
+            status: enabled
+            type: targeted
+          ansible_selinux_python_present: true
+          ansible_service_mgr: systemd
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.135
+          ansible_ssh_host_key_ecdsa_public: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBE/bXVb18aohbwKjBSGtyv1zfhPdWe5676gr6OO7qMaJRlsJ4LPC+T7uBrkoht+pOdWz4P9CXLONHK84di2xf8=
+          ansible_ssh_host_key_ed25519_public: AAAAC3NzaC1lZDI1NTE5AAAAID1YCPrNmWrSzcTKKbyoiNKofwdXXlwWSvbQL6DDIAAB
+          ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAADAQABAAABAQDbAmxXAIKzY3VhhrZL/Bv9ILjglJUgfP+VjptiOosEtpXI0WzquxIQvasp+B83o46aXoRAr30kGpfpsvNjlkb2Qx4uVrz4B3cF/HE2PqJg8rElZveKL3OKDtRZdAi9yumrBhaPI4G1Fqd0/vK5Zd1zvkW6dHVDVPU7Fq0QcoMjnTshF3l7P3NBlnmJd4/d9YB+Ns7sZGdlUYyCfj6FgVW7+SZNUl97+eqCdOxiIKGGhGrLb9YB04HtWSwuDrVLN22qVv/Y2IGldqjX8yv3WKO5dwDVfMOzsycBFFCB9lwCd1jDnYDj9a/gUUR2uRYtURNxFR1HHRvGA5NzOG5KS+Pv
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          ansible_swaptotal_mb: 0
+          ansible_system: Linux
+          ansible_system_capabilities:
+          - ''
+          ansible_system_capabilities_enforced: 'True'
+          ansible_user_dir: /home/centos
+          ansible_user_gecos: Cloud User
+          ansible_user_gid: 1000
+          ansible_user_id: centos
+          ansible_user_shell: /bin/bash
+          ansible_user_uid: 1000
+          ansible_userspace_architecture: x86_64
+          ansible_userspace_bits: '64'
+          bin_dir: /usr/bin
+          cloud_provider: openstack
+          consul_is_server: false
+          containerd_storage_dir: /mnt/lib/containerd
+          discovered_interpreter_python: /usr/bin/python
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          flavor:
+            id: 22f7655d-45c1-4e01-83a0-2929e686f19b
+            name: c1-7.5gb-36
+          gather_subset:
+          - '!all'
+          host_domain: novalocal
+          id: a2aed495-dbe9-41a1-a538-6d9220cd2f2d
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ip: 192.168.0.135
+          key_pair: kubernetes-axion
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: etcd,no_floating
+            ssh_user: centos
+            use_access_ip: '1'
+          module_setup: true
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.135
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:f9:ed:66
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          private_ipv4: 192.168.0.135
+          provider: openstack
+          public_ipv4: 192.168.0.135
+          publicly_routable: true
+          region: RegionOne
+          role: none
+          security_groups:
+          - axion-k8s
+          use_host_domain: true
+    k8s_cluster:
+      hosts:
+        axion-k8s-master-nf-ne-1:
+          access_ip: 192.168.0.92
+          access_ip_v4: 192.168.0.92
+          access_ip_v6: ''
+          ansible_all_ipv4_addresses:
+          - 192.168.0.92
+          - 169.254.25.10
+          - 10.233.124.0
+          - 10.233.0.1
+          - 10.233.0.3
+          - 10.233.40.191
+          - 10.233.57.221
+          - 10.233.53.187
+          - 10.233.54.135
+          - 10.233.41.132
+          - 10.233.53.196
+          - 10.233.27.194
+          ansible_all_ipv6_addresses:
+          - fe80::f816:3eff:fee9:94e5
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          ansible_apparmor:
+            status: disabled
+          ansible_architecture: x86_64
+          ansible_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console: ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_date_time:
+            date: '2022-05-23'
+            day: '23'
+            epoch: '1653333781'
+            hour: '19'
+            iso8601: '2022-05-23T19:23:01Z'
+            iso8601_basic: 20220523T192301853177
+            iso8601_basic_short: 20220523T192301
+            iso8601_micro: '2022-05-23T19:23:01.853177Z'
+            minute: '23'
+            month: '05'
+            second: '01'
+            time: '19:23:01'
+            tz: UTC
+            tz_offset: '+0000'
+            weekday: Monday
+            weekday_number: '1'
+            weeknumber: '21'
+            year: '2022'
+          ansible_default_ipv4:
+            address: 192.168.0.92
+            alias: eth0
+            broadcast: 192.168.0.255
+            gateway: 192.168.0.1
+            interface: eth0
+            macaddress: fa:16:3e:e9:94:e5
+            mtu: 1500
+            netmask: 255.255.255.0
+            network: 192.168.0.0
+            type: ether
+          ansible_default_ipv6: {}
+          ansible_distribution: CentOS
+          ansible_distribution_file_parsed: true
+          ansible_distribution_file_path: /etc/redhat-release
+          ansible_distribution_file_variety: RedHat
+          ansible_distribution_major_version: '7'
+          ansible_distribution_release: Core
+          ansible_distribution_version: '7.9'
+          ansible_dns:
+            nameservers:
+            - 192.168.0.3
+            - 192.168.0.5
+            - 192.168.0.2
+            - 192.168.0.4
+            search:
+            - arbutus
+            - novalocal
+          ansible_domain: cluster.local
+          ansible_effective_group_id: 1000
+          ansible_effective_user_id: 1000
+          ansible_env:
+            HOME: /home/centos
+            LANG: en_US.UTF-8
+            LC_ADDRESS: en_US.UTF-8
+            LC_IDENTIFICATION: en_US.UTF-8
+            LC_MEASUREMENT: en_US.UTF-8
+            LC_MONETARY: en_US.UTF-8
+            LC_NAME: en_US.UTF-8
+            LC_NUMERIC: en_US.UTF-8
+            LC_PAPER: en_US.UTF-8
+            LC_TELEPHONE: en_US.UTF-8
+            LC_TIME: en_US.UTF-8
+            LESSOPEN: '||/usr/bin/lesspipe.sh %s'
+            LOGNAME: centos
+            MAIL: /var/mail/centos
+            PATH: /usr/local/bin:/usr/bin
+            PWD: /home/centos
+            SELINUX_LEVEL_REQUESTED: ''
+            SELINUX_ROLE_REQUESTED: ''
+            SELINUX_USE_CURRENT_RANGE: ''
+            SHELL: /bin/bash
+            SHLVL: '2'
+            SSH_CLIENT: 192.168.0.215 39530 22
+            SSH_CONNECTION: 192.168.0.215 39530 192.168.0.92 22
+            USER: centos
+            XDG_RUNTIME_DIR: /run/user/1000
+            XDG_SESSION_ID: '2349'
+            _: /usr/bin/python
+          ansible_fips: false
+          ansible_fqdn: axion-k8s-master-nf-ne-1.cluster.local
+          ansible_hostname: axion-k8s-master-nf-ne-1
+          ansible_kernel: 3.10.0-1160.45.1.el7.x86_64
+          ansible_kernel_version: '#1 SMP Wed Oct 13 17:20:51 UTC 2021'
+          ansible_local: {}
+          ansible_lsb: {}
+          ansible_machine: x86_64
+          ansible_machine_id: 754f8a1ad2654504b10cacfb2e9d5eb0
+          ansible_memtotal_mb: 90471
+          ansible_nodename: axion-k8s-master-nf-ne-1
+          ansible_os_family: RedHat
+          ansible_pkg_mgr: yum
+          ansible_proc_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console:
+            - tty0
+            - ttyS0,115200n8
+            - ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_python:
+            executable: /usr/bin/python
+            has_sslcontext: true
+            type: CPython
+            version:
+              major: 2
+              micro: 5
+              minor: 7
+              releaselevel: final
+              serial: 0
+            version_info:
+            - 2
+            - 7
+            - 5
+            - final
+            - 0
+          ansible_python_version: 2.7.5
+          ansible_real_group_id: 1000
+          ansible_real_user_id: 1000
+          ansible_selinux:
+            config_mode: permissive
+            mode: permissive
+            policyvers: 31
+            status: enabled
+            type: targeted
+          ansible_selinux_python_present: true
+          ansible_service_mgr: systemd
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.92
+          ansible_ssh_host_key_ecdsa_public: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLpAgOi4PAzD5HciusEQYCKei3YSyJVsGxLYwcKdDK9GLggp0hXpJPW2XUrXby6Njja3w9LzMqy9EpeVfz2g/+8=
+          ansible_ssh_host_key_ed25519_public: AAAAC3NzaC1lZDI1NTE5AAAAINeMn87cPW9s/bYRZ6IJzBvFHCcsLKj+tw+bEKUxeasK
+          ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAADAQABAAABAQDP7YCjaoogeErIE+5yD3CAUlWNFJeojRwwGraSoiFq9DqBoHssPYC4wO1ku2yiVm6zVb4YfE9y5KHIdj9/wOf/Vsx/mSroYJmLtvarZ5UlVjd/QTRmIOqVqthfnPW59JoKuqFbU8ILIQZKZc6QY28Tbh0CzoteZn6mXdQI4+M5WsBpCPhhuJBDLXosMehbbf7sRd0rGGXHS7hthr4QQA19ZVWtytFpoSmfXxcfJ1cKgFRijE7HoBNfu/D1CnIXdJxuEr1EPbohTWnuzWTcBKMTD9kd5Ju+hGDBqfnaEKzjyvZltTXej0EFW95wxMro/ghVp6VJSOe8TGQ7HpQwaEKP
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          ansible_swaptotal_mb: 0
+          ansible_system: Linux
+          ansible_system_capabilities:
+          - ''
+          ansible_system_capabilities_enforced: 'True'
+          ansible_user_dir: /home/centos
+          ansible_user_gecos: Cloud User
+          ansible_user_gid: 1000
+          ansible_user_id: centos
+          ansible_user_shell: /bin/bash
+          ansible_user_uid: 1000
+          ansible_userspace_architecture: x86_64
+          ansible_userspace_bits: '64'
+          auto_renew_certificates: false
+          bin_dir: /usr/bin
+          cephfs_provisioner_enabled: false
+          cloud_provider: openstack
+          cluster_name: cluster.local
+          consul_is_server: false
+          container_manager: containerd
+          containerd_storage_dir: /mnt/lib/containerd
+          coredns_k8s_external_zone: k8s_external.local
+          credentials_dir: '{{ inventory_dir }}/credentials'
+          dashboard_enabled: true
+          default_kubelet_config_dir: '{{ kube_config_dir }}/dynamic_kubelet_dir'
+          deploy_netchecker: false
+          discovered_interpreter_python: /usr/bin/python
+          dns_domain: '{{ cluster_name }}'
+          dns_mode: coredns
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          dynamic_kubelet_configuration: false
+          dynamic_kubelet_configuration_dir: '{{ kubelet_config_dir | default(default_kubelet_config_dir)
+            }}'
+          enable_coredns_k8s_endpoint_pod_names: false
+          enable_coredns_k8s_external: false
+          enable_dual_stack_networks: false
+          enable_nat_default_gateway: true
+          enable_nodelocaldns: true
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          event_ttl_duration: 1h0m0s
+          flavor:
+            id: 57a73012-a294-4caf-b7b8-8e98c8e9bee3
+            name: c8-90gb-288
+          gather_subset:
+          - '!all'
+          helm_enabled: true
+          host_domain: novalocal
+          id: 7ce0cd56-98a4-4a49-b063-11c65765370c
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ingress_alb_enabled: false
+          ingress_ambassador_enabled: false
+          ingress_nginx_enabled: true
+          ingress_publish_status_address: ''
+          ip: 192.168.0.92
+          k8s_image_pull_policy: IfNotPresent
+          kata_containers_enabled: false
+          key_pair: kubernetes-axion
+          krew_enabled: false
+          krew_root_dir: /usr/local/krew
+          kube_api_anonymous_auth: true
+          kube_apiserver_insecure_port: 0
+          kube_apiserver_ip: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(1)|ipaddr(''address'')
+            }}'
+          kube_apiserver_port: 6443
+          kube_cert_dir: '{{ kube_config_dir }}/ssl'
+          kube_cert_group: kube-cert
+          kube_config_dir: /etc/kubernetes
+          kube_encrypt_secret_data: false
+          kube_log_level: 2
+          kube_manifest_dir: '{{ kube_config_dir }}/manifests'
+          kube_network_node_prefix: 24
+          kube_network_node_prefix_ipv6: 120
+          kube_network_plugin: calico
+          kube_network_plugin_multus: true
+          kube_pods_subnet: 10.233.64.0/18
+          kube_pods_subnet_ipv6: fd85:ee78:d8a6:8607::1:0000/112
+          kube_proxy_mode: ipvs
+          kube_proxy_nodeport_addresses: '{%- if kube_proxy_nodeport_addresses_cidr
+            is defined -%} [{{ kube_proxy_nodeport_addresses_cidr }}] {%- else -%}
+            [] {%- endif -%}'
+          kube_proxy_strict_arp: true
+          kube_script_dir: '{{ bin_dir }}/kubernetes-scripts'
+          kube_service_addresses: 10.233.0.0/18
+          kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+          kube_token_dir: '{{ kube_config_dir }}/tokens'
+          kube_version: v1.22.1
+          kubeadm_certificate_key: '{{ lookup(''password'', credentials_dir + ''/kubeadm_certificate_key.creds
+            length=64 chars=hexdigits'') | lower }}'
+          kubernetes_audit: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          local_path_provisioner_enabled: false
+          local_release_dir: /tmp/releases
+          local_volume_provisioner_enabled: false
+          macvlan_interface: eth1
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_control_plane,,k8s_cluster,no_floating
+            ssh_user: centos
+            use_access_ip: '1'
+          metallb_enabled: true
+          metallb_ip_range: &id001
+          - 192.168.0.10-192.168.0.20
+          metallb_speaker_enabled: true
+          metallb_version: v0.10.2
+          metrics_server_enabled: false
+          module_setup: true
+          ndots: 2
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.92
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:e9:94:e5
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          nodelocaldns_health_port: 9254
+          nodelocaldns_ip: 169.254.25.10
+          persistent_volumes_enabled: true
+          podsecuritypolicy_enabled: false
+          private_ipv4: 192.168.0.92
+          provider: openstack
+          public_ipv4: 192.168.0.92
+          publicly_routable: true
+          rbd_provisioner_enabled: false
+          region: RegionOne
+          registry_enabled: false
+          resolvconf_mode: docker_dns
+          retry_stagger: 5
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-master
+          skydns_server: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(3)|ipaddr(''address'')
+            }}'
+          skydns_server_secondary: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(4)|ipaddr(''address'')
+            }}'
+          use_host_domain: true
+          volume_cross_zone_attachment: true
+          weave_no_masq_local: true
+        axion-k8s-node-1:
+          access_ip: 192.168.0.233
+          access_ip_v4: 192.168.0.233
+          access_ip_v6: ''
+          ansible_all_ipv4_addresses:
+          - 192.168.0.233
+          - 169.254.25.10
+          - 172.17.0.1
+          - 10.233.118.0
+          - 10.233.27.194
+          - 10.233.41.132
+          - 10.233.53.196
+          - 10.233.0.3
+          - 10.233.54.135
+          - 10.233.57.221
+          - 10.233.40.191
+          - 10.233.53.187
+          - 10.233.0.1
+          ansible_all_ipv6_addresses:
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::f816:3eff:fe3a:693b
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          ansible_apparmor:
+            status: disabled
+          ansible_architecture: x86_64
+          ansible_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console: ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_date_time:
+            date: '2022-05-23'
+            day: '23'
+            epoch: '1653333779'
+            hour: '19'
+            iso8601: '2022-05-23T19:22:59Z'
+            iso8601_basic: 20220523T192259724433
+            iso8601_basic_short: 20220523T192259
+            iso8601_micro: '2022-05-23T19:22:59.724433Z'
+            minute: '22'
+            month: '05'
+            second: '59'
+            time: '19:22:59'
+            tz: UTC
+            tz_offset: '+0000'
+            weekday: Monday
+            weekday_number: '1'
+            weeknumber: '21'
+            year: '2022'
+          ansible_default_ipv4:
+            address: 192.168.0.233
+            alias: eth0
+            broadcast: 192.168.0.255
+            gateway: 192.168.0.1
+            interface: eth0
+            macaddress: fa:16:3e:3a:69:3b
+            mtu: 1500
+            netmask: 255.255.255.0
+            network: 192.168.0.0
+            type: ether
+          ansible_default_ipv6: {}
+          ansible_distribution: CentOS
+          ansible_distribution_file_parsed: true
+          ansible_distribution_file_path: /etc/redhat-release
+          ansible_distribution_file_variety: RedHat
+          ansible_distribution_major_version: '7'
+          ansible_distribution_release: Core
+          ansible_distribution_version: '7.9'
+          ansible_dns:
+            nameservers:
+            - 192.168.0.3
+            - 192.168.0.5
+            - 192.168.0.2
+            - 192.168.0.4
+            search:
+            - arbutus
+          ansible_domain: cluster.local
+          ansible_effective_group_id: 1000
+          ansible_effective_user_id: 1000
+          ansible_env:
+            HOME: /home/centos
+            LANG: en_US.UTF-8
+            LC_ADDRESS: en_US.UTF-8
+            LC_IDENTIFICATION: en_US.UTF-8
+            LC_MEASUREMENT: en_US.UTF-8
+            LC_MONETARY: en_US.UTF-8
+            LC_NAME: en_US.UTF-8
+            LC_NUMERIC: en_US.UTF-8
+            LC_PAPER: en_US.UTF-8
+            LC_TELEPHONE: en_US.UTF-8
+            LC_TIME: en_US.UTF-8
+            LESSOPEN: '||/usr/bin/lesspipe.sh %s'
+            LOGNAME: centos
+            MAIL: /var/mail/centos
+            PATH: /usr/local/bin:/usr/bin
+            PWD: /home/centos
+            SELINUX_LEVEL_REQUESTED: ''
+            SELINUX_ROLE_REQUESTED: ''
+            SELINUX_USE_CURRENT_RANGE: ''
+            SHELL: /bin/bash
+            SHLVL: '2'
+            SSH_CLIENT: 192.168.0.215 44456 22
+            SSH_CONNECTION: 192.168.0.215 44456 192.168.0.233 22
+            USER: centos
+            XDG_RUNTIME_DIR: /run/user/1000
+            XDG_SESSION_ID: '1638'
+            _: /usr/bin/python
+          ansible_fips: false
+          ansible_fqdn: axion-k8s-node-1.cluster.local
+          ansible_hostname: axion-k8s-node-1
+          ansible_kernel: 3.10.0-1160.45.1.el7.x86_64
+          ansible_kernel_version: '#1 SMP Wed Oct 13 17:20:51 UTC 2021'
+          ansible_local: {}
+          ansible_lsb: {}
+          ansible_machine: x86_64
+          ansible_machine_id: 754f8a1ad2654504b10cacfb2e9d5eb0
+          ansible_memtotal_mb: 181184
+          ansible_nodename: axion-k8s-node-1
+          ansible_os_family: RedHat
+          ansible_pkg_mgr: yum
+          ansible_proc_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console:
+            - tty0
+            - ttyS0,115200n8
+            - ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_python:
+            executable: /usr/bin/python
+            has_sslcontext: true
+            type: CPython
+            version:
+              major: 2
+              micro: 5
+              minor: 7
+              releaselevel: final
+              serial: 0
+            version_info:
+            - 2
+            - 7
+            - 5
+            - final
+            - 0
+          ansible_python_version: 2.7.5
+          ansible_real_group_id: 1000
+          ansible_real_user_id: 1000
+          ansible_selinux:
+            config_mode: permissive
+            mode: permissive
+            policyvers: 31
+            status: enabled
+            type: targeted
+          ansible_selinux_python_present: true
+          ansible_service_mgr: systemd
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.233
+          ansible_ssh_host_key_ecdsa_public: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMOiYHqFlu9MPdXABr+GtbPX5M6qWBxAivSxFU7LcU+123Tq3gt6SP1eEl3b3HlvKS1+lYXlbxh0daDSOv1tbGI=
+          ansible_ssh_host_key_ed25519_public: AAAAC3NzaC1lZDI1NTE5AAAAIBQBfn4rVCNWOG7y3VcBSYQp8ZhFPTNo0dUsM6v18aK5
+          ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAADAQABAAABAQDvpl3qXtpHDGHJvT4SuMCUtCdxGu809CgztBvLA+M7SybEwrq/6C2XIRj7vhmdQN9oa1PhCHLfyf8kzVaJFJi7vYajpxSJrpTtKgc1cV1K/LhUbCuMoeeRDAZbrwnlj1QorWsevGlAgKiMUdpCyALnAgN11YkyXxmDQhUV5RjIbUTMNfoL/TC12hoFr5CoLlE58Sa8m681oJPu91/jmietRNOOBmS0OtKMT0TDKshskgFibzgppXsw3/gHk3KUc0qUri1HhVJQATVZHA8ObB6HWWDfcqnVtYFmY5Hf6kRKT8qIdt0nK+zBOG46b/qJlve+c1GDWkk0b3+1KrCWGCVZ
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          ansible_swaptotal_mb: 0
+          ansible_system: Linux
+          ansible_system_capabilities:
+          - ''
+          ansible_system_capabilities_enforced: 'True'
+          ansible_user_dir: /home/centos
+          ansible_user_gecos: Cloud User
+          ansible_user_gid: 1000
+          ansible_user_id: centos
+          ansible_user_shell: /bin/bash
+          ansible_user_uid: 1000
+          ansible_userspace_architecture: x86_64
+          ansible_userspace_bits: '64'
+          auto_renew_certificates: false
+          bin_dir: /usr/bin
+          cephfs_provisioner_enabled: false
+          cloud_provider: openstack
+          cluster_name: cluster.local
+          consul_is_server: false
+          container_manager: containerd
+          containerd_storage_dir: /mnt/lib/containerd
+          coredns_k8s_external_zone: k8s_external.local
+          credentials_dir: '{{ inventory_dir }}/credentials'
+          dashboard_enabled: true
+          default_kubelet_config_dir: '{{ kube_config_dir }}/dynamic_kubelet_dir'
+          deploy_netchecker: false
+          discovered_interpreter_python: /usr/bin/python
+          dns_domain: '{{ cluster_name }}'
+          dns_mode: coredns
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          dynamic_kubelet_configuration: false
+          dynamic_kubelet_configuration_dir: '{{ kubelet_config_dir | default(default_kubelet_config_dir)
+            }}'
+          enable_coredns_k8s_endpoint_pod_names: false
+          enable_coredns_k8s_external: false
+          enable_dual_stack_networks: false
+          enable_nat_default_gateway: true
+          enable_nodelocaldns: true
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          event_ttl_duration: 1h0m0s
+          flavor:
+            id: 39b3870c-e0f6-42cb-a565-f90db442629a
+            name: c16-180gb-576
+          gather_subset:
+          - '!all'
+          helm_enabled: true
+          host_domain: novalocal
+          id: aea46e3d-5788-486b-abe8-10fa73aac9d2
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ingress_alb_enabled: false
+          ingress_ambassador_enabled: false
+          ingress_nginx_enabled: true
+          ingress_publish_status_address: ''
+          ip: 192.168.0.233
+          k8s_image_pull_policy: IfNotPresent
+          kata_containers_enabled: false
+          key_pair: kubernetes-axion
+          krew_enabled: false
+          krew_root_dir: /usr/local/krew
+          kube_api_anonymous_auth: true
+          kube_apiserver_insecure_port: 0
+          kube_apiserver_ip: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(1)|ipaddr(''address'')
+            }}'
+          kube_apiserver_port: 6443
+          kube_cert_dir: '{{ kube_config_dir }}/ssl'
+          kube_cert_group: kube-cert
+          kube_config_dir: /etc/kubernetes
+          kube_encrypt_secret_data: false
+          kube_log_level: 2
+          kube_manifest_dir: '{{ kube_config_dir }}/manifests'
+          kube_network_node_prefix: 24
+          kube_network_node_prefix_ipv6: 120
+          kube_network_plugin: calico
+          kube_network_plugin_multus: true
+          kube_pods_subnet: 10.233.64.0/18
+          kube_pods_subnet_ipv6: fd85:ee78:d8a6:8607::1:0000/112
+          kube_proxy_mode: ipvs
+          kube_proxy_nodeport_addresses: '{%- if kube_proxy_nodeport_addresses_cidr
+            is defined -%} [{{ kube_proxy_nodeport_addresses_cidr }}] {%- else -%}
+            [] {%- endif -%}'
+          kube_proxy_strict_arp: true
+          kube_script_dir: '{{ bin_dir }}/kubernetes-scripts'
+          kube_service_addresses: 10.233.0.0/18
+          kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+          kube_token_dir: '{{ kube_config_dir }}/tokens'
+          kube_version: v1.22.1
+          kubeadm_certificate_key: '{{ lookup(''password'', credentials_dir + ''/kubeadm_certificate_key.creds
+            length=64 chars=hexdigits'') | lower }}'
+          kubernetes_audit: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          local_path_provisioner_enabled: false
+          local_release_dir: /tmp/releases
+          local_volume_provisioner_enabled: false
+          macvlan_interface: eth1
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_node,k8s_cluster,no_floating,
+            ssh_user: centos
+            use_access_ip: '1'
+          metallb_enabled: true
+          metallb_ip_range: *id001
+          metallb_speaker_enabled: true
+          metallb_version: v0.10.2
+          metrics_server_enabled: false
+          module_setup: true
+          ndots: 2
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.233
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:3a:69:3b
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          nodelocaldns_health_port: 9254
+          nodelocaldns_ip: 169.254.25.10
+          persistent_volumes_enabled: true
+          podsecuritypolicy_enabled: false
+          private_ipv4: 192.168.0.233
+          provider: openstack
+          public_ipv4: 192.168.0.233
+          publicly_routable: true
+          rbd_provisioner_enabled: false
+          region: RegionOne
+          registry_enabled: false
+          resolvconf_mode: docker_dns
+          retry_stagger: 5
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-worker
+          skydns_server: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(3)|ipaddr(''address'')
+            }}'
+          skydns_server_secondary: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(4)|ipaddr(''address'')
+            }}'
+          use_host_domain: true
+          volume_cross_zone_attachment: true
+          weave_no_masq_local: true
+        axion-k8s-node-2:
+          access_ip: 192.168.0.153
+          access_ip_v4: 192.168.0.153
+          access_ip_v6: ''
+          ansible_all_ipv4_addresses:
+          - 192.168.0.153
+          - 169.254.25.10
+          - 172.17.0.1
+          - 10.233.92.0
+          - 10.233.0.3
+          - 10.233.54.135
+          - 10.233.41.132
+          - 10.233.53.187
+          - 10.233.53.196
+          - 10.233.40.191
+          - 10.233.57.221
+          - 10.233.0.1
+          - 10.233.27.194
+          ansible_all_ipv6_addresses:
+          - fe80::f816:3eff:feea:48c9
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          - fe80::ecee:eeff:feee:eeee
+          ansible_apparmor:
+            status: disabled
+          ansible_architecture: x86_64
+          ansible_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console: ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_date_time:
+            date: '2022-05-23'
+            day: '23'
+            epoch: '1653333779'
+            hour: '19'
+            iso8601: '2022-05-23T19:22:59Z'
+            iso8601_basic: 20220523T192259678289
+            iso8601_basic_short: 20220523T192259
+            iso8601_micro: '2022-05-23T19:22:59.678289Z'
+            minute: '22'
+            month: '05'
+            second: '59'
+            time: '19:22:59'
+            tz: UTC
+            tz_offset: '+0000'
+            weekday: Monday
+            weekday_number: '1'
+            weeknumber: '21'
+            year: '2022'
+          ansible_default_ipv4:
+            address: 192.168.0.153
+            alias: eth0
+            broadcast: 192.168.0.255
+            gateway: 192.168.0.1
+            interface: eth0
+            macaddress: fa:16:3e:ea:48:c9
+            mtu: 1500
+            netmask: 255.255.255.0
+            network: 192.168.0.0
+            type: ether
+          ansible_default_ipv6: {}
+          ansible_distribution: CentOS
+          ansible_distribution_file_parsed: true
+          ansible_distribution_file_path: /etc/redhat-release
+          ansible_distribution_file_variety: RedHat
+          ansible_distribution_major_version: '7'
+          ansible_distribution_release: Core
+          ansible_distribution_version: '7.9'
+          ansible_dns:
+            nameservers:
+            - 192.168.0.3
+            - 192.168.0.5
+            - 192.168.0.2
+            - 192.168.0.4
+            search:
+            - arbutus
+          ansible_domain: cluster.local
+          ansible_effective_group_id: 1000
+          ansible_effective_user_id: 1000
+          ansible_env:
+            HOME: /home/centos
+            LANG: en_US.UTF-8
+            LC_ADDRESS: en_US.UTF-8
+            LC_IDENTIFICATION: en_US.UTF-8
+            LC_MEASUREMENT: en_US.UTF-8
+            LC_MONETARY: en_US.UTF-8
+            LC_NAME: en_US.UTF-8
+            LC_NUMERIC: en_US.UTF-8
+            LC_PAPER: en_US.UTF-8
+            LC_TELEPHONE: en_US.UTF-8
+            LC_TIME: en_US.UTF-8
+            LESSOPEN: '||/usr/bin/lesspipe.sh %s'
+            LOGNAME: centos
+            MAIL: /var/mail/centos
+            PATH: /usr/local/bin:/usr/bin
+            PWD: /home/centos
+            SELINUX_LEVEL_REQUESTED: ''
+            SELINUX_ROLE_REQUESTED: ''
+            SELINUX_USE_CURRENT_RANGE: ''
+            SHELL: /bin/bash
+            SHLVL: '2'
+            SSH_CLIENT: 192.168.0.215 52144 22
+            SSH_CONNECTION: 192.168.0.215 52144 192.168.0.153 22
+            USER: centos
+            XDG_RUNTIME_DIR: /run/user/1000
+            XDG_SESSION_ID: '1641'
+            _: /usr/bin/python
+          ansible_fips: false
+          ansible_fqdn: axion-k8s-node-2.cluster.local
+          ansible_hostname: axion-k8s-node-2
+          ansible_kernel: 3.10.0-1160.45.1.el7.x86_64
+          ansible_kernel_version: '#1 SMP Wed Oct 13 17:20:51 UTC 2021'
+          ansible_local: {}
+          ansible_lsb: {}
+          ansible_machine: x86_64
+          ansible_machine_id: 754f8a1ad2654504b10cacfb2e9d5eb0
+          ansible_memtotal_mb: 181184
+          ansible_nodename: axion-k8s-node-2
+          ansible_os_family: RedHat
+          ansible_pkg_mgr: yum
+          ansible_proc_cmdline:
+            BOOT_IMAGE: /boot/vmlinuz-3.10.0-1160.45.1.el7.x86_64
+            LANG: en_US.UTF-8
+            console:
+            - tty0
+            - ttyS0,115200n8
+            - ttyS0
+            crashkernel: auto
+            net.ifnames: '0'
+            ro: true
+            root: UUID=44a6a613-4e21-478b-a909-ab653c9d39df
+          ansible_python:
+            executable: /usr/bin/python
+            has_sslcontext: true
+            type: CPython
+            version:
+              major: 2
+              micro: 5
+              minor: 7
+              releaselevel: final
+              serial: 0
+            version_info:
+            - 2
+            - 7
+            - 5
+            - final
+            - 0
+          ansible_python_version: 2.7.5
+          ansible_real_group_id: 1000
+          ansible_real_user_id: 1000
+          ansible_selinux:
+            config_mode: permissive
+            mode: permissive
+            policyvers: 31
+            status: enabled
+            type: targeted
+          ansible_selinux_python_present: true
+          ansible_service_mgr: systemd
+          ansible_ssh_common_args: -o ProxyCommand='ssh -o StrictHostKeyChecking=no
+            -o UserKnownHostsFile=/dev/null -W %h:%p -q centos@206.12.95.48 {% if
+            ansible_ssh_private_key_file is defined %}-i {{ ansible_ssh_private_key_file
+            }}{% endif %}'
+          ansible_ssh_host: 192.168.0.153
+          ansible_ssh_host_key_ecdsa_public: AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBO+c6etoX8HhD1dbCUJ36twggRCTwJW9isJ3tVLWhu7niSEj82y4oM1XUdTfaEFmxz9klsulvvyZ53ysMJD86C8=
+          ansible_ssh_host_key_ed25519_public: AAAAC3NzaC1lZDI1NTE5AAAAIBVhfiAtP+KAfZVYnXMIUzX/jVe3UDMABU8AX3udvkVp
+          ansible_ssh_host_key_rsa_public: AAAAB3NzaC1yc2EAAAADAQABAAABAQDV7MLTSZ75y8zTDPv+VHLx4k0JW3xKcenfQG+5ZbAwyjEgVI+Cuy+DN3LrulxmHLqCzofek/eStEvAXjPwpJP0IhXRn7xjJKUVRoNQQdbeCUefPNGNt59avCMNqVR9Azx7DM+v05j+uAgGGFsFGFTkIpY3tMP2mpHu88i2C5TuyLsZRNNu30iua4E0IBtGwaSxpQGVB6p89sVNSOBlL8OA/7aM3p9I3VQWs2DZ4aBoiRAZZZw3qBjc4UOgJOMgi0DZHRD9yy/6wPgxYlHTu77T5E3+ellY+9v2fsCMt33Czcyiw05nvQocpyrURXDPoGnL3vHrtMA/pYpWmiLzzD3f
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          ansible_swaptotal_mb: 0
+          ansible_system: Linux
+          ansible_system_capabilities:
+          - ''
+          ansible_system_capabilities_enforced: 'True'
+          ansible_user_dir: /home/centos
+          ansible_user_gecos: Cloud User
+          ansible_user_gid: 1000
+          ansible_user_id: centos
+          ansible_user_shell: /bin/bash
+          ansible_user_uid: 1000
+          ansible_userspace_architecture: x86_64
+          ansible_userspace_bits: '64'
+          auto_renew_certificates: false
+          bin_dir: /usr/bin
+          cephfs_provisioner_enabled: false
+          cloud_provider: openstack
+          cluster_name: cluster.local
+          consul_is_server: false
+          container_manager: containerd
+          containerd_storage_dir: /mnt/lib/containerd
+          coredns_k8s_external_zone: k8s_external.local
+          credentials_dir: '{{ inventory_dir }}/credentials'
+          dashboard_enabled: true
+          default_kubelet_config_dir: '{{ kube_config_dir }}/dynamic_kubelet_dir'
+          deploy_netchecker: false
+          discovered_interpreter_python: /usr/bin/python
+          dns_domain: '{{ cluster_name }}'
+          dns_mode: coredns
+          docker_bin_dir: /usr/bin
+          docker_container_storage_setup: false
+          docker_daemon_graph: /var/lib/docker
+          docker_dns_servers_strict: false
+          docker_iptables_enabled: 'false'
+          docker_log_opts: --log-opt max-size=50m --log-opt max-file=5
+          docker_rpm_keepcache: 1
+          dynamic_kubelet_configuration: false
+          dynamic_kubelet_configuration_dir: '{{ kubelet_config_dir | default(default_kubelet_config_dir)
+            }}'
+          enable_coredns_k8s_endpoint_pod_names: false
+          enable_coredns_k8s_external: false
+          enable_dual_stack_networks: false
+          enable_nat_default_gateway: true
+          enable_nodelocaldns: true
+          etcd_data_dir: /var/lib/etcd
+          etcd_kubeadm_enabled: false
+          event_ttl_duration: 1h0m0s
+          flavor:
+            id: 39b3870c-e0f6-42cb-a565-f90db442629a
+            name: c16-180gb-576
+          gather_subset:
+          - '!all'
+          helm_enabled: true
+          host_domain: novalocal
+          id: 598d50f1-c01b-4f32-914f-75f2e1a46702
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ingress_alb_enabled: false
+          ingress_ambassador_enabled: false
+          ingress_nginx_enabled: true
+          ingress_publish_status_address: ''
+          ip: 192.168.0.153
+          k8s_image_pull_policy: IfNotPresent
+          kata_containers_enabled: false
+          key_pair: kubernetes-axion
+          krew_enabled: false
+          krew_root_dir: /usr/local/krew
+          kube_api_anonymous_auth: true
+          kube_apiserver_insecure_port: 0
+          kube_apiserver_ip: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(1)|ipaddr(''address'')
+            }}'
+          kube_apiserver_port: 6443
+          kube_cert_dir: '{{ kube_config_dir }}/ssl'
+          kube_cert_group: kube-cert
+          kube_config_dir: /etc/kubernetes
+          kube_encrypt_secret_data: false
+          kube_log_level: 2
+          kube_manifest_dir: '{{ kube_config_dir }}/manifests'
+          kube_network_node_prefix: 24
+          kube_network_node_prefix_ipv6: 120
+          kube_network_plugin: calico
+          kube_network_plugin_multus: true
+          kube_pods_subnet: 10.233.64.0/18
+          kube_pods_subnet_ipv6: fd85:ee78:d8a6:8607::1:0000/112
+          kube_proxy_mode: ipvs
+          kube_proxy_nodeport_addresses: '{%- if kube_proxy_nodeport_addresses_cidr
+            is defined -%} [{{ kube_proxy_nodeport_addresses_cidr }}] {%- else -%}
+            [] {%- endif -%}'
+          kube_proxy_strict_arp: true
+          kube_script_dir: '{{ bin_dir }}/kubernetes-scripts'
+          kube_service_addresses: 10.233.0.0/18
+          kube_service_addresses_ipv6: fd85:ee78:d8a6:8607::1000/116
+          kube_token_dir: '{{ kube_config_dir }}/tokens'
+          kube_version: v1.22.1
+          kubeadm_certificate_key: '{{ lookup(''password'', credentials_dir + ''/kubeadm_certificate_key.creds
+            length=64 chars=hexdigits'') | lower }}'
+          kubernetes_audit: false
+          loadbalancer_apiserver_healthcheck_port: 8081
+          loadbalancer_apiserver_port: 6443
+          local_path_provisioner_enabled: false
+          local_release_dir: /tmp/releases
+          local_volume_provisioner_enabled: false
+          macvlan_interface: eth1
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_node,k8s_cluster,no_floating,
+            ssh_user: centos
+            use_access_ip: '1'
+          metallb_enabled: true
+          metallb_ip_range: *id001
+          metallb_speaker_enabled: true
+          metallb_version: v0.10.2
+          metrics_server_enabled: false
+          module_setup: true
+          ndots: 2
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.153
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:ea:48:c9
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          no_proxy_exclude_workers: false
+          nodelocaldns_health_port: 9254
+          nodelocaldns_ip: 169.254.25.10
+          persistent_volumes_enabled: true
+          podsecuritypolicy_enabled: false
+          private_ipv4: 192.168.0.153
+          provider: openstack
+          public_ipv4: 192.168.0.153
+          publicly_routable: true
+          rbd_provisioner_enabled: false
+          region: RegionOne
+          registry_enabled: false
+          resolvconf_mode: docker_dns
+          retry_stagger: 5
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-worker
+          skydns_server: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(3)|ipaddr(''address'')
+            }}'
+          skydns_server_secondary: '{{ kube_service_addresses|ipaddr(''net'')|ipaddr(4)|ipaddr(''address'')
+            }}'
+          use_host_domain: true
+          volume_cross_zone_attachment: true
+          weave_no_masq_local: true
+        axion-k8s-node-gpu-1:
+          ansible_default_ipv4:
+            address: 192.168.0.236
+            alias: eth0
+            broadcast: 192.168.0.255
+            gateway: 192.168.0.1
+            interface: eth0
+            macaddress: fa:16:3e:6f:68:4f
+            mtu: 1500
+            netmask: 255.255.255.0
+            network: 192.168.0.0
+            type: ether
+          discovered_interpreter_python: /usr/bin/python
+    kube_control_plane:
+      hosts:
+        axion-k8s-master-nf-ne-1: {}
+    kube_node:
+      hosts:
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+        axion-k8s-node-gpu-1: {}
+    no_floating:
+      hosts:
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_flavor=c1-7.5gb-36:
+      hosts:
+        axion-etcd-1: {}
+    os_flavor=c16-180gb-576:
+      hosts:
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_flavor=c2-15gb-72:
+      hosts:
+        axion-bastion-1: {}
+    os_flavor=c8-90gb-288:
+      hosts:
+        axion-k8s-master-nf-ne-1: {}
+    os_image=b5d803f7-bcb1-4af4-83ce-6e994eb0d04f:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_metadata_%=4:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    'os_metadata_depends_on= 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ':
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_metadata_kubespray_groups=bastion:
+      hosts:
+        axion-bastion-1: {}
+    os_metadata_kubespray_groups=etcd,no_floating:
+      hosts:
+        axion-etcd-1: {}
+    os_metadata_kubespray_groups=kube_control_plane,,k8s_cluster,no_floating:
+      hosts:
+        axion-k8s-master-nf-ne-1: {}
+    os_metadata_kubespray_groups=kube_node,k8s_cluster,no_floating,:
+      hosts:
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_metadata_ssh_user=centos:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_metadata_use_access_ip=1:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    os_region=RegionOne:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    publicly_routable:
+      hosts:
+        axion-bastion-1: {}
+        axion-etcd-1: {}
+        axion-k8s-master-nf-ne-1: {}
+        axion-k8s-node-1: {}
+        axion-k8s-node-2: {}
+    ungrouped: {}

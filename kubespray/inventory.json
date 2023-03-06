@@ -1,0 +1,477 @@
+{
+    "publicly_routable": {
+        "hosts": [
+            "axion-bastion-1",
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_metadata_%=4": {
+        "hosts": [
+            "axion-bastion-1",
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "bastion": {
+        "hosts": [
+            "axion-bastion-1"
+        ]
+    },
+    "os_metadata_use_access_ip=1": {
+        "hosts": [
+            "axion-bastion-1",
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_metadata_kubespray_groups=bastion": {
+        "hosts": [
+            "axion-bastion-1"
+        ]
+    },
+    "os_metadata_ssh_user=centos": {
+        "hosts": [
+            "axion-bastion-1",
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_region=RegionOne": {
+        "hosts": [
+            "axion-bastion-1",
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_flavor=c2-15gb-72": {
+        "hosts": [
+            "axion-bastion-1"
+        ]
+    },
+    "os_metadata_depends_on= 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ": {
+        "hosts": [
+            "axion-bastion-1",
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_image=b5d803f7-bcb1-4af4-83ce-6e994eb0d04f": {
+        "hosts": [
+            "axion-bastion-1",
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_metadata_kubespray_groups=etcd,no_floating": {
+        "hosts": [
+            "axion-etcd-1"
+        ]
+    },
+    "no_floating": {
+        "hosts": [
+            "axion-etcd-1",
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "etcd": {
+        "hosts": [
+            "axion-etcd-1"
+        ]
+    },
+    "os_flavor=c1-7.5gb-36": {
+        "hosts": [
+            "axion-etcd-1"
+        ]
+    },
+    "all": {
+        "hosts": [
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_flavor=c8-90gb-288": {
+        "hosts": [
+            "axion-k8s-master-nf-ne-1"
+        ]
+    },
+    "k8s_cluster": {
+        "hosts": [
+            "axion-k8s-master-nf-ne-1",
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_metadata_kubespray_groups=kube_control_plane,,k8s_cluster,no_floating": {
+        "hosts": [
+            "axion-k8s-master-nf-ne-1"
+        ]
+    },
+    "kube_control_plane": {
+        "hosts": [
+            "axion-k8s-master-nf-ne-1"
+        ]
+    },
+    "os_flavor=c16-180gb-576": {
+        "hosts": [
+            "axion-k8s-node-1",
+            "axion-k8s-node-2"
+        ]
+    },
+    "os_flavor=g1-8gb-c4-22gb": {
+        "hosts": [
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "os_metadata_kubespray_groups=kube_node,k8s_cluster,no_floating,": {
+        "hosts": [
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "kube_node": {
+        "hosts": [
+            "axion-k8s-node-1",
+            "axion-k8s-node-2",
+            "axion-k8s-node-gpu-1"
+        ]
+    },
+    "_meta": {
+        "hostvars": {
+            "axion-bastion-1": {
+                "access_ip_v4": "206.12.95.48",
+                "access_ip_v6": "",
+                "access_ip": "206.12.95.48",
+                "ip": "192.168.0.215",
+                "flavor": {
+                    "id": "8c4dad4f-807d-4240-91e0-0fb958a1c671",
+                    "name": "c2-15gb-72"
+                },
+                "id": "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+                "image": {
+                    "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+                    "name": "CentOS-7-x64-2021-11"
+                },
+                "key_pair": "kubernetes-axion",
+                "metadata": {
+                    "%": 4,
+                    "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+                    "kubespray_groups": "bastion",
+                    "ssh_user": "centos",
+                    "use_access_ip": "1"
+                },
+                "network": [
+                    {
+                        "access_network": false,
+                        "fixed_ip_v4": "192.168.0.215",
+                        "fixed_ip_v6": "",
+                        "floating_ip": "",
+                        "mac": "fa:16:3e:91:24:c6",
+                        "name": "axion",
+                        "port": "",
+                        "uuid": "5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4"
+                    }
+                ],
+                "region": "RegionOne",
+                "security_groups": [
+                    "axion-bastion",
+                    "axion-k8s"
+                ],
+                "ansible_ssh_port": 22,
+                "host_domain": "novalocal",
+                "use_host_domain": true,
+                "public_ipv4": "206.12.95.48",
+                "private_ipv4": "192.168.0.215",
+                "provider": "openstack",
+                "ansible_ssh_host": "206.12.95.48",
+                "publicly_routable": true,
+                "ansible_ssh_user": "centos",
+                "role": "none",
+                "consul_is_server": false
+            },
+            "axion-etcd-1": {
+                "access_ip_v4": "192.168.0.135",
+                "access_ip_v6": "",
+                "access_ip": "192.168.0.135",
+                "ip": "192.168.0.135",
+                "flavor": {
+                    "id": "22f7655d-45c1-4e01-83a0-2929e686f19b",
+                    "name": "c1-7.5gb-36"
+                },
+                "id": "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+                "image": {
+                    "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+                    "name": "CentOS-7-x64-2021-11"
+                },
+                "key_pair": "kubernetes-axion",
+                "metadata": {
+                    "%": 4,
+                    "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+                    "kubespray_groups": "etcd,no_floating",
+                    "ssh_user": "centos",
+                    "use_access_ip": "1"
+                },
+                "network": [
+                    {
+                        "access_network": false,
+                        "fixed_ip_v4": "192.168.0.135",
+                        "fixed_ip_v6": "",
+                        "floating_ip": "",
+                        "mac": "fa:16:3e:f9:ed:66",
+                        "name": "axion",
+                        "port": "",
+                        "uuid": "5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4"
+                    }
+                ],
+                "region": "RegionOne",
+                "security_groups": [
+                    "axion-k8s"
+                ],
+                "ansible_ssh_port": 22,
+                "host_domain": "novalocal",
+                "use_host_domain": true,
+                "public_ipv4": "192.168.0.135",
+                "private_ipv4": "192.168.0.135",
+                "provider": "openstack",
+                "ansible_ssh_host": "192.168.0.135",
+                "publicly_routable": true,
+                "ansible_ssh_user": "centos",
+                "role": "none",
+                "consul_is_server": false
+            },
+            "axion-k8s-master-nf-ne-1": {
+                "access_ip_v4": "192.168.0.92",
+                "access_ip_v6": "",
+                "access_ip": "192.168.0.92",
+                "ip": "192.168.0.92",
+                "flavor": {
+                    "id": "57a73012-a294-4caf-b7b8-8e98c8e9bee3",
+                    "name": "c8-90gb-288"
+                },
+                "id": "7ce0cd56-98a4-4a49-b063-11c65765370c",
+                "image": {
+                    "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+                    "name": "CentOS-7-x64-2021-11"
+                },
+                "key_pair": "kubernetes-axion",
+                "metadata": {
+                    "%": 4,
+                    "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+                    "kubespray_groups": "kube_control_plane,,k8s_cluster,no_floating",
+                    "ssh_user": "centos",
+                    "use_access_ip": "1"
+                },
+                "network": [
+                    {
+                        "access_network": false,
+                        "fixed_ip_v4": "192.168.0.92",
+                        "fixed_ip_v6": "",
+                        "floating_ip": "",
+                        "mac": "fa:16:3e:e9:94:e5",
+                        "name": "axion",
+                        "port": "",
+                        "uuid": "5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4"
+                    }
+                ],
+                "region": "RegionOne",
+                "security_groups": [
+                    "axion-k8s",
+                    "axion-k8s-master"
+                ],
+                "ansible_ssh_port": 22,
+                "host_domain": "novalocal",
+                "use_host_domain": true,
+                "public_ipv4": "192.168.0.92",
+                "private_ipv4": "192.168.0.92",
+                "provider": "openstack",
+                "ansible_ssh_host": "192.168.0.92",
+                "publicly_routable": true,
+                "ansible_ssh_user": "centos",
+                "role": "none",
+                "consul_is_server": false
+            },
+            "axion-k8s-node-1": {
+                "access_ip_v4": "192.168.0.233",
+                "access_ip_v6": "",
+                "access_ip": "192.168.0.233",
+                "ip": "192.168.0.233",
+                "flavor": {
+                    "id": "39b3870c-e0f6-42cb-a565-f90db442629a",
+                    "name": "c16-180gb-576"
+                },
+                "id": "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+                "image": {
+                    "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+                    "name": "CentOS-7-x64-2021-11"
+                },
+                "key_pair": "kubernetes-axion",
+                "metadata": {
+                    "%": 4,
+                    "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+                    "kubespray_groups": "kube_node,k8s_cluster,no_floating,",
+                    "ssh_user": "centos",
+                    "use_access_ip": "1"
+                },
+                "network": [
+                    {
+                        "access_network": false,
+                        "fixed_ip_v4": "192.168.0.233",
+                        "fixed_ip_v6": "",
+                        "floating_ip": "",
+                        "mac": "fa:16:3e:3a:69:3b",
+                        "name": "axion",
+                        "port": "",
+                        "uuid": "5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4"
+                    }
+                ],
+                "region": "RegionOne",
+                "security_groups": [
+                    "axion-k8s",
+                    "axion-k8s-worker"
+                ],
+                "ansible_ssh_port": 22,
+                "host_domain": "novalocal",
+                "use_host_domain": true,
+                "public_ipv4": "192.168.0.233",
+                "private_ipv4": "192.168.0.233",
+                "provider": "openstack",
+                "ansible_ssh_host": "192.168.0.233",
+                "publicly_routable": true,
+                "ansible_ssh_user": "centos",
+                "role": "none",
+                "consul_is_server": false
+            },
+            "axion-k8s-node-2": {
+                "access_ip_v4": "192.168.0.153",
+                "access_ip_v6": "",
+                "access_ip": "192.168.0.153",
+                "ip": "192.168.0.153",
+                "flavor": {
+                    "id": "39b3870c-e0f6-42cb-a565-f90db442629a",
+                    "name": "c16-180gb-576"
+                },
+                "id": "301688ef-2718-4df6-804d-8094b15d5f1e",
+                "image": {
+                    "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+                    "name": "CentOS-7-x64-2021-11"
+                },
+                "key_pair": "kubernetes-axion",
+                "metadata": {
+                    "%": 4,
+                    "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+                    "kubespray_groups": "kube_node,k8s_cluster,no_floating,",
+                    "ssh_user": "centos",
+                    "use_access_ip": "1"
+                },
+                "network": [
+                    {
+                        "access_network": false,
+                        "fixed_ip_v4": "192.168.0.153",
+                        "fixed_ip_v6": "",
+                        "floating_ip": "",
+                        "mac": "fa:16:3e:ea:48:c9",
+                        "name": "axion",
+                        "port": "",
+                        "uuid": "5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4"
+                    }
+                ],
+                "region": "RegionOne",
+                "security_groups": [
+                    "axion-k8s",
+                    "axion-k8s-worker"
+                ],
+                "ansible_ssh_port": 22,
+                "host_domain": "novalocal",
+                "use_host_domain": true,
+                "public_ipv4": "192.168.0.153",
+                "private_ipv4": "192.168.0.153",
+                "provider": "openstack",
+                "ansible_ssh_host": "192.168.0.153",
+                "publicly_routable": true,
+                "ansible_ssh_user": "centos",
+                "role": "none",
+                "consul_is_server": false
+            },
+            "axion-k8s-node-gpu-1": {
+                "access_ip_v4": "192.168.0.236",
+                "access_ip_v6": "",
+                "access_ip": "192.168.0.236",
+                "ip": "192.168.0.236",
+                "flavor": {
+                    "id": "39d3041a-ace2-4166-9133-d78fe00190a9",
+                    "name": "g1-8gb-c4-22gb"
+                },
+                "id": "598d50f1-c01b-4f32-914f-75f2e1a46702",
+                "image": {
+                    "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+                    "name": "CentOS-7-x64-2021-11"
+                },
+                "key_pair": "kubernetes-axion",
+                "metadata": {
+                    "%": 4,
+                    "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+                    "kubespray_groups": "kube_node,k8s_cluster,no_floating,",
+                    "ssh_user": "centos",
+                    "use_access_ip": "1"
+                },
+                "network": [
+                    {
+                        "access_network": false,
+                        "fixed_ip_v4": "192.168.0.236",
+                        "fixed_ip_v6": "",
+                        "floating_ip": "",
+                        "mac": "fa:16:3e:6f:68:4f",
+                        "name": "axion",
+                        "port": "",
+                        "uuid": "5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4"
+                    }
+                ],
+                "region": "RegionOne",
+                "security_groups": [
+                    "axion-k8s",
+                    "axion-k8s-worker"
+                ],
+                "ansible_ssh_port": 22,
+                "host_domain": "novalocal",
+                "use_host_domain": true,
+                "public_ipv4": "192.168.0.236",
+                "private_ipv4": "192.168.0.236",
+                "provider": "openstack",
+                "ansible_ssh_host": "192.168.0.236",
+                "publicly_routable": true,
+                "ansible_ssh_user": "centos",
+                "role": "none",
+                "consul_is_server": false
+            }
+
+        }
+    }
+}

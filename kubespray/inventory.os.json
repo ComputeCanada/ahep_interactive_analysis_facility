@@ -1,0 +1,2667 @@
+{
+  "Compute": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "RegionOne": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e",
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "RegionOne_Compute": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "RegionOne_nova": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e"
+  ],
+  "_meta": {
+    "hostvars": {
+      "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5": {
+        "ansible_host": "206.12.93.186",
+        "ansible_ssh_host": "206.12.93.186",
+        "openstack": {
+          "OS-DCF:diskConfig": "AUTO",
+          "OS-EXT-AZ:availability_zone": "Compute",
+          "OS-EXT-SRV-ATTR:host": null,
+          "OS-EXT-SRV-ATTR:hostname": null,
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+          "OS-EXT-SRV-ATTR:instance_name": null,
+          "OS-EXT-SRV-ATTR:kernel_id": null,
+          "OS-EXT-SRV-ATTR:launch_index": null,
+          "OS-EXT-SRV-ATTR:ramdisk_id": null,
+          "OS-EXT-SRV-ATTR:reservation_id": null,
+          "OS-EXT-SRV-ATTR:root_device_name": null,
+          "OS-EXT-SRV-ATTR:user_data": null,
+          "OS-EXT-STS:power_state": 1,
+          "OS-EXT-STS:task_state": null,
+          "OS-EXT-STS:vm_state": "active",
+          "OS-SCH-HNT:scheduler_hints": null,
+          "OS-SRV-USG:launched_at": "2021-10-14T15:50:50.000000",
+          "OS-SRV-USG:terminated_at": null,
+          "accessIPv4": "206.12.93.186",
+          "accessIPv6": "",
+          "addresses": {
+            "axion": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:cf:81:41",
+                "OS-EXT-IPS:type": "fixed",
+                "addr": "192.168.0.134",
+                "version": 4
+              },
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:cf:81:41",
+                "OS-EXT-IPS:type": "floating",
+                "addr": "206.12.93.186",
+                "version": 4
+              }
+            ]
+          },
+          "adminPass": null,
+          "az": "Compute",
+          "block_device_mapping": null,
+          "cloud": "envvars",
+          "config_drive": "",
+          "created": "2021-10-14T15:50:27Z",
+          "created_at": "2021-10-14T15:50:27Z",
+          "description": null,
+          "disk_config": "AUTO",
+          "flavor": {
+            "disk": 20,
+            "ephemeral": 288,
+            "extra_specs": {
+              "aggregate_instance_extra_specs:compute": "true",
+              "quota:cpu_period": "1000000",
+              "quota:cpu_quota": "950000",
+              "quota:disk_read_bytes_sec": "115343360",
+              "quota:disk_read_iops_sec": "2500",
+              "quota:disk_write_bytes_sec": "115343360",
+              "quota:disk_write_iops_sec": "2000",
+              "quota:write_read_iops_sec": "2000"
+            },
+            "name": "c8-30gb-288",
+            "original_name": "c8-30gb-288",
+            "ram": 30720,
+            "swap": 0,
+            "vcpus": 8
+          },
+          "has_config_drive": false,
+          "host": null,
+          "hostId": "df803a9eb888275d71254fb5a43cac11ff70deccf560ee3688ee56b1",
+          "host_id": "df803a9eb888275d71254fb5a43cac11ff70deccf560ee3688ee56b1",
+          "host_status": null,
+          "hostname": null,
+          "hypervisor_hostname": null,
+          "id": "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5",
+          "image": {
+            "id": "59671c16-03bd-4425-b86f-bd22ac58f343"
+          },
+          "instance_name": null,
+          "interface_ip": "206.12.93.186",
+          "kernel_id": null,
+          "key_name": "kubernetes-axion",
+          "launch_index": null,
+          "launched_at": "2021-10-14T15:50:50.000000",
+          "location": {
+            "cloud": "envvars",
+            "project": {
+              "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+              "domain_name": null,
+              "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "name": "rrg-cdavid"
+            },
+            "region_name": "RegionOne",
+            "zone": "Compute"
+          },
+          "locked": false,
+          "max_count": null,
+          "metadata": {},
+          "min_count": null,
+          "name": "axion-server",
+          "networks": {},
+          "os-extended-volumes:volumes_attached": [],
+          "personality": null,
+          "power_state": 1,
+          "private_v4": "192.168.0.134",
+          "progress": 0,
+          "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "properties": {
+            "OS-DCF:diskConfig": "AUTO",
+            "OS-EXT-AZ:availability_zone": "Compute",
+            "OS-EXT-SRV-ATTR:host": null,
+            "OS-EXT-SRV-ATTR:hostname": null,
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+            "OS-EXT-SRV-ATTR:instance_name": null,
+            "OS-EXT-SRV-ATTR:kernel_id": null,
+            "OS-EXT-SRV-ATTR:launch_index": null,
+            "OS-EXT-SRV-ATTR:ramdisk_id": null,
+            "OS-EXT-SRV-ATTR:reservation_id": null,
+            "OS-EXT-SRV-ATTR:root_device_name": null,
+            "OS-EXT-SRV-ATTR:user_data": null,
+            "OS-EXT-STS:power_state": 1,
+            "OS-EXT-STS:task_state": null,
+            "OS-EXT-STS:vm_state": "active",
+            "OS-SCH-HNT:scheduler_hints": null,
+            "OS-SRV-USG:launched_at": "2021-10-14T15:50:50.000000",
+            "OS-SRV-USG:terminated_at": null,
+            "host_status": null,
+            "locked": false,
+            "max_count": null,
+            "min_count": null,
+            "os-extended-volumes:volumes_attached": [],
+            "trusted_image_certificates": null
+          },
+          "public_v4": "206.12.93.186",
+          "public_v6": "",
+          "ramdisk_id": null,
+          "region": "RegionOne",
+          "reservation_id": null,
+          "root_device_name": null,
+          "scheduler_hints": null,
+          "security_groups": [
+            {
+              "description": "",
+              "id": "6befcf03-17b6-4d07-bb9a-530e983ba220",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "server",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "202d76be-b5e5-43a3-910d-ab17510b6521",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 443,
+                  "port_range_min": 443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "6befcf03-17b6-4d07-bb9a-530e983ba220",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "5bfd2f19-4034-48e5-96fa-0d3891b7dc19",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 80,
+                  "port_range_min": 80,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "6befcf03-17b6-4d07-bb9a-530e983ba220",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "d997a788-f77d-4ded-8441-e6db98b53582",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 22,
+                  "port_range_min": 22,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "192.168.0.0/24",
+                  "security_group_id": "6befcf03-17b6-4d07-bb9a-530e983ba220",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            }
+          ],
+          "server_groups": null,
+          "status": "ACTIVE",
+          "tags": [],
+          "task_state": null,
+          "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "terminated_at": null,
+          "trusted_image_certificates": null,
+          "updated": "2021-10-14T15:53:53Z",
+          "user_data": null,
+          "user_id": "be10864cdd2131364d234cc47064dc65b2e48e57bb03f086698c64e9cd19df70",
+          "vm_state": "active",
+          "volumes": []
+        }
+      },
+      "301688ef-2718-4df6-804d-8094b15d5f1e": {
+        "ansible_host": "",
+        "ansible_ssh_host": "",
+        "openstack": {
+          "OS-DCF:diskConfig": "AUTO",
+          "OS-EXT-AZ:availability_zone": "nova",
+          "OS-EXT-SRV-ATTR:host": null,
+          "OS-EXT-SRV-ATTR:hostname": null,
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+          "OS-EXT-SRV-ATTR:instance_name": null,
+          "OS-EXT-SRV-ATTR:kernel_id": null,
+          "OS-EXT-SRV-ATTR:launch_index": null,
+          "OS-EXT-SRV-ATTR:ramdisk_id": null,
+          "OS-EXT-SRV-ATTR:reservation_id": null,
+          "OS-EXT-SRV-ATTR:root_device_name": null,
+          "OS-EXT-SRV-ATTR:user_data": null,
+          "OS-EXT-STS:power_state": 1,
+          "OS-EXT-STS:task_state": null,
+          "OS-EXT-STS:vm_state": "active",
+          "OS-SCH-HNT:scheduler_hints": null,
+          "OS-SRV-USG:launched_at": "2022-05-23T14:14:38.000000",
+          "OS-SRV-USG:terminated_at": null,
+          "accessIPv4": "",
+          "accessIPv6": "",
+          "addresses": {
+            "axion": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:6f:68:4f",
+                "OS-EXT-IPS:type": "fixed",
+                "addr": "192.168.0.236",
+                "version": 4
+              }
+            ]
+          },
+          "adminPass": null,
+          "az": "nova",
+          "block_device_mapping": null,
+          "cloud": "envvars",
+          "config_drive": "",
+          "created": "2022-05-23T14:12:29Z",
+          "created_at": "2022-05-23T14:12:29Z",
+          "description": null,
+          "disk_config": "AUTO",
+          "flavor": {
+            "disk": 80,
+            "ephemeral": 0,
+            "extra_specs": {
+              "quota:cpu_period": "1000000",
+              "quota:cpu_quota": "950000",
+              "quota:disk_read_bytes_sec": "115343360",
+              "quota:disk_read_iops_sec": "2500",
+              "quota:disk_write_bytes_sec": "115343360",
+              "quota:disk_write_iops_sec": "2000",
+              "quota:write_read_iops_sec": "2000",
+              "resources:VGPU": "1"
+            },
+            "name": "g1-8gb-c4-22gb",
+            "original_name": "g1-8gb-c4-22gb",
+            "ram": 22528,
+            "swap": 0,
+            "vcpus": 4
+          },
+          "has_config_drive": false,
+          "host": null,
+          "hostId": "3668aabdf452a3b942b926c9e18a84e543317337c1d38600751f3b6b",
+          "host_id": "3668aabdf452a3b942b926c9e18a84e543317337c1d38600751f3b6b",
+          "host_status": null,
+          "hostname": null,
+          "hypervisor_hostname": null,
+          "id": "301688ef-2718-4df6-804d-8094b15d5f1e",
+          "image": {
+            "id": null
+          },
+          "instance_name": null,
+          "interface_ip": "",
+          "kernel_id": null,
+          "key_name": "kubernetes-axion",
+          "launch_index": null,
+          "launched_at": "2022-05-23T14:14:38.000000",
+          "location": {
+            "cloud": "envvars",
+            "project": {
+              "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+              "domain_name": null,
+              "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "name": "rrg-cdavid"
+            },
+            "region_name": "RegionOne",
+            "zone": "nova"
+          },
+          "locked": false,
+          "max_count": null,
+          "metadata": {},
+          "min_count": null,
+          "name": "axion-k8s-node-gpu-1",
+          "networks": {},
+          "os-extended-volumes:volumes_attached": [
+            {
+              "delete_on_termination": true,
+              "id": "dff80a4c-e976-4025-ae00-df0e7378a26f"
+            }
+          ],
+          "personality": null,
+          "power_state": 1,
+          "private_v4": "192.168.0.236",
+          "progress": 0,
+          "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "properties": {
+            "OS-DCF:diskConfig": "AUTO",
+            "OS-EXT-AZ:availability_zone": "nova",
+            "OS-EXT-SRV-ATTR:host": null,
+            "OS-EXT-SRV-ATTR:hostname": null,
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+            "OS-EXT-SRV-ATTR:instance_name": null,
+            "OS-EXT-SRV-ATTR:kernel_id": null,
+            "OS-EXT-SRV-ATTR:launch_index": null,
+            "OS-EXT-SRV-ATTR:ramdisk_id": null,
+            "OS-EXT-SRV-ATTR:reservation_id": null,
+            "OS-EXT-SRV-ATTR:root_device_name": null,
+            "OS-EXT-SRV-ATTR:user_data": null,
+            "OS-EXT-STS:power_state": 1,
+            "OS-EXT-STS:task_state": null,
+            "OS-EXT-STS:vm_state": "active",
+            "OS-SCH-HNT:scheduler_hints": null,
+            "OS-SRV-USG:launched_at": "2022-05-23T14:14:38.000000",
+            "OS-SRV-USG:terminated_at": null,
+            "host_status": null,
+            "locked": false,
+            "max_count": null,
+            "min_count": null,
+            "os-extended-volumes:volumes_attached": [
+              {
+                "delete_on_termination": true,
+                "id": "dff80a4c-e976-4025-ae00-df0e7378a26f"
+              }
+            ],
+            "trusted_image_certificates": null
+          },
+          "public_v4": "",
+          "public_v6": "",
+          "ramdisk_id": null,
+          "region": "RegionOne",
+          "reservation_id": null,
+          "root_device_name": null,
+          "scheduler_hints": null,
+          "security_groups": [
+            {
+              "description": "axion - Kubernetes",
+              "id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "axion-k8s",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "94c27692-fb12-45b6-8243-f1679f6e869b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "axion-k8s",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            },
+            {
+              "description": "axion - Kubernetes worker nodes",
+              "id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s-worker",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "11350c03-d296-49a3-93f7-7edb1598302f",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 80,
+                  "port_range_min": 80,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "6bfe56b5-c626-45a4-a204-9dd279d72553",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 32767,
+                  "port_range_min": 30000,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "bb2da699-25b5-414e-bf71-229d62b3063b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 443,
+                  "port_range_min": 443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "bb908744-117b-4dbd-9fbf-7482442debfb",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 22,
+                  "port_range_min": 22,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            },
+            {
+              "description": "Default security group",
+              "id": "c81426d2-f3d3-48c7-9083-10789fa0ce53",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "default",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "2e59b768-6265-4140-8f52-7a2d283d4fd4",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 80,
+                  "port_range_min": 80,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "c81426d2-f3d3-48c7-9083-10789fa0ce53",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "300c8db5-e3ce-4d17-84d2-ee0aadb3ebab",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 443,
+                  "port_range_min": 443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "c81426d2-f3d3-48c7-9083-10789fa0ce53",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "5bb080a8-5743-4d66-9ac5-d561056747b6",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 22,
+                  "port_range_min": 22,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "99.240.73.157/32",
+                  "security_group_id": "c81426d2-f3d3-48c7-9083-10789fa0ce53",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "default",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "9802a95d-f328-4c9c-9124-60fd65f504d5",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "default",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c81426d2-f3d3-48c7-9083-10789fa0ce53",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "b9fa1122-dfb2-40d1-bac6-d84637c38fcc",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 8000,
+                  "port_range_min": 8000,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "c81426d2-f3d3-48c7-9083-10789fa0ce53",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "default",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "f7e7d56b-4132-4722-9ef0-0f29068eff29",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "default",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c81426d2-f3d3-48c7-9083-10789fa0ce53",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            }
+          ],
+          "server_groups": null,
+          "status": "ACTIVE",
+          "tags": [],
+          "task_state": null,
+          "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "terminated_at": null,
+          "trusted_image_certificates": null,
+          "updated": "2022-05-23T14:14:38Z",
+          "user_data": null,
+          "user_id": "be10864cdd2131364d234cc47064dc65b2e48e57bb03f086698c64e9cd19df70",
+          "vm_state": "active",
+          "volumes": []
+        }
+      },
+      "598d50f1-c01b-4f32-914f-75f2e1a46702": {
+        "ansible_host": "",
+        "ansible_ssh_host": "",
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL",
+          "OS-EXT-AZ:availability_zone": "Compute",
+          "OS-EXT-SRV-ATTR:host": null,
+          "OS-EXT-SRV-ATTR:hostname": null,
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+          "OS-EXT-SRV-ATTR:instance_name": null,
+          "OS-EXT-SRV-ATTR:kernel_id": null,
+          "OS-EXT-SRV-ATTR:launch_index": null,
+          "OS-EXT-SRV-ATTR:ramdisk_id": null,
+          "OS-EXT-SRV-ATTR:reservation_id": null,
+          "OS-EXT-SRV-ATTR:root_device_name": null,
+          "OS-EXT-SRV-ATTR:user_data": null,
+          "OS-EXT-STS:power_state": 1,
+          "OS-EXT-STS:task_state": null,
+          "OS-EXT-STS:vm_state": "active",
+          "OS-SCH-HNT:scheduler_hints": null,
+          "OS-SRV-USG:launched_at": "2022-02-08T15:16:31.000000",
+          "OS-SRV-USG:terminated_at": null,
+          "accessIPv4": "",
+          "accessIPv6": "",
+          "addresses": {
+            "axion": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:ea:48:c9",
+                "OS-EXT-IPS:type": "fixed",
+                "addr": "192.168.0.153",
+                "version": 4
+              }
+            ]
+          },
+          "adminPass": null,
+          "az": "Compute",
+          "block_device_mapping": null,
+          "cloud": "envvars",
+          "config_drive": "",
+          "created": "2022-02-08T15:16:05Z",
+          "created_at": "2022-02-08T15:16:05Z",
+          "description": "axion-k8s-node-2",
+          "disk_config": "MANUAL",
+          "flavor": {
+            "disk": 20,
+            "ephemeral": 576,
+            "extra_specs": {
+              "aggregate_instance_extra_specs:compute": "true",
+              "quota:cpu_period": "1000000",
+              "quota:cpu_quota": "950000",
+              "quota:disk_read_bytes_sec": "115343360",
+              "quota:disk_read_iops_sec": "2500",
+              "quota:disk_write_bytes_sec": "115343360",
+              "quota:disk_write_iops_sec": "2000",
+              "quota:write_read_iops_sec": "2000"
+            },
+            "name": "c16-180gb-576",
+            "original_name": "c16-180gb-576",
+            "ram": 184320,
+            "swap": 0,
+            "vcpus": 16
+          },
+          "has_config_drive": false,
+          "host": null,
+          "hostId": "7199385a38903cc5e978031d67ed4a1f5e3c6798d445022b2f5cedd6",
+          "host_id": "7199385a38903cc5e978031d67ed4a1f5e3c6798d445022b2f5cedd6",
+          "host_status": null,
+          "hostname": null,
+          "hypervisor_hostname": null,
+          "id": "598d50f1-c01b-4f32-914f-75f2e1a46702",
+          "image": {
+            "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+            "name": "CentOS-7-x64-2021-11"
+          },
+          "instance_name": null,
+          "interface_ip": "",
+          "kernel_id": null,
+          "key_name": "kubernetes-axion",
+          "launch_index": null,
+          "launched_at": "2022-02-08T15:16:31.000000",
+          "location": {
+            "cloud": "envvars",
+            "project": {
+              "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+              "domain_name": null,
+              "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "name": "rrg-cdavid"
+            },
+            "region_name": "RegionOne",
+            "zone": "Compute"
+          },
+          "locked": false,
+          "max_count": null,
+          "metadata": {
+            "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+            "kubespray_groups": "kube_node,k8s_cluster,no_floating,",
+            "ssh_user": "centos",
+            "use_access_ip": "1"
+          },
+          "min_count": null,
+          "name": "axion-k8s-node-2",
+          "networks": {},
+          "os-extended-volumes:volumes_attached": [
+            {
+              "delete_on_termination": false,
+              "id": "705ca952-e81d-45b3-987f-68362cbf1c1d"
+            }
+          ],
+          "personality": null,
+          "power_state": 1,
+          "private_v4": "192.168.0.153",
+          "progress": 0,
+          "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL",
+            "OS-EXT-AZ:availability_zone": "Compute",
+            "OS-EXT-SRV-ATTR:host": null,
+            "OS-EXT-SRV-ATTR:hostname": null,
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+            "OS-EXT-SRV-ATTR:instance_name": null,
+            "OS-EXT-SRV-ATTR:kernel_id": null,
+            "OS-EXT-SRV-ATTR:launch_index": null,
+            "OS-EXT-SRV-ATTR:ramdisk_id": null,
+            "OS-EXT-SRV-ATTR:reservation_id": null,
+            "OS-EXT-SRV-ATTR:root_device_name": null,
+            "OS-EXT-SRV-ATTR:user_data": null,
+            "OS-EXT-STS:power_state": 1,
+            "OS-EXT-STS:task_state": null,
+            "OS-EXT-STS:vm_state": "active",
+            "OS-SCH-HNT:scheduler_hints": null,
+            "OS-SRV-USG:launched_at": "2022-02-08T15:16:31.000000",
+            "OS-SRV-USG:terminated_at": null,
+            "host_status": null,
+            "locked": false,
+            "max_count": null,
+            "min_count": null,
+            "os-extended-volumes:volumes_attached": [
+              {
+                "delete_on_termination": false,
+                "id": "705ca952-e81d-45b3-987f-68362cbf1c1d"
+              }
+            ],
+            "trusted_image_certificates": null
+          },
+          "public_v4": "",
+          "public_v6": "",
+          "ramdisk_id": null,
+          "region": "RegionOne",
+          "reservation_id": null,
+          "root_device_name": null,
+          "scheduler_hints": null,
+          "security_groups": [
+            {
+              "description": "axion - Kubernetes",
+              "id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "axion-k8s",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "94c27692-fb12-45b6-8243-f1679f6e869b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "axion-k8s",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            },
+            {
+              "description": "axion - Kubernetes worker nodes",
+              "id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s-worker",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "11350c03-d296-49a3-93f7-7edb1598302f",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 80,
+                  "port_range_min": 80,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "6bfe56b5-c626-45a4-a204-9dd279d72553",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 32767,
+                  "port_range_min": 30000,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "bb2da699-25b5-414e-bf71-229d62b3063b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 443,
+                  "port_range_min": 443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "bb908744-117b-4dbd-9fbf-7482442debfb",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 22,
+                  "port_range_min": 22,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            }
+          ],
+          "server_groups": null,
+          "status": "ACTIVE",
+          "tags": [],
+          "task_state": null,
+          "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "terminated_at": null,
+          "trusted_image_certificates": null,
+          "updated": "2022-02-08T15:16:31Z",
+          "user_data": null,
+          "user_id": "be10864cdd2131364d234cc47064dc65b2e48e57bb03f086698c64e9cd19df70",
+          "vm_state": "active",
+          "volumes": []
+        }
+      },
+      "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72": {
+        "ansible_host": "206.12.95.48",
+        "ansible_ssh_host": "206.12.95.48",
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL",
+          "OS-EXT-AZ:availability_zone": "Compute",
+          "OS-EXT-SRV-ATTR:host": null,
+          "OS-EXT-SRV-ATTR:hostname": null,
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+          "OS-EXT-SRV-ATTR:instance_name": null,
+          "OS-EXT-SRV-ATTR:kernel_id": null,
+          "OS-EXT-SRV-ATTR:launch_index": null,
+          "OS-EXT-SRV-ATTR:ramdisk_id": null,
+          "OS-EXT-SRV-ATTR:reservation_id": null,
+          "OS-EXT-SRV-ATTR:root_device_name": null,
+          "OS-EXT-SRV-ATTR:user_data": null,
+          "OS-EXT-STS:power_state": 1,
+          "OS-EXT-STS:task_state": null,
+          "OS-EXT-STS:vm_state": "active",
+          "OS-SCH-HNT:scheduler_hints": null,
+          "OS-SRV-USG:launched_at": "2022-02-08T15:16:25.000000",
+          "OS-SRV-USG:terminated_at": null,
+          "accessIPv4": "206.12.95.48",
+          "accessIPv6": "",
+          "addresses": {
+            "axion": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:91:24:c6",
+                "OS-EXT-IPS:type": "fixed",
+                "addr": "192.168.0.215",
+                "version": 4
+              },
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:91:24:c6",
+                "OS-EXT-IPS:type": "floating",
+                "addr": "206.12.95.48",
+                "version": 4
+              }
+            ]
+          },
+          "adminPass": null,
+          "az": "Compute",
+          "block_device_mapping": null,
+          "cloud": "envvars",
+          "config_drive": "",
+          "created": "2022-02-08T15:16:05Z",
+          "created_at": "2022-02-08T15:16:05Z",
+          "description": "axion-bastion-1",
+          "disk_config": "MANUAL",
+          "flavor": {
+            "disk": 20,
+            "ephemeral": 72,
+            "extra_specs": {
+              "aggregate_instance_extra_specs:compute": "true",
+              "quota:cpu_period": "1000000",
+              "quota:cpu_quota": "950000",
+              "quota:disk_read_bytes_sec": "115343360",
+              "quota:disk_read_iops_sec": "2500",
+              "quota:disk_write_bytes_sec": "115343360",
+              "quota:disk_write_iops_sec": "2000",
+              "quota:write_read_iops_sec": "2000"
+            },
+            "name": "c2-15gb-72",
+            "original_name": "c2-15gb-72",
+            "ram": 15360,
+            "swap": 0,
+            "vcpus": 2
+          },
+          "has_config_drive": false,
+          "host": null,
+          "hostId": "e9f58ceecdb1c33902d8b5e5a090b6b8e36d587e81a8d7333f0c7d21",
+          "host_id": "e9f58ceecdb1c33902d8b5e5a090b6b8e36d587e81a8d7333f0c7d21",
+          "host_status": null,
+          "hostname": null,
+          "hypervisor_hostname": null,
+          "id": "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+          "image": {
+            "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+            "name": "CentOS-7-x64-2021-11"
+          },
+          "instance_name": null,
+          "interface_ip": "206.12.95.48",
+          "kernel_id": null,
+          "key_name": "kubernetes-axion",
+          "launch_index": null,
+          "launched_at": "2022-02-08T15:16:25.000000",
+          "location": {
+            "cloud": "envvars",
+            "project": {
+              "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+              "domain_name": null,
+              "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "name": "rrg-cdavid"
+            },
+            "region_name": "RegionOne",
+            "zone": "Compute"
+          },
+          "locked": false,
+          "max_count": null,
+          "metadata": {
+            "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+            "kubespray_groups": "bastion",
+            "ssh_user": "centos",
+            "use_access_ip": "1"
+          },
+          "min_count": null,
+          "name": "axion-bastion-1",
+          "networks": {},
+          "os-extended-volumes:volumes_attached": [],
+          "personality": null,
+          "power_state": 1,
+          "private_v4": "192.168.0.215",
+          "progress": 0,
+          "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL",
+            "OS-EXT-AZ:availability_zone": "Compute",
+            "OS-EXT-SRV-ATTR:host": null,
+            "OS-EXT-SRV-ATTR:hostname": null,
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+            "OS-EXT-SRV-ATTR:instance_name": null,
+            "OS-EXT-SRV-ATTR:kernel_id": null,
+            "OS-EXT-SRV-ATTR:launch_index": null,
+            "OS-EXT-SRV-ATTR:ramdisk_id": null,
+            "OS-EXT-SRV-ATTR:reservation_id": null,
+            "OS-EXT-SRV-ATTR:root_device_name": null,
+            "OS-EXT-SRV-ATTR:user_data": null,
+            "OS-EXT-STS:power_state": 1,
+            "OS-EXT-STS:task_state": null,
+            "OS-EXT-STS:vm_state": "active",
+            "OS-SCH-HNT:scheduler_hints": null,
+            "OS-SRV-USG:launched_at": "2022-02-08T15:16:25.000000",
+            "OS-SRV-USG:terminated_at": null,
+            "host_status": null,
+            "locked": false,
+            "max_count": null,
+            "min_count": null,
+            "os-extended-volumes:volumes_attached": [],
+            "trusted_image_certificates": null
+          },
+          "public_v4": "206.12.95.48",
+          "public_v6": "",
+          "ramdisk_id": null,
+          "region": "RegionOne",
+          "reservation_id": null,
+          "root_device_name": null,
+          "scheduler_hints": null,
+          "security_groups": [
+            {
+              "description": "axion - Bastion Server",
+              "id": "46ec6046-4e75-4f1c-a788-693b36c9d280",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-bastion",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "6a02f409-0319-462d-8e14-b23f7dfa7550",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 80,
+                  "port_range_min": 80,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "46ec6046-4e75-4f1c-a788-693b36c9d280",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "c318fcce-141f-49c1-9aed-9fb6a3bb45eb",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 22,
+                  "port_range_min": 22,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "46ec6046-4e75-4f1c-a788-693b36c9d280",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "eb1e4546-367f-4d91-a15f-d5f41e122cff",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 443,
+                  "port_range_min": 443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "46ec6046-4e75-4f1c-a788-693b36c9d280",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            },
+            {
+              "description": "axion - Kubernetes",
+              "id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "axion-k8s",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "94c27692-fb12-45b6-8243-f1679f6e869b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "axion-k8s",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            }
+          ],
+          "server_groups": null,
+          "status": "ACTIVE",
+          "tags": [],
+          "task_state": null,
+          "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "terminated_at": null,
+          "trusted_image_certificates": null,
+          "updated": "2022-02-08T15:16:25Z",
+          "user_data": null,
+          "user_id": "be10864cdd2131364d234cc47064dc65b2e48e57bb03f086698c64e9cd19df70",
+          "vm_state": "active",
+          "volumes": []
+        }
+      },
+      "7ce0cd56-98a4-4a49-b063-11c65765370c": {
+        "ansible_host": "",
+        "ansible_ssh_host": "",
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL",
+          "OS-EXT-AZ:availability_zone": "Compute",
+          "OS-EXT-SRV-ATTR:host": null,
+          "OS-EXT-SRV-ATTR:hostname": null,
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+          "OS-EXT-SRV-ATTR:instance_name": null,
+          "OS-EXT-SRV-ATTR:kernel_id": null,
+          "OS-EXT-SRV-ATTR:launch_index": null,
+          "OS-EXT-SRV-ATTR:ramdisk_id": null,
+          "OS-EXT-SRV-ATTR:reservation_id": null,
+          "OS-EXT-SRV-ATTR:root_device_name": null,
+          "OS-EXT-SRV-ATTR:user_data": null,
+          "OS-EXT-STS:power_state": 1,
+          "OS-EXT-STS:task_state": null,
+          "OS-EXT-STS:vm_state": "active",
+          "OS-SCH-HNT:scheduler_hints": null,
+          "OS-SRV-USG:launched_at": "2022-02-15T15:19:59.000000",
+          "OS-SRV-USG:terminated_at": null,
+          "accessIPv4": "",
+          "accessIPv6": "",
+          "addresses": {
+            "axion": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:e9:94:e5",
+                "OS-EXT-IPS:type": "fixed",
+                "addr": "192.168.0.92",
+                "version": 4
+              }
+            ]
+          },
+          "adminPass": null,
+          "az": "Compute",
+          "block_device_mapping": null,
+          "cloud": "envvars",
+          "config_drive": "",
+          "created": "2022-02-15T15:19:34Z",
+          "created_at": "2022-02-15T15:19:34Z",
+          "description": "axion-k8s-master-nf-ne-1",
+          "disk_config": "MANUAL",
+          "flavor": {
+            "disk": 20,
+            "ephemeral": 288,
+            "extra_specs": {
+              "aggregate_instance_extra_specs:compute": "true",
+              "quota:cpu_period": "1000000",
+              "quota:cpu_quota": "950000",
+              "quota:disk_read_bytes_sec": "115343360",
+              "quota:disk_read_iops_sec": "2500",
+              "quota:disk_write_bytes_sec": "115343360",
+              "quota:disk_write_iops_sec": "2000",
+              "quota:write_read_iops_sec": "2000"
+            },
+            "name": "c8-90gb-288",
+            "original_name": "c8-90gb-288",
+            "ram": 92160,
+            "swap": 0,
+            "vcpus": 8
+          },
+          "has_config_drive": false,
+          "host": null,
+          "hostId": "7c09a37cc253349007dccb79a183fe083fe037a93e1d97fd2dc3c528",
+          "host_id": "7c09a37cc253349007dccb79a183fe083fe037a93e1d97fd2dc3c528",
+          "host_status": null,
+          "hostname": null,
+          "hypervisor_hostname": null,
+          "id": "7ce0cd56-98a4-4a49-b063-11c65765370c",
+          "image": {
+            "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+            "name": "CentOS-7-x64-2021-11"
+          },
+          "instance_name": null,
+          "interface_ip": "",
+          "kernel_id": null,
+          "key_name": "kubernetes-axion",
+          "launch_index": null,
+          "launched_at": "2022-02-15T15:19:59.000000",
+          "location": {
+            "cloud": "envvars",
+            "project": {
+              "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+              "domain_name": null,
+              "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "name": "rrg-cdavid"
+            },
+            "region_name": "RegionOne",
+            "zone": "Compute"
+          },
+          "locked": false,
+          "max_count": null,
+          "metadata": {
+            "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+            "kubespray_groups": "kube_control_plane,,k8s_cluster,no_floating",
+            "ssh_user": "centos",
+            "use_access_ip": "1"
+          },
+          "min_count": null,
+          "name": "axion-k8s-master-nf-ne-1",
+          "networks": {},
+          "os-extended-volumes:volumes_attached": [],
+          "personality": null,
+          "power_state": 1,
+          "private_v4": "192.168.0.92",
+          "progress": 0,
+          "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL",
+            "OS-EXT-AZ:availability_zone": "Compute",
+            "OS-EXT-SRV-ATTR:host": null,
+            "OS-EXT-SRV-ATTR:hostname": null,
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+            "OS-EXT-SRV-ATTR:instance_name": null,
+            "OS-EXT-SRV-ATTR:kernel_id": null,
+            "OS-EXT-SRV-ATTR:launch_index": null,
+            "OS-EXT-SRV-ATTR:ramdisk_id": null,
+            "OS-EXT-SRV-ATTR:reservation_id": null,
+            "OS-EXT-SRV-ATTR:root_device_name": null,
+            "OS-EXT-SRV-ATTR:user_data": null,
+            "OS-EXT-STS:power_state": 1,
+            "OS-EXT-STS:task_state": null,
+            "OS-EXT-STS:vm_state": "active",
+            "OS-SCH-HNT:scheduler_hints": null,
+            "OS-SRV-USG:launched_at": "2022-02-15T15:19:59.000000",
+            "OS-SRV-USG:terminated_at": null,
+            "host_status": null,
+            "locked": false,
+            "max_count": null,
+            "min_count": null,
+            "os-extended-volumes:volumes_attached": [],
+            "trusted_image_certificates": null
+          },
+          "public_v4": "",
+          "public_v6": "",
+          "ramdisk_id": null,
+          "region": "RegionOne",
+          "reservation_id": null,
+          "root_device_name": null,
+          "scheduler_hints": null,
+          "security_groups": [
+            {
+              "description": "axion - Kubernetes",
+              "id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "axion-k8s",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "94c27692-fb12-45b6-8243-f1679f6e869b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "axion-k8s",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            },
+            {
+              "description": "axion - Kubernetes Master",
+              "id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s-master",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "3920f588-a387-4533-8ef2-1813944992ac",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 9000,
+                  "port_range_min": 8000,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "5e54d50d-e5d1-4c64-b631-f0217a1d332d",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 22,
+                  "port_range_min": 22,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "6c2453c9-2a66-42b0-88d2-036a975ba23c",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 80,
+                  "port_range_min": 80,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "830f329a-042f-4851-a7d9-19fe56adbc37",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 10255,
+                  "port_range_min": 10250,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "8328a905-8587-44dd-ab55-cade4e4a1ef4",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 2380,
+                  "port_range_min": 2379,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "a95228f0-50b2-452a-a5dd-e425bc2ff22c",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 443,
+                  "port_range_min": 443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "d12681c5-7faf-498f-bd69-2dbc3da09fba",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 6443,
+                  "port_range_min": 6443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "8603cdc0-79b3-403e-b60f-239bbfdd4349",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            }
+          ],
+          "server_groups": null,
+          "status": "ACTIVE",
+          "tags": [],
+          "task_state": null,
+          "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "terminated_at": null,
+          "trusted_image_certificates": null,
+          "updated": "2022-02-15T15:19:59Z",
+          "user_data": null,
+          "user_id": "be10864cdd2131364d234cc47064dc65b2e48e57bb03f086698c64e9cd19df70",
+          "vm_state": "active",
+          "volumes": []
+        }
+      },
+      "a2aed495-dbe9-41a1-a538-6d9220cd2f2d": {
+        "ansible_host": "",
+        "ansible_ssh_host": "",
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL",
+          "OS-EXT-AZ:availability_zone": "Compute",
+          "OS-EXT-SRV-ATTR:host": null,
+          "OS-EXT-SRV-ATTR:hostname": null,
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+          "OS-EXT-SRV-ATTR:instance_name": null,
+          "OS-EXT-SRV-ATTR:kernel_id": null,
+          "OS-EXT-SRV-ATTR:launch_index": null,
+          "OS-EXT-SRV-ATTR:ramdisk_id": null,
+          "OS-EXT-SRV-ATTR:reservation_id": null,
+          "OS-EXT-SRV-ATTR:root_device_name": null,
+          "OS-EXT-SRV-ATTR:user_data": null,
+          "OS-EXT-STS:power_state": 1,
+          "OS-EXT-STS:task_state": null,
+          "OS-EXT-STS:vm_state": "active",
+          "OS-SCH-HNT:scheduler_hints": null,
+          "OS-SRV-USG:launched_at": "2022-02-15T15:20:03.000000",
+          "OS-SRV-USG:terminated_at": null,
+          "accessIPv4": "",
+          "accessIPv6": "",
+          "addresses": {
+            "axion": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:f9:ed:66",
+                "OS-EXT-IPS:type": "fixed",
+                "addr": "192.168.0.135",
+                "version": 4
+              }
+            ]
+          },
+          "adminPass": null,
+          "az": "Compute",
+          "block_device_mapping": null,
+          "cloud": "envvars",
+          "config_drive": "",
+          "created": "2022-02-15T15:19:33Z",
+          "created_at": "2022-02-15T15:19:33Z",
+          "description": "axion-etcd-1",
+          "disk_config": "MANUAL",
+          "flavor": {
+            "disk": 20,
+            "ephemeral": 36,
+            "extra_specs": {
+              "aggregate_instance_extra_specs:compute": "true",
+              "quota:cpu_period": "1000000",
+              "quota:cpu_quota": "950000",
+              "quota:disk_read_bytes_sec": "115343360",
+              "quota:disk_read_iops_sec": "2500",
+              "quota:disk_write_bytes_sec": "115343360",
+              "quota:disk_write_iops_sec": "2000",
+              "quota:write_read_iops_sec": "2000"
+            },
+            "name": "c1-7.5gb-36",
+            "original_name": "c1-7.5gb-36",
+            "ram": 7680,
+            "swap": 0,
+            "vcpus": 1
+          },
+          "has_config_drive": false,
+          "host": null,
+          "hostId": "a53a9fcf5cf216ed3d60c932c6b985e8ae33506ab84bddeb3a41cbda",
+          "host_id": "a53a9fcf5cf216ed3d60c932c6b985e8ae33506ab84bddeb3a41cbda",
+          "host_status": null,
+          "hostname": null,
+          "hypervisor_hostname": null,
+          "id": "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+          "image": {
+            "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+            "name": "CentOS-7-x64-2021-11"
+          },
+          "instance_name": null,
+          "interface_ip": "",
+          "kernel_id": null,
+          "key_name": "kubernetes-axion",
+          "launch_index": null,
+          "launched_at": "2022-02-15T15:20:03.000000",
+          "location": {
+            "cloud": "envvars",
+            "project": {
+              "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+              "domain_name": null,
+              "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "name": "rrg-cdavid"
+            },
+            "region_name": "RegionOne",
+            "zone": "Compute"
+          },
+          "locked": false,
+          "max_count": null,
+          "metadata": {
+            "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+            "kubespray_groups": "etcd,no_floating",
+            "ssh_user": "centos",
+            "use_access_ip": "1"
+          },
+          "min_count": null,
+          "name": "axion-etcd-1",
+          "networks": {},
+          "os-extended-volumes:volumes_attached": [],
+          "personality": null,
+          "power_state": 1,
+          "private_v4": "192.168.0.135",
+          "progress": 0,
+          "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL",
+            "OS-EXT-AZ:availability_zone": "Compute",
+            "OS-EXT-SRV-ATTR:host": null,
+            "OS-EXT-SRV-ATTR:hostname": null,
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+            "OS-EXT-SRV-ATTR:instance_name": null,
+            "OS-EXT-SRV-ATTR:kernel_id": null,
+            "OS-EXT-SRV-ATTR:launch_index": null,
+            "OS-EXT-SRV-ATTR:ramdisk_id": null,
+            "OS-EXT-SRV-ATTR:reservation_id": null,
+            "OS-EXT-SRV-ATTR:root_device_name": null,
+            "OS-EXT-SRV-ATTR:user_data": null,
+            "OS-EXT-STS:power_state": 1,
+            "OS-EXT-STS:task_state": null,
+            "OS-EXT-STS:vm_state": "active",
+            "OS-SCH-HNT:scheduler_hints": null,
+            "OS-SRV-USG:launched_at": "2022-02-15T15:20:03.000000",
+            "OS-SRV-USG:terminated_at": null,
+            "host_status": null,
+            "locked": false,
+            "max_count": null,
+            "min_count": null,
+            "os-extended-volumes:volumes_attached": [],
+            "trusted_image_certificates": null
+          },
+          "public_v4": "",
+          "public_v6": "",
+          "ramdisk_id": null,
+          "region": "RegionOne",
+          "reservation_id": null,
+          "root_device_name": null,
+          "scheduler_hints": null,
+          "security_groups": [
+            {
+              "description": "axion - Kubernetes",
+              "id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "axion-k8s",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "94c27692-fb12-45b6-8243-f1679f6e869b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "axion-k8s",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            }
+          ],
+          "server_groups": null,
+          "status": "ACTIVE",
+          "tags": [],
+          "task_state": null,
+          "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "terminated_at": null,
+          "trusted_image_certificates": null,
+          "updated": "2022-02-15T15:20:03Z",
+          "user_data": null,
+          "user_id": "be10864cdd2131364d234cc47064dc65b2e48e57bb03f086698c64e9cd19df70",
+          "vm_state": "active",
+          "volumes": []
+        }
+      },
+      "aea46e3d-5788-486b-abe8-10fa73aac9d2": {
+        "ansible_host": "",
+        "ansible_ssh_host": "",
+        "openstack": {
+          "OS-DCF:diskConfig": "MANUAL",
+          "OS-EXT-AZ:availability_zone": "Compute",
+          "OS-EXT-SRV-ATTR:host": null,
+          "OS-EXT-SRV-ATTR:hostname": null,
+          "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+          "OS-EXT-SRV-ATTR:instance_name": null,
+          "OS-EXT-SRV-ATTR:kernel_id": null,
+          "OS-EXT-SRV-ATTR:launch_index": null,
+          "OS-EXT-SRV-ATTR:ramdisk_id": null,
+          "OS-EXT-SRV-ATTR:reservation_id": null,
+          "OS-EXT-SRV-ATTR:root_device_name": null,
+          "OS-EXT-SRV-ATTR:user_data": null,
+          "OS-EXT-STS:power_state": 1,
+          "OS-EXT-STS:task_state": null,
+          "OS-EXT-STS:vm_state": "active",
+          "OS-SCH-HNT:scheduler_hints": null,
+          "OS-SRV-USG:launched_at": "2022-02-08T15:16:31.000000",
+          "OS-SRV-USG:terminated_at": null,
+          "accessIPv4": "",
+          "accessIPv6": "",
+          "addresses": {
+            "axion": [
+              {
+                "OS-EXT-IPS-MAC:mac_addr": "fa:16:3e:3a:69:3b",
+                "OS-EXT-IPS:type": "fixed",
+                "addr": "192.168.0.233",
+                "version": 4
+              }
+            ]
+          },
+          "adminPass": null,
+          "az": "Compute",
+          "block_device_mapping": null,
+          "cloud": "envvars",
+          "config_drive": "",
+          "created": "2022-02-08T15:16:15Z",
+          "created_at": "2022-02-08T15:16:15Z",
+          "description": "axion-k8s-node-1",
+          "disk_config": "MANUAL",
+          "flavor": {
+            "disk": 20,
+            "ephemeral": 576,
+            "extra_specs": {
+              "aggregate_instance_extra_specs:compute": "true",
+              "quota:cpu_period": "1000000",
+              "quota:cpu_quota": "950000",
+              "quota:disk_read_bytes_sec": "115343360",
+              "quota:disk_read_iops_sec": "2500",
+              "quota:disk_write_bytes_sec": "115343360",
+              "quota:disk_write_iops_sec": "2000",
+              "quota:write_read_iops_sec": "2000"
+            },
+            "name": "c16-180gb-576",
+            "original_name": "c16-180gb-576",
+            "ram": 184320,
+            "swap": 0,
+            "vcpus": 16
+          },
+          "has_config_drive": false,
+          "host": null,
+          "hostId": "81d7d510208135791c371122376a0092e6badf54bb75fc15f583de81",
+          "host_id": "81d7d510208135791c371122376a0092e6badf54bb75fc15f583de81",
+          "host_status": null,
+          "hostname": null,
+          "hypervisor_hostname": null,
+          "id": "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+          "image": {
+            "id": "b5d803f7-bcb1-4af4-83ce-6e994eb0d04f",
+            "name": "CentOS-7-x64-2021-11"
+          },
+          "instance_name": null,
+          "interface_ip": "",
+          "kernel_id": null,
+          "key_name": "kubernetes-axion",
+          "launch_index": null,
+          "launched_at": "2022-02-08T15:16:31.000000",
+          "location": {
+            "cloud": "envvars",
+            "project": {
+              "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+              "domain_name": null,
+              "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "name": "rrg-cdavid"
+            },
+            "region_name": "RegionOne",
+            "zone": "Compute"
+          },
+          "locked": false,
+          "max_count": null,
+          "metadata": {
+            "depends_on": " 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ",
+            "kubespray_groups": "kube_node,k8s_cluster,no_floating,",
+            "ssh_user": "centos",
+            "use_access_ip": "1"
+          },
+          "min_count": null,
+          "name": "axion-k8s-node-1",
+          "networks": {},
+          "os-extended-volumes:volumes_attached": [
+            {
+              "delete_on_termination": false,
+              "id": "31042722-31d6-448d-b9c9-f889897c9994"
+            }
+          ],
+          "personality": null,
+          "power_state": 1,
+          "private_v4": "192.168.0.233",
+          "progress": 0,
+          "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "properties": {
+            "OS-DCF:diskConfig": "MANUAL",
+            "OS-EXT-AZ:availability_zone": "Compute",
+            "OS-EXT-SRV-ATTR:host": null,
+            "OS-EXT-SRV-ATTR:hostname": null,
+            "OS-EXT-SRV-ATTR:hypervisor_hostname": null,
+            "OS-EXT-SRV-ATTR:instance_name": null,
+            "OS-EXT-SRV-ATTR:kernel_id": null,
+            "OS-EXT-SRV-ATTR:launch_index": null,
+            "OS-EXT-SRV-ATTR:ramdisk_id": null,
+            "OS-EXT-SRV-ATTR:reservation_id": null,
+            "OS-EXT-SRV-ATTR:root_device_name": null,
+            "OS-EXT-SRV-ATTR:user_data": null,
+            "OS-EXT-STS:power_state": 1,
+            "OS-EXT-STS:task_state": null,
+            "OS-EXT-STS:vm_state": "active",
+            "OS-SCH-HNT:scheduler_hints": null,
+            "OS-SRV-USG:launched_at": "2022-02-08T15:16:31.000000",
+            "OS-SRV-USG:terminated_at": null,
+            "host_status": null,
+            "locked": false,
+            "max_count": null,
+            "min_count": null,
+            "os-extended-volumes:volumes_attached": [
+              {
+                "delete_on_termination": false,
+                "id": "31042722-31d6-448d-b9c9-f889897c9994"
+              }
+            ],
+            "trusted_image_certificates": null
+          },
+          "public_v4": "",
+          "public_v6": "",
+          "ramdisk_id": null,
+          "region": "RegionOne",
+          "reservation_id": null,
+          "root_device_name": null,
+          "scheduler_hints": null,
+          "security_groups": [
+            {
+              "description": "axion - Kubernetes",
+              "id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {
+                    "name": "axion-k8s",
+                    "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                  },
+                  "id": "94c27692-fb12-45b6-8243-f1679f6e869b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": null,
+                  "port_range_min": null,
+                  "project_id": "",
+                  "properties": {
+                    "group": {
+                      "name": "axion-k8s",
+                      "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+                    }
+                  },
+                  "protocol": null,
+                  "remote_group_id": null,
+                  "remote_ip_prefix": null,
+                  "security_group_id": "c2d69f58-5009-49da-a89a-80d7dca2ebbe",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            },
+            {
+              "description": "axion - Kubernetes worker nodes",
+              "id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+              "location": {
+                "cloud": "envvars",
+                "project": {
+                  "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                  "domain_name": null,
+                  "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                  "name": "rrg-cdavid"
+                },
+                "region_name": "RegionOne",
+                "zone": null
+              },
+              "name": "axion-k8s-worker",
+              "project_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+              "properties": {},
+              "security_group_rules": [
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "11350c03-d296-49a3-93f7-7edb1598302f",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 80,
+                  "port_range_min": 80,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "6bfe56b5-c626-45a4-a204-9dd279d72553",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 32767,
+                  "port_range_min": 30000,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "bb2da699-25b5-414e-bf71-229d62b3063b",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 443,
+                  "port_range_min": 443,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                },
+                {
+                  "direction": "ingress",
+                  "ethertype": "IPv4",
+                  "group": {},
+                  "id": "bb908744-117b-4dbd-9fbf-7482442debfb",
+                  "location": {
+                    "cloud": "envvars",
+                    "project": {
+                      "domain_id": "e05dc10d20cf47f38ce2443f4c0d7ee5",
+                      "domain_name": null,
+                      "id": "827eb41d94fe4e7f890a905fbd8be6c5",
+                      "name": "rrg-cdavid"
+                    },
+                    "region_name": "RegionOne",
+                    "zone": null
+                  },
+                  "port_range_max": 22,
+                  "port_range_min": 22,
+                  "project_id": "",
+                  "properties": {
+                    "group": {}
+                  },
+                  "protocol": "tcp",
+                  "remote_group_id": null,
+                  "remote_ip_prefix": "0.0.0.0/0",
+                  "security_group_id": "ec7cb25b-fccd-4b0c-8d00-866f8370484a",
+                  "tenant_id": ""
+                }
+              ],
+              "stateful": true,
+              "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5"
+            }
+          ],
+          "server_groups": null,
+          "status": "ACTIVE",
+          "tags": [],
+          "task_state": null,
+          "tenant_id": "827eb41d94fe4e7f890a905fbd8be6c5",
+          "terminated_at": null,
+          "trusted_image_certificates": null,
+          "updated": "2022-03-16T21:17:22Z",
+          "user_data": null,
+          "user_id": "be10864cdd2131364d234cc47064dc65b2e48e57bb03f086698c64e9cd19df70",
+          "vm_state": "active",
+          "volumes": []
+        }
+      }
+    }
+  },
+  "axion-bastion-1": [
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "axion-etcd-1": [
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d"
+  ],
+  "axion-k8s-master-nf-ne-1": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c"
+  ],
+  "axion-k8s-node-1": [
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2"
+  ],
+  "axion-k8s-node-2": [
+    "598d50f1-c01b-4f32-914f-75f2e1a46702"
+  ],
+  "axion-k8s-node-gpu-1": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e"
+  ],
+  "axion-server": [
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "envvars": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e",
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "envvars_RegionOne": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e",
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "envvars_RegionOne_Compute": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72",
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "envvars_RegionOne_nova": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e"
+  ],
+  "flavor-c1-7.5gb-36": [
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d"
+  ],
+  "flavor-c16-180gb-576": [
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702"
+  ],
+  "flavor-c2-15gb-72": [
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "flavor-c8-30gb-288": [
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "flavor-c8-90gb-288": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c"
+  ],
+  "flavor-g1-8gb-c4-22gb": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e"
+  ],
+  "image-CentOS-7-x64-2021-11": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "instance-11fcf7c4-2ed9-42b3-ae1d-187720aa34b5": [
+    "11fcf7c4-2ed9-42b3-ae1d-187720aa34b5"
+  ],
+  "instance-301688ef-2718-4df6-804d-8094b15d5f1e": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e"
+  ],
+  "instance-598d50f1-c01b-4f32-914f-75f2e1a46702": [
+    "598d50f1-c01b-4f32-914f-75f2e1a46702"
+  ],
+  "instance-5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72": [
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "instance-7ce0cd56-98a4-4a49-b063-11c65765370c": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c"
+  ],
+  "instance-a2aed495-dbe9-41a1-a538-6d9220cd2f2d": [
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d"
+  ],
+  "instance-aea46e3d-5788-486b-abe8-10fa73aac9d2": [
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2"
+  ],
+  "meta-depends_on_ 6f4b0f51-fe1d-435f-a4b6-a0907b604133 ": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "meta-kubespray_groups_bastion": [
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "meta-kubespray_groups_etcd,no_floating": [
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d"
+  ],
+  "meta-kubespray_groups_kube_control_plane,,k8s_cluster,no_floating": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c"
+  ],
+  "meta-kubespray_groups_kube_node,k8s_cluster,no_floating,": [
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702"
+  ],
+  "meta-ssh_user_centos": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "meta-use_access_ip_1": [
+    "7ce0cd56-98a4-4a49-b063-11c65765370c",
+    "a2aed495-dbe9-41a1-a538-6d9220cd2f2d",
+    "aea46e3d-5788-486b-abe8-10fa73aac9d2",
+    "598d50f1-c01b-4f32-914f-75f2e1a46702",
+    "5f5f6f01-8a55-4272-a7b6-8fc5a4a53d72"
+  ],
+  "nova": [
+    "301688ef-2718-4df6-804d-8094b15d5f1e"
+  ]
+}

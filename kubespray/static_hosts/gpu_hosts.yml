@@ -1,0 +1,74 @@
+all:
+  children:
+    k8s_cluster:
+      hosts:
+        axion-k8s-node-gpu-1:
+          access_ip: 192.168.0.236
+          access_ip_v4: 192.168.0.236
+          access_ip_v6: ''
+          ansible_ssh_host: 192.168.0.236
+          ansible_ssh_port: 22
+          ansible_ssh_user: centos
+          consul_is_server: false
+          flavor:
+            id: 39b3870c-e0f6-42cb-a565-f90db442629a
+            name: c16-180gb-576
+          host_domain: novalocal
+          id: 301688ef-2718-4df6-804d-8094b15d5f1e
+          image:
+            id: b5d803f7-bcb1-4af4-83ce-6e994eb0d04f
+            name: CentOS-7-x64-2021-11
+          ip: 192.168.0.236
+          key_pair: kubernetes-axion
+          metadata:
+            '%': 4
+            depends_on: ' 6f4b0f51-fe1d-435f-a4b6-a0907b604133 '
+            kubespray_groups: kube_node,k8s_cluster,no_floating,
+            ssh_user: centos
+            use_access_ip: '1'
+          network:
+          - access_network: false
+            fixed_ip_v4: 192.168.0.236
+            fixed_ip_v6: ''
+            floating_ip: ''
+            mac: fa:16:3e:6f:68:4f
+            name: axion
+            port: ''
+            uuid: 5c1a0d52-711f-4a7b-9bab-b7bef5c55ff4
+          private_ipv4: 192.168.0.236
+          provider: openstack
+          public_ipv4: 192.168.0.236
+          publicly_routable: true
+          region: RegionOne
+          role: none
+          security_groups:
+          - axion-k8s
+          - axion-k8s-worker
+          use_host_domain: true
+    kube_node:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    os_flavor=g1-8gb-c4-22gb:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    os_image=b5d803f7-bcb1-4af4-83ce-6e994eb0d04f:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    no_floating:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    os_metadata_kubespray_groups=kube_node,k8s_cluster,no_floating,:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    os_metadata_ssh_user=centos:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    os_metadata_use_access_ip=1:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    os_region=RegionOne:
+      hosts:
+        axion-k8s-node-gpu-1: {}
+    publicly_routable:
+      hosts:
+        axion-k8s-node-gpu-1: {}
